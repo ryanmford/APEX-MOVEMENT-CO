@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { Mountain, CheckCircle2, MoveRight, Trophy } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { useAppContext } from '../../contexts/AppContext';
 
 export function TwoCommunitiesSection() {
@@ -37,14 +38,12 @@ export function TwoCommunitiesSection() {
                 </li>
               ))}
             </ul>
-            <a 
-              href="https://www.skool.com/apexmovement"
-              target="_blank"
-              rel="noreferrer"
+            <Link 
+              to="/train"
               className="inline-flex items-center gap-2 bg-amber-400 text-zinc-950 px-8 py-4 font-black uppercase tracking-[0.2em] text-[11px] hover:bg-amber-500 transition-all hover:scale-105 active:scale-95 border-2 border-amber-400 shadow-[0_0_40px_-10px_rgba(251,191,36,0.4)]"
             >
-              JOIN FOR FREE
-            </a>
+              FOR ATHLETES
+            </Link>
           </motion.div>
 
           {/* Paid Skool */}
@@ -75,14 +74,12 @@ export function TwoCommunitiesSection() {
                 ))}
               </ul>
               <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
-                <a 
-                  href="https://calendly.com/apexmovement/strategy"
-                  target="_blank"
-                  rel="noreferrer"
+                <Link 
+                  to="/coach"
                   className="inline-flex items-center gap-2 bg-amber-400 text-zinc-950 px-8 py-4 font-black uppercase tracking-[0.2em] text-[11px] hover:bg-amber-500 transition-all hover:scale-105 active:scale-95 border-2 border-amber-400 shadow-[0_0_40px_-10px_rgba(251,191,36,0.4)]"
                 >
-                  APPLY NOW
-                </a>
+                  FOR COACHES
+                </Link>
               </div>
             </div>
           </motion.div>

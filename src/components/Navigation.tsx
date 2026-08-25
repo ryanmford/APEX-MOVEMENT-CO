@@ -43,13 +43,17 @@ export function Navigation({ isMenuOpen, setIsMenuOpen }: NavigationProps) {
   }, [navigate, setIsMenuOpen]);
 
   const navLinks = useMemo(() => [
-    { label: 'the apex method', onClick: () => handleNav('home', '#method'), href: '/#method', external: false },
-    { label: 'certification cohort', onClick: () => handleNav('certification'), active: currentView === 'certification', external: false, href: undefined },
+    { label: 'about', onClick: () => handleNav('about'), active: currentView === 'about', external: false, href: undefined },
+    { label: 'for athletes', onClick: () => handleNav('train'), active: currentView === 'train', external: false, href: undefined },
+    { label: 'for coaches', onClick: () => handleNav('coach'), active: currentView === 'coach', external: false, href: undefined },
+    { label: 'hire', onClick: () => handleNav('hire'), active: currentView === 'hire', external: false, href: undefined },
+    { label: 'blog', onClick: undefined, active: false, external: true, href: 'https://apexmovement.substack.com/' },
+    { label: 'merch', onClick: undefined, active: false, external: true, href: CONFIG.merchLink },
   ], [handleNav, currentView]);
 
   return (
     <>
-      <div className={`fixed top-0 w-full z-[310] py-2 px-4 text-center text-[10px] md:text-xs font-black uppercase tracking-widest bg-[#FFCC00] text-black`}>
+      <div className={`fixed top-0 w-full z-[310] py-2 px-4 text-center text-[10px] md:text-xs font-black uppercase tracking-widest bg-amber-400 text-zinc-950`}>
         SEP 19 COHORT: 17 OF 20 SPOTS LEFT. ENROLLMENT CLOSES SEP 15.
       </div>
       {isMenuOpen && (
@@ -119,7 +123,7 @@ export function Navigation({ isMenuOpen, setIsMenuOpen }: NavigationProps) {
                     if (link.onClick) link.onClick(); 
                   }
                 }} 
-                className={`transition-all cursor-pointer relative group flex items-center gap-1 xl:gap-2 uppercase ${link.active ? 'opacity-100' : 'opacity-40 hover:opacity-100'} whitespace-nowrap`}
+                className={`transition-all cursor-pointer relative group flex items-center gap-1 xl:gap-2 uppercase ${link.active ? 'opacity-100' : 'opacity-40 hover:opacity-100'} whitespace-nowrap ${i >= 4 ? 'hidden xl:flex' : ''}`}
                 aria-current={link.active ? 'page' : undefined}
               >
                 <span>{link.label}</span>

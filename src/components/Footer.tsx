@@ -38,7 +38,8 @@ export function Footer() {
           </div>
           <div className="flex flex-wrap justify-center gap-6 md:gap-10 text-xs font-black uppercase tracking-widest opacity-60">
             <Link to="/about" className="hover:opacity-100 transition-opacity">About</Link>
-            <Link to="/learn" className="hover:opacity-100 transition-opacity">Learn</Link>
+            <Link to="/train" className="hover:opacity-100 transition-opacity">Athletes</Link>
+            <Link to="/coach" className="hover:opacity-100 transition-opacity">Coaches</Link>
             <Link to="/hire" className="hover:opacity-100 transition-opacity">Hire</Link>
             <a href="https://apexmovement.substack.com/" target="_blank" rel="noreferrer" className="hover:opacity-100 transition-opacity">Blog</a>
             <a href={CONFIG.merchLink} target="_blank" rel="noreferrer" className="hover:opacity-100 transition-opacity">Merch</a>

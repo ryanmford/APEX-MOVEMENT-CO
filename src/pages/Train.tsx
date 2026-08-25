@@ -8,7 +8,7 @@ import { useAppContext } from '../contexts/AppContext';
 
 const UI = { Button, Heading, Badge, Image };
 
-export default function Learn() {
+export default function Train() {
   const { theme } = useAppContext();
   const navigate = useNavigate();
   
@@ -26,10 +26,15 @@ export default function Learn() {
         <button onClick={() => navigate('/')} className="flex items-center min-h-[44px] gap-3 text-[10px] md:text-[11px] font-black uppercase tracking-[0.4em] opacity-70 hover:opacity-100 cursor-pointer transition-all group mx-auto md:mx-0 bg-transparent border-none active:scale-95">
           <ChevronLeft size={18} className="group-hover:-translate-x-2 transition-transform" /> Return Home
         </button>
-        <UI.Heading>LEARN</UI.Heading>
+        <UI.Heading>FOR ATHLETES</UI.Heading>
         <p className="text-xl sm:text-2xl md:text-3xl font-medium opacity-80 mt-6 md:mt-10 max-w-3xl leading-snug break-words mx-auto md:mx-0">
-          The technical hierarchy of movement. Physics-based training protocols and the Apex Standard.
+          Join our free skool community. Access our foundational curriculum, connect with global athletes, and start your path to mastery.
         </p>
+        <div className="mt-8 flex justify-center md:justify-start">
+           <UI.Button onClick={openSkool} theme={theme} className="!py-4 !px-8">
+             JOIN SKOOL COMMUNITY <ArrowRight size={18} className="ml-2 inline" />
+           </UI.Button>
+        </div>
       </motion.div>
 
       <div className="space-y-24 md:space-y-32">
