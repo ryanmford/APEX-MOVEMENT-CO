@@ -53,8 +53,8 @@ export function Navigation({ isMenuOpen, setIsMenuOpen }: NavigationProps) {
 
   return (
     <>
-      <div className={`fixed top-0 w-full z-[310] py-2 px-4 text-center text-[10px] md:text-xs font-black uppercase tracking-widest bg-amber-400 text-zinc-950`}>
-        SEP 19 COHORT: 17 OF 20 SPOTS LEFT. ENROLLMENT CLOSES SEP 15.
+      <div className={`fixed top-0 w-full z-[310] h-[30px] md:h-[32px] flex items-center justify-center px-2 text-center text-[9px] min-[375px]:text-[10px] sm:text-[11px] md:text-xs font-black uppercase tracking-wide sm:tracking-widest whitespace-nowrap bg-amber-400 text-zinc-950`}>
+        OCT 3 COHORT: 17 / 20 SPOTS LEFT. ENROLLMENT ENDS SEP 29
       </div>
       {isMenuOpen && (
         <div role="dialog" aria-modal="true" aria-label="Mobile Navigation" className={`fixed inset-0 z-[400] pt-24 pb-[calc(2rem+env(safe-area-inset-bottom))] px-8 flex flex-col transition-all duration-500 animate-in fade-in slide-in-from-right-full ${theme === 'dark' ? 'bg-black text-white' : 'bg-white text-black shadow-2xl'}`}>
@@ -103,7 +103,7 @@ export function Navigation({ isMenuOpen, setIsMenuOpen }: NavigationProps) {
         </div>
       )}
 
-      <nav className={`fixed top-[32px] md:top-[34px] w-full z-[300] transition-all duration-700 px-6 py-4 flex justify-between items-center ${scrolled || currentView !== 'home' ? (theme === 'dark' ? 'bg-black/95 border-b-2 border-white/10 text-white' : 'bg-white/95 border-b-2 border-black/10 text-black') : (theme === 'dark' ? 'bg-transparent text-white' : 'bg-transparent text-black')} backdrop-blur-md`}>
+      <nav className={`fixed top-[30px] md:top-[32px] w-full z-[300] transition-all duration-700 px-6 py-4 flex justify-between items-center ${scrolled || currentView !== 'home' ? (theme === 'dark' ? 'bg-black/95 border-b-2 border-white/10 text-white' : 'bg-white/95 border-b-2 border-black/10 text-black') : (theme === 'dark' ? 'bg-transparent text-white' : 'bg-transparent text-black')} backdrop-blur-md`}>
         <a href="/" onClick={(e) => { e.preventDefault(); handleNav('home'); }} className="text-xl md:text-2xl font-black tracking-tighter uppercase cursor-pointer group flex items-center gap-2 shrink-0" aria-label="Go to home">
             <Mountain className="opacity-40 group-hover:-translate-y-1 group-hover:opacity-100 transition-all duration-300" size={18} aria-hidden="true" />
             {CONFIG.brand}

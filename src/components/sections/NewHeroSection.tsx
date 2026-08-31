@@ -66,7 +66,7 @@ export function NewHeroSection() {
           </h1>
           
           <p className={`text-base md:text-xl ${theme === 'dark' ? 'text-zinc-400' : 'text-zinc-600'} mb-8 md:mb-10 max-w-2xl leading-relaxed font-medium lowercase`}>
-            Book a call to see if our 3-month program is a good fit. 20 spots per cohort. Enrollment closes September 15.
+            Book a call to see if our 3-month program is a good fit. 20 spots per cohort. Enrollment closes September 29.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
@@ -76,7 +76,7 @@ export function NewHeroSection() {
               rel="noopener noreferrer"
               className={`inline-flex items-center justify-center gap-3 px-8 py-5 font-black uppercase tracking-[0.2em] text-[12px] md:text-[13px] transition-all duration-300 active:scale-95 ${theme === 'dark' ? 'bg-white text-black hover:bg-zinc-200 shadow-[0_0_40px_-10px_rgba(255,255,255,0.3)]' : 'bg-zinc-900 text-white hover:bg-black shadow-xl'}`}
             >
-              Apply for Sep 19 Cohort <ArrowRight className="w-5 h-5" />
+              Apply for Oct 3 Cohort <ArrowRight className="w-5 h-5" />
             </a>
             <a 
               href="https://www.skool.com/apexmovement"

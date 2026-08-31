@@ -32,7 +32,7 @@ export default function Coach() {
         <div className="max-w-4xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-amber-500/30 bg-amber-500/10 text-amber-500 text-sm font-bold tracking-widest uppercase mb-4">
             <span className="w-2 h-2 rounded-full bg-amber-500 animate-pulse" />
-            Sept 19 Cohort Application Open
+            Oct 3 Cohort Application Open
           </div>
           <div className="text-sm font-bold tracking-widest uppercase mb-8 text-zinc-500">
             For coaches with 1,000+ followers
@@ -255,7 +255,7 @@ export default function Coach() {
       {/* CTA */}
       <section className={`py-32 px-6 text-center border-t ${themeClasses.border}`}>
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-5xl md:text-6xl font-black lowercase tracking-tighter mb-6">secure your spot for september 19th.</h2>
+          <h2 className="text-5xl md:text-6xl font-black lowercase tracking-tighter mb-6">secure your spot for october 3rd.</h2>
           <p className={`text-xl mb-12 font-medium lowercase ${themeClasses.muted}`}>
             we only accept a small group of coaches who have the drive to execute. let's build your empire.
           </p>
