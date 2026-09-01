@@ -75,40 +75,78 @@ export default function Coach() {
       <section className={`py-12 border-y ${themeClasses.border} bg-black/5`}>
         <div className="max-w-7xl mx-auto px-6">
           <p className={`text-center text-sm font-bold tracking-widest uppercase mb-8 ${themeClasses.muted}`}>
-            we've helped top athletes & coaches scale
+            we've helped parkour athletes & coaches scale their skills, brands, & income since 2011:
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-y-12 gap-x-8 text-center items-center">
             <div>
               <div className="text-2xl font-black lowercase mb-1">Bob Reese</div>
-              <div className={`text-sm font-medium ${themeClasses.accent}`}>3.2M+ Followers</div>
-            </div>
-            <div>
-              <div className="text-2xl font-black lowercase mb-1">Rafe Kelley</div>
-              <div className={`text-sm font-medium ${themeClasses.accent}`}>450K+ Followers</div>
+              <div className={`text-xs font-bold tracking-widest uppercase mb-1 ${themeClasses.muted}`}>Jul 2014 Cohort</div>
+              <a href="https://www.youtube.com/@bob_reese" target="_blank" rel="noopener noreferrer" className={`block text-sm font-medium hover:opacity-80 transition-opacity ${themeClasses.accent}`}>10.4M YouTube</a>
             </div>
             <div>
               <div className="text-2xl font-black lowercase mb-1">Taylor Carpenter</div>
-              <div className={`text-sm font-medium ${themeClasses.accent}`}>150K+ Followers</div>
+              <div className={`text-xs font-bold tracking-widest uppercase mb-1 ${themeClasses.muted}`}>Jul 2018 Cohort</div>
+              <a href="https://www.instagram.com/tlynncarpenter" target="_blank" rel="noopener noreferrer" className={`block text-sm font-medium hover:opacity-80 transition-opacity ${themeClasses.accent}`}>633k Instagram</a>
+            </div>
+            <div>
+              <div className="text-2xl font-black lowercase mb-1">Rafe Kelley</div>
+              <div className={`text-xs font-bold tracking-widest uppercase mb-1 ${themeClasses.muted}`}>Nov 2013 Cohort</div>
+              <a href="https://www.instagram.com/evolve.move.play" target="_blank" rel="noopener noreferrer" className={`block text-sm font-medium hover:opacity-80 transition-opacity ${themeClasses.accent}`}>58.7k Instagram</a>
+            </div>
+            <div>
+              <div className="text-2xl font-black lowercase mb-1">Melissa McQueen</div>
+              <div className={`text-xs font-bold tracking-widest uppercase mb-1 ${themeClasses.muted}`}>Mar 2023 Cohort</div>
+              <a href="https://www.instagram.com/mel2toes" target="_blank" rel="noopener noreferrer" className={`block text-sm font-medium hover:opacity-80 transition-opacity ${themeClasses.accent}`}>68.7k Instagram</a>
+            </div>
+            <div>
+              <div className="text-2xl font-black lowercase mb-1">Max Henry</div>
+              <div className={`text-xs font-bold tracking-widest uppercase mb-1 ${themeClasses.muted}`}>Apr 2019 Cohort</div>
+              <a href="https://www.instagram.com/maxhenryparkour" target="_blank" rel="noopener noreferrer" className={`block text-sm font-medium hover:opacity-80 transition-opacity ${themeClasses.accent}`}>19.7k Instagram</a>
             </div>
             <div>
               <div className="text-2xl font-black lowercase mb-1">Darryl Stingley</div>
-              <div className={`text-sm font-medium ${themeClasses.accent}`}>120K+ Followers</div>
+              <div className={`text-xs font-bold tracking-widest uppercase mb-1 ${themeClasses.muted}`}>Aug 2016 Cohort</div>
+              <a href="https://www.instagram.com/iamwavezilla" target="_blank" rel="noopener noreferrer" className={`block text-sm font-medium hover:opacity-80 transition-opacity ${themeClasses.accent}`}>310k Instagram</a>
             </div>
             <div>
               <div className="text-2xl font-black lowercase mb-1">Paul Darnell</div>
-              <div className={`text-sm font-medium ${themeClasses.accent}`}>100K+ Followers</div>
+              <div className={`text-xs font-bold tracking-widest uppercase mb-1 ${themeClasses.muted}`}>Jul 2013 Cohort</div>
+              <a href="https://www.instagram.com/pauljdarnell" target="_blank" rel="noopener noreferrer" className={`block text-sm font-medium hover:opacity-80 transition-opacity ${themeClasses.accent}`}>21.5k Instagram</a>
+            </div>
+            <div>
+              <div className="text-2xl font-black lowercase mb-1">Koh Chen Pin</div>
+              <div className={`text-xs font-bold tracking-widest uppercase mb-1 ${themeClasses.muted}`}>Oct 2017 Cohort</div>
+              <a href="https://www.instagram.com/deeenester" target="_blank" rel="noopener noreferrer" className={`block text-sm font-medium hover:opacity-80 transition-opacity ${themeClasses.accent}`}>42.1k Instagram</a>
             </div>
             <div>
               <div className="text-2xl font-black lowercase mb-1">Renae Dambly</div>
-              <div className={`text-sm font-medium ${themeClasses.accent}`}>85K+ Followers</div>
+              <div className={`text-xs font-bold tracking-widest uppercase mb-1 ${themeClasses.muted}`}>Nov 2012 Cohort</div>
+              <a href="https://www.instagram.com/renaedambly" target="_blank" rel="noopener noreferrer" className={`block text-sm font-medium hover:opacity-80 transition-opacity ${themeClasses.accent}`}>26.7k Instagram</a>
+            </div>
+            <div>
+              <div className="text-2xl font-black lowercase mb-1">Masa Suzuki</div>
+              <div className={`text-xs font-bold tracking-widest uppercase mb-1 ${themeClasses.muted}`}>Mar 2017 Cohort</div>
+              <a href="https://www.instagram.com/shinobi_mover/" target="_blank" rel="noopener noreferrer" className={`block text-sm font-medium hover:opacity-80 transition-opacity ${themeClasses.accent}`}>39.1k Instagram</a>
             </div>
             <div>
               <div className="text-2xl font-black lowercase mb-1">Jimmy Davidson</div>
-              <div className={`text-sm font-medium ${themeClasses.accent}`}>70K+ Followers</div>
+              <div className={`text-xs font-bold tracking-widest uppercase mb-1 ${themeClasses.muted}`}>Apr 2019 Cohort</div>
+              <a href="https://www.youtube.com/@FiMParkourGym" target="_blank" rel="noopener noreferrer" className={`block text-sm font-medium hover:opacity-80 transition-opacity ${themeClasses.accent}`}>12.1k YouTube</a>
+            </div>
+            <div>
+              <div className="text-2xl font-black lowercase mb-1">Dylan Baker</div>
+              <div className={`text-xs font-bold tracking-widest uppercase mb-1 ${themeClasses.muted}`}>Nov 2013 Cohort</div>
+              <a href="https://www.instagram.com/dylanwellsbaker" target="_blank" rel="noopener noreferrer" className={`block text-sm font-medium hover:opacity-80 transition-opacity ${themeClasses.accent}`}>12.7k Instagram</a>
+            </div>
+            <div>
+              <div className="text-2xl font-black lowercase mb-1">Erica Madrid</div>
+              <div className={`text-xs font-bold tracking-widest uppercase mb-1 ${themeClasses.muted}`}>Nov 2011 Cohort</div>
+              <a href="https://www.instagram.com/auraiyamadrid" target="_blank" rel="noopener noreferrer" className={`block text-sm font-medium hover:opacity-80 transition-opacity ${themeClasses.accent}`}>23.5k Instagram</a>
             </div>
             <div>
               <div className="text-2xl font-black lowercase mb-1">Amos Rendao</div>
-              <div className={`text-sm font-medium ${themeClasses.accent}`}>Parkour EDU</div>
+              <div className={`text-xs font-bold tracking-widest uppercase mb-1 ${themeClasses.muted}`}>Dec 2011 Cohort</div>
+              <a href="https://www.youtube.com/@amosrendao" target="_blank" rel="noopener noreferrer" className={`block text-sm font-medium hover:opacity-80 transition-opacity ${themeClasses.accent}`}>10.8k YouTube</a>
             </div>
           </div>
         </div>

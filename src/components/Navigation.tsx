@@ -43,9 +43,9 @@ export function Navigation({ isMenuOpen, setIsMenuOpen }: NavigationProps) {
   }, [navigate, setIsMenuOpen]);
 
   const navLinks = useMemo(() => [
-    { label: 'about', onClick: () => handleNav('about'), active: currentView === 'about', external: false, href: undefined },
-    { label: 'for athletes', onClick: () => handleNav('train'), active: currentView === 'train', external: false, href: undefined },
     { label: 'for coaches', onClick: () => handleNav('coach'), active: currentView === 'coach', external: false, href: undefined },
+    { label: 'for athletes', onClick: () => handleNav('train'), active: currentView === 'train', external: false, href: undefined },
+    { label: 'about', onClick: () => handleNav('about'), active: currentView === 'about', external: false, href: undefined },
     { label: 'hire', onClick: () => handleNav('hire'), active: currentView === 'hire', external: false, href: undefined },
     { label: 'blog', onClick: undefined, active: false, external: true, href: 'https://apexmovement.substack.com/' },
     { label: 'merch', onClick: undefined, active: false, external: true, href: CONFIG.merchLink },
