@@ -11,8 +11,8 @@ export default function RootLayout() {
   const { pathname, hash } = useLocation();
 
   useEffect(() => {
-    if (!hash) {
-      window.scrollTo(0, 0);
+    if (hash) {
+      // If there's a hash, we let the browser handle it, or we could handle it here.
     }
   }, [pathname, hash]);
 

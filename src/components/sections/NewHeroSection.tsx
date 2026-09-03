@@ -28,7 +28,7 @@ const slides = [
         make parkour coaching<br />a sustainable career.
       </>
     ),
-    description: "Book a call to see if our 3-month program is a good fit. 20 spots per cohort. Enrollment closes September 29.",
+    description: "Book a call to see if our 3-month program is a good fit. 12 spots per cohort. Enrollment closes September 29.",
     primaryButton: {
       text: "Apply for Oct 3 Cohort",
       href: "https://calendly.com/apexmovement/strategy",

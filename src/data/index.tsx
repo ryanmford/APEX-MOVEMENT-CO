@@ -33,7 +33,7 @@ export const BIOS = [
   {
     name: "Ryan Ford",
     role: "The Movement Architect",
-    story: "Ryan founded the first dedicated parkour gym in the Western Hemisphere in 2006. Author of 'Parkour Strength Training', he has spent two decades decoding the physiological requirements of explosive movement.",
+    story: "In 2006, Ryan founded the first parkour program in the Western Hemisphere. Author of 'Parkour Strength Training', he has dedicated over 20 years to parkour .",
     focus: ["Anatomy", "Plyometric Load", "Pedagogy"],
     metrics: "Founder",
     gif: "/ryan.jpg"

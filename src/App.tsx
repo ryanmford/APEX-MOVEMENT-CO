@@ -9,12 +9,14 @@ import Blog from './pages/Blog';
 import About from './pages/About';
 import Apply from './pages/Apply';
 import Coach from './pages/Coach';
+import ScrollToTop from './components/ScrollToTop';
 
 export default function App() {
   return (
     <HelmetProvider>
       <AppProvider>
         <BrowserRouter basename={import.meta.env.BASE_URL}>
+          <ScrollToTop />
           <Routes>
             <Route path="/" element={<RootLayout />}>
               <Route index element={<Home />} />

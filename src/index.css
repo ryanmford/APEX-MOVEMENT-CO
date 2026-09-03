@@ -7,9 +7,10 @@
 }
 
 @layer base {
-  html {
+  html, body {
     scroll-behavior: smooth;
     scroll-padding-top: 100px;
+    overscroll-behavior-x: none;
   }
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display);
