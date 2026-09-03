@@ -6,7 +6,7 @@ This file (`AGENTS.md`) is automatically read by the AI assistant at the start o
 * **Guide, Don't Override:** Use these guidelines to inform new development and copy decisions. Do not aggressively refactor or override the existing architecture or UI patterns unless explicitly instructed.
 
 ## Brand Voice & Copywriting
-* **Brand Name:** Always spell it as **APEX HQ**, Apex HQ, or APEX.
+* **Brand Name:** Always spell it as **APEX MOVEMENT**, Apex Movement, or simply APEX or Apex.
 * **Tone & Perspective:** Direct. Declarative. Minimalist. Treat the user as smart. Use "you" heavily. Avoid "I" or "we" when possible. Speak directly to the user's goals. 
 * **Structure & Punctuation:** Write in short sentences and paragraphs (1-3 sentences max). Use line breaks instead of commas. Land punchlines on strong, short nouns.
 * **Rhetorical Patterns:** Use clear contrasts (e.g., theory vs. practice, amateur vs. professional) and parallel structures. State uncomfortable truths about training and mastery directly.
@@ -33,7 +33,7 @@ This file (`AGENTS.md`) is automatically read by the AI assistant at the start o
 * **Aesthetic:** Minimalist, high-fidelity design. Professional, authoritative, and clean. Complexity happens by default; simplicity happens by design.
 * **Visual Integration:** Visuals break up text and reinforce the core points. They do not exist just to decorate. 
 * **Media Proof:** Place a heavy, uncompromising emphasis on high-quality imagery and videos of actual world-class performers and coaches.
-* **Typography & Theming:** Maintain refined contrast. Use purposeful outlines, accessible colors, and clear hierarchical highlights. 
+* **Typography & Theming (Single Source of Truth):** Never hardcode font families on individual components. All fonts must be defined as variables (`--font-display`, `--font-sans`) in `src/index.css`. Components must only reference their structural role via Tailwind classes (e.g., `font-display`, `font-sans`). Maintain refined contrast, purposeful outlines, and clear hierarchical highlights.
 * **States & Loading:** Never flash blank screens or raw, unstyled data. Always default to loading states (Skeletons) during data fetch cycles and use polished empty states for null results so the UI never feels broken.
 * **UI Complexity Control:** Keep buttons, toggles, and atomic UI components simple. Avoid heavy nesting, excessive absolute layers, or heavy blurring (`backdrop-blur`) inside repeated UI elements, which can cause freezing, lagging, and glitching on mobile rendering engines.
 

@@ -1,11 +1,13 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { ArrowRight, CheckCircle2, Play, Users, TrendingUp, ShieldCheck, Award, Medal, Zap } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Users, TrendingUp, ShieldCheck, Award, Medal, Zap, ChevronDown } from 'lucide-react';
+import { motion, AnimatePresence } from 'motion/react';
 import { useAppContext } from '../contexts/AppContext';
 import { CONFIG } from '../data';
 
 export default function Coach() {
   const { theme } = useAppContext();
+  const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -30,20 +32,16 @@ export default function Coach() {
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-amber-500/30 bg-amber-500/10 text-amber-500 text-sm font-bold tracking-widest uppercase mb-4">
-            <span className="w-2 h-2 rounded-full bg-amber-500 animate-pulse" />
-            Oct 3 Cohort Application Open
-          </div>
           <div className="text-sm font-bold tracking-widest uppercase mb-8 text-zinc-500">
             For coaches with 1,000+ followers
           </div>
           
-          <h1 className="text-5xl md:text-7xl font-black lowercase tracking-tighter mb-8 leading-[1.1]">
-            turn your movement expertise into a <span className="text-amber-500">scalable digital business.</span>
+          <h1 className="text-5xl md:text-7xl font-black tracking-tighter mb-8 leading-[1.1]">
+            turn your movement expertise into a <span className="text-amber-500">scalable system, brand, & income</span>
           </h1>
           
-          <p className={`text-xl md:text-2xl mb-12 lowercase font-medium max-w-3xl mx-auto leading-relaxed ${themeClasses.muted}`}>
-            an exclusive, intimate cohort helping elite parkour athletes and coaches monetize their audience, package their knowledge, and build a high-leverage brand.
+          <p className={`text-xl md:text-2xl mb-12 font-medium max-w-3xl mx-auto leading-relaxed ${themeClasses.muted}`}>
+            a 3-month coaching cohort designed to help high performing parkour athletes and coaches monetize their audience, package their knowledge, and build a high-leverage brand.
           </p>
           
           <a 
@@ -54,20 +52,6 @@ export default function Coach() {
           >
             Apply to the program <ArrowRight className="w-5 h-5" />
           </a>
-
-          {/* VSL Placeholder */}
-          <div className={`mt-20 aspect-video w-full rounded-2xl border-2 ${themeClasses.border} overflow-hidden relative group cursor-pointer`}>
-            <div className="absolute inset-0 bg-zinc-900/80 flex items-center justify-center z-10 transition-colors group-hover:bg-zinc-900/60">
-              <div className="w-20 h-20 rounded-full bg-amber-500 flex items-center justify-center pl-2 shadow-[0_0_40px_-10px_rgba(251,191,36,0.8)] transition-transform group-hover:scale-110">
-                <Play className="w-8 h-8 text-zinc-950" />
-              </div>
-            </div>
-            <img 
-              src="https://images.unsplash.com/photo-1599058917212-d750089bc07e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2069&q=80" 
-              alt="Video thumbnail" 
-              className="w-full h-full object-cover grayscale opacity-50"
-            />
-          </div>
         </div>
       </section>
 
@@ -75,76 +59,121 @@ export default function Coach() {
       <section className={`py-12 border-y ${themeClasses.border} bg-black/5`}>
         <div className="max-w-7xl mx-auto px-6">
           <p className={`text-center text-sm font-bold tracking-widest uppercase mb-8 ${themeClasses.muted}`}>
-            we've helped parkour athletes & coaches scale their skills, brands, & income since 2011:
+            we've helped parkour coaches scale their skills, systems, brands, & income since 2011:
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-y-12 gap-x-8 text-center items-center">
             <div>
-              <div className="text-2xl font-black lowercase mb-1">Bob Reese</div>
+              <div className="text-2xl font-black mb-1">Bob Reese</div>
               <div className={`text-xs font-bold tracking-widest uppercase mb-1 ${themeClasses.muted}`}>Jul 2014 Cohort</div>
               <a href="https://www.youtube.com/@bob_reese" target="_blank" rel="noopener noreferrer" className={`block text-sm font-medium hover:opacity-80 transition-opacity ${themeClasses.accent}`}>10.4M YouTube</a>
             </div>
             <div>
-              <div className="text-2xl font-black lowercase mb-1">Taylor Carpenter</div>
+              <div className="text-2xl font-black mb-1">Taylor Carpenter</div>
               <div className={`text-xs font-bold tracking-widest uppercase mb-1 ${themeClasses.muted}`}>Jul 2018 Cohort</div>
               <a href="https://www.instagram.com/tlynncarpenter" target="_blank" rel="noopener noreferrer" className={`block text-sm font-medium hover:opacity-80 transition-opacity ${themeClasses.accent}`}>633k Instagram</a>
             </div>
             <div>
-              <div className="text-2xl font-black lowercase mb-1">Rafe Kelley</div>
+              <div className="text-2xl font-black mb-1">Rafe Kelley</div>
               <div className={`text-xs font-bold tracking-widest uppercase mb-1 ${themeClasses.muted}`}>Nov 2013 Cohort</div>
               <a href="https://www.instagram.com/evolve.move.play" target="_blank" rel="noopener noreferrer" className={`block text-sm font-medium hover:opacity-80 transition-opacity ${themeClasses.accent}`}>58.7k Instagram</a>
             </div>
             <div>
-              <div className="text-2xl font-black lowercase mb-1">Melissa McQueen</div>
+              <div className="text-2xl font-black mb-1">Melissa McQueen</div>
               <div className={`text-xs font-bold tracking-widest uppercase mb-1 ${themeClasses.muted}`}>Mar 2023 Cohort</div>
               <a href="https://www.instagram.com/mel2toes" target="_blank" rel="noopener noreferrer" className={`block text-sm font-medium hover:opacity-80 transition-opacity ${themeClasses.accent}`}>68.7k Instagram</a>
             </div>
             <div>
-              <div className="text-2xl font-black lowercase mb-1">Max Henry</div>
+              <div className="text-2xl font-black mb-1">Max Henry</div>
               <div className={`text-xs font-bold tracking-widest uppercase mb-1 ${themeClasses.muted}`}>Apr 2019 Cohort</div>
               <a href="https://www.instagram.com/maxhenryparkour" target="_blank" rel="noopener noreferrer" className={`block text-sm font-medium hover:opacity-80 transition-opacity ${themeClasses.accent}`}>19.7k Instagram</a>
             </div>
             <div>
-              <div className="text-2xl font-black lowercase mb-1">Darryl Stingley</div>
+              <div className="text-2xl font-black mb-1">Julie Angel</div>
+              <div className={`text-xs font-bold tracking-widest uppercase mb-1 ${themeClasses.muted}`}>Oct 2017 Cohort</div>
+              <a href="https://www.instagram.com/julie_angel_phd_movementsnacks" target="_blank" rel="noopener noreferrer" className={`block text-sm font-medium hover:opacity-80 transition-opacity ${themeClasses.accent}`}>77.6k Instagram</a>
+            </div>
+            <div>
+              <div className="text-2xl font-black mb-1">Jonathan & Thomas Tapp</div>
+              <div className={`text-xs font-bold tracking-widest uppercase mb-1 ${themeClasses.muted}`}>May 2012 Cohort</div>
+              <a href="https://www.youtube.com/@TappBrothers" target="_blank" rel="noopener noreferrer" className={`block text-sm font-medium hover:opacity-80 transition-opacity ${themeClasses.accent}`}>1.2M YouTube</a>
+            </div>
+            <div>
+              <div className="text-2xl font-black mb-1">Olof Wood</div>
+              <div className={`text-xs font-bold tracking-widest uppercase mb-1 ${themeClasses.muted}`}>Aug 2016 Cohort</div>
+              <a href="https://www.instagram.com/olofwood" target="_blank" rel="noopener noreferrer" className={`block text-sm font-medium hover:opacity-80 transition-opacity ${themeClasses.accent}`}>4.8k Instagram</a>
+            </div>
+            <div>
+              <div className="text-2xl font-black mb-1">Darryl Stingley</div>
               <div className={`text-xs font-bold tracking-widest uppercase mb-1 ${themeClasses.muted}`}>Aug 2016 Cohort</div>
               <a href="https://www.instagram.com/iamwavezilla" target="_blank" rel="noopener noreferrer" className={`block text-sm font-medium hover:opacity-80 transition-opacity ${themeClasses.accent}`}>310k Instagram</a>
             </div>
             <div>
-              <div className="text-2xl font-black lowercase mb-1">Paul Darnell</div>
+              <div className="text-2xl font-black mb-1">Rob Schihl</div>
+              <div className={`text-xs font-bold tracking-widest uppercase mb-1 ${themeClasses.muted}`}>May 2012 Cohort</div>
+              <a href="https://www.instagram.com/apexdenver" target="_blank" rel="noopener noreferrer" className={`block text-sm font-medium hover:opacity-80 transition-opacity ${themeClasses.accent}`}>6.4k Instagram</a>
+            </div>
+            <div>
+              <div className="text-2xl font-black mb-1">Kent Johns</div>
+              <div className={`text-xs font-bold tracking-widest uppercase mb-1 ${themeClasses.muted}`}>Nov 2013 Cohort</div>
+              <a href="https://www.youtube.com/@UnparalleledMovement" target="_blank" rel="noopener noreferrer" className={`block text-sm font-medium hover:opacity-80 transition-opacity ${themeClasses.accent}`}>32.6k YouTube</a>
+            </div>
+            <div>
+              <div className="text-2xl font-black mb-1">Kristine Dietrich</div>
+              <div className={`text-xs font-bold tracking-widest uppercase mb-1 ${themeClasses.muted}`}>Feb 2013 Cohort</div>
+              <a href="https://www.instagram.com/kristinehnry" target="_blank" rel="noopener noreferrer" className={`block text-sm font-medium hover:opacity-80 transition-opacity ${themeClasses.accent}`}>4.4k Instagram</a>
+            </div>
+            <div>
+              <div className="text-2xl font-black mb-1">Paul Darnell</div>
               <div className={`text-xs font-bold tracking-widest uppercase mb-1 ${themeClasses.muted}`}>Jul 2013 Cohort</div>
               <a href="https://www.instagram.com/pauljdarnell" target="_blank" rel="noopener noreferrer" className={`block text-sm font-medium hover:opacity-80 transition-opacity ${themeClasses.accent}`}>21.5k Instagram</a>
             </div>
             <div>
-              <div className="text-2xl font-black lowercase mb-1">Koh Chen Pin</div>
+              <div className="text-2xl font-black mb-1">Koh Chen Pin</div>
               <div className={`text-xs font-bold tracking-widest uppercase mb-1 ${themeClasses.muted}`}>Oct 2017 Cohort</div>
               <a href="https://www.instagram.com/deeenester" target="_blank" rel="noopener noreferrer" className={`block text-sm font-medium hover:opacity-80 transition-opacity ${themeClasses.accent}`}>42.1k Instagram</a>
             </div>
             <div>
-              <div className="text-2xl font-black lowercase mb-1">Renae Dambly</div>
+              <div className="text-2xl font-black mb-1">Renae Dambly</div>
               <div className={`text-xs font-bold tracking-widest uppercase mb-1 ${themeClasses.muted}`}>Nov 2012 Cohort</div>
               <a href="https://www.instagram.com/renaedambly" target="_blank" rel="noopener noreferrer" className={`block text-sm font-medium hover:opacity-80 transition-opacity ${themeClasses.accent}`}>26.7k Instagram</a>
             </div>
             <div>
-              <div className="text-2xl font-black lowercase mb-1">Masa Suzuki</div>
+              <div className="text-2xl font-black mb-1">Masa Suzuki</div>
               <div className={`text-xs font-bold tracking-widest uppercase mb-1 ${themeClasses.muted}`}>Mar 2017 Cohort</div>
-              <a href="https://www.instagram.com/shinobi_mover/" target="_blank" rel="noopener noreferrer" className={`block text-sm font-medium hover:opacity-80 transition-opacity ${themeClasses.accent}`}>39.1k Instagram</a>
+              <a href="https://www.instagram.com/shinobi_mover" target="_blank" rel="noopener noreferrer" className={`block text-sm font-medium hover:opacity-80 transition-opacity ${themeClasses.accent}`}>39.1k Instagram</a>
             </div>
             <div>
-              <div className="text-2xl font-black lowercase mb-1">Jimmy Davidson</div>
+              <div className="text-2xl font-black mb-1">Brandon Douglass</div>
+              <div className={`text-xs font-bold tracking-widest uppercase mb-1 ${themeClasses.muted}`}>May 2012 Cohort</div>
+              <a href="https://www.instagram.com/brandondouglass" target="_blank" rel="noopener noreferrer" className={`block text-sm font-medium hover:opacity-80 transition-opacity ${themeClasses.accent}`}>9.1k Instagram</a>
+            </div>
+            <div>
+              <div className="text-2xl font-black mb-1">Jimmy Davidson</div>
               <div className={`text-xs font-bold tracking-widest uppercase mb-1 ${themeClasses.muted}`}>Apr 2019 Cohort</div>
               <a href="https://www.youtube.com/@FiMParkourGym" target="_blank" rel="noopener noreferrer" className={`block text-sm font-medium hover:opacity-80 transition-opacity ${themeClasses.accent}`}>12.1k YouTube</a>
             </div>
             <div>
-              <div className="text-2xl font-black lowercase mb-1">Dylan Baker</div>
+              <div className="text-2xl font-black mb-1">Dylan Baker</div>
               <div className={`text-xs font-bold tracking-widest uppercase mb-1 ${themeClasses.muted}`}>Nov 2013 Cohort</div>
               <a href="https://www.instagram.com/dylanwellsbaker" target="_blank" rel="noopener noreferrer" className={`block text-sm font-medium hover:opacity-80 transition-opacity ${themeClasses.accent}`}>12.7k Instagram</a>
             </div>
             <div>
-              <div className="text-2xl font-black lowercase mb-1">Erica Madrid</div>
+              <div className="text-2xl font-black mb-1">Megan McQueen</div>
+              <div className={`text-xs font-bold tracking-widest uppercase mb-1 ${themeClasses.muted}`}>Feb 2013 Cohort</div>
+              <a href="https://www.instagram.com/meganmcqueen_" target="_blank" rel="noopener noreferrer" className={`block text-sm font-medium hover:opacity-80 transition-opacity ${themeClasses.accent}`}>7.6k Instagram</a>
+            </div>
+            <div>
+              <div className="text-2xl font-black mb-1">Erica Madrid</div>
               <div className={`text-xs font-bold tracking-widest uppercase mb-1 ${themeClasses.muted}`}>Nov 2011 Cohort</div>
               <a href="https://www.instagram.com/auraiyamadrid" target="_blank" rel="noopener noreferrer" className={`block text-sm font-medium hover:opacity-80 transition-opacity ${themeClasses.accent}`}>23.5k Instagram</a>
             </div>
             <div>
-              <div className="text-2xl font-black lowercase mb-1">Amos Rendao</div>
+              <div className="text-2xl font-black mb-1">Jamie Rahn</div>
+              <div className={`text-xs font-bold tracking-widest uppercase mb-1 ${themeClasses.muted}`}>Jul 2012 Cohort</div>
+              <a href="https://www.instagram.com/jamierahn" target="_blank" rel="noopener noreferrer" className={`block text-sm font-medium hover:opacity-80 transition-opacity ${themeClasses.accent}`}>52.1k Instagram</a>
+            </div>
+            <div>
+              <div className="text-2xl font-black mb-1">Amos Rendao</div>
               <div className={`text-xs font-bold tracking-widest uppercase mb-1 ${themeClasses.muted}`}>Dec 2011 Cohort</div>
               <a href="https://www.youtube.com/@amosrendao" target="_blank" rel="noopener noreferrer" className={`block text-sm font-medium hover:opacity-80 transition-opacity ${themeClasses.accent}`}>10.8k YouTube</a>
             </div>
@@ -157,7 +186,7 @@ export default function Coach() {
         <div className="max-w-4xl mx-auto">
           <div className="grid md:grid-cols-2 gap-16">
             <div>
-              <h2 className="text-3xl font-black lowercase tracking-tighter mb-6">you have the attention, but not the system.</h2>
+              <h2 className="text-3xl font-black tracking-tighter mb-6">you have the attention, but not the system</h2>
               <p className={`text-lg leading-relaxed font-medium mb-6 ${themeClasses.muted}`}>
                 building an audience as a parkour coach is incredibly difficult. you've bled for your skills, filmed thousands of hours, and finally built a platform.
               </p>
@@ -166,7 +195,7 @@ export default function Coach() {
               </p>
             </div>
             <div className={`p-8 rounded-2xl border-2 ${themeClasses.card}`}>
-              <h3 className="text-2xl font-black lowercase tracking-tighter mb-6">the apex model.</h3>
+              <h3 className="text-2xl font-black tracking-tighter mb-6">the Apex model</h3>
               <ul className="space-y-4">
                 {[
                   "decouple your time from your income",
@@ -177,7 +206,7 @@ export default function Coach() {
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <CheckCircle2 className={`w-6 h-6 shrink-0 mt-0.5 ${themeClasses.accent}`} />
-                    <span className="font-medium lowercase text-lg">{item}</span>
+                    <span className="font-medium text-lg">{item}</span>
                   </li>
                 ))}
               </ul>
@@ -191,32 +220,32 @@ export default function Coach() {
         <div className="max-w-4xl mx-auto">
           <div className="grid md:grid-cols-12 gap-12 items-center">
             <div className="md:col-span-5 relative">
-              <div className="aspect-[4/5] rounded-2xl overflow-hidden grayscale contrast-125">
+              <div className="aspect-[4/5] rounded-2xl overflow-hidden">
                 <img 
-                  src="https://images.unsplash.com/photo-1555597673-b21d5c935865?ixlib=rb-4.0.3&auto=format&fit=crop&w=1974&q=80" 
-                  alt="Founder coaching" 
+                  src="/ryan.jpg" 
+                  alt="Ryan Ford, Founder & Head Coach" 
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className={`absolute -bottom-6 -right-6 p-6 rounded-2xl border-2 ${themeClasses.card} w-64`}>
-                <div className="text-sm font-bold tracking-widest uppercase mb-2">My Mission</div>
-                <div className="font-medium lowercase text-sm">to elevate the profession of parkour coaching worldwide.</div>
+                <div className="text-sm font-bold tracking-widest uppercase mb-2">Ryan Ford</div>
+                <div className="font-medium text-sm">founder & head coach of Apex</div>
               </div>
             </div>
             <div className="md:col-span-7">
-              <h2 className="text-4xl md:text-5xl font-black lowercase tracking-tighter mb-8">from athlete to educator to empire.</h2>
-              <div className={`space-y-6 text-lg leading-relaxed font-medium ${themeClasses.muted} lowercase`}>
+              <h2 className="text-4xl md:text-5xl font-black tracking-tighter mb-8">from athlete to educator to empire</h2>
+              <div className={`space-y-6 text-lg leading-relaxed font-medium ${themeClasses.muted}`}>
                 <p>
-                  i know the struggle because i lived it. when i started apex, parkour was a fringe internet phenomenon. there was no blueprint for turning jumps into a legitimate career.
+                  I know the struggle because I lived it. when I started Apex, parkour was a fringe internet phenomenon. there was no blueprint for turning jumps into a legitimate career.
                 </p>
                 <p>
-                  i spent years grinding on concrete, building communities, and figuring out how to teach movement safely at scale. we built the world's leading parkour curriculum, opened massive facilities, and certified thousands of coaches.
+                  I spent years grinding on concrete, building communities, and figuring out how to teach movement safely at scale. we built the world's leading parkour curriculum, opened massive facilities, and certified thousands of coaches.
                 </p>
                 <p>
                   but the landscape has changed. the modern athlete doesn't just need a gym—they need a digital infrastructure.
                 </p>
                 <p className={`text-xl font-bold ${themeClasses.text}`}>
-                  i took everything i learned scaling a physical movement empire and adapted it for the digital creator. this is the exact system i wish i had 15 years ago.
+                  I took everything I learned scaling a physical movement empire and adapted it for the digital creator. this is the exact system I wish I had 15 years ago.
                 </p>
               </div>
             </div>
@@ -224,11 +253,53 @@ export default function Coach() {
         </div>
       </section>
 
-      {/* Program Details */}
+      {/* The Coaching Team */}
       <section className="py-32 px-6">
+        <div className="max-w-4xl mx-auto">
+          <div className="mb-16 md:text-right">
+            <h2 className="text-4xl md:text-5xl font-black tracking-tighter mb-4">assistant coaches</h2>
+            <p className={`text-xl font-medium ${themeClasses.muted}`}>
+              the team helping you build your brand and attract more clients.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-12 gap-12 items-center">
+            <div className="md:col-span-7 md:order-1 order-2">
+              <h3 className="text-3xl font-black tracking-tighter mb-6">taylor carpenter</h3>
+              <div className={`space-y-6 text-lg leading-relaxed font-medium ${themeClasses.muted}`}>
+                <p>
+                  as an assistant coach at Apex, taylor specializes in helping parkour athletes and movement professionals build their digital presence.
+                </p>
+                <p>
+                  her primary focus is coaching you on how to create better content and grow your personal brand online, giving you the tools to stand out in a crowded market.
+                </p>
+                <p className={`text-xl font-bold ${themeClasses.text}`}>
+                  she turns raw talent into recognizable brands so you can attract more clients and monetize your passion effectively.
+                </p>
+              </div>
+            </div>
+            <div className="md:col-span-5 md:order-2 order-1 relative">
+              <div className="aspect-[4/5] rounded-2xl overflow-hidden">
+                <img 
+                  src="/taylor.jpg" 
+                  alt="Taylor Carpenter, Assistant Coach" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className={`absolute -bottom-6 -left-6 p-6 rounded-2xl border-2 ${themeClasses.card} w-64`}>
+                <div className="text-sm font-bold tracking-widest uppercase mb-2">Taylor Carpenter</div>
+                <div className="font-medium text-sm">assistant coach & content strategist</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Program Details */}
+      <section className={`py-32 px-6 border-y ${themeClasses.border} ${themeClasses.bg === 'bg-zinc-950' ? 'bg-zinc-900/30' : 'bg-neutral-50/50'}`}>
         <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-black lowercase tracking-tighter mb-6">inside the program.</h2>
-          <p className={`text-xl mb-16 font-medium lowercase max-w-2xl mx-auto ${themeClasses.muted}`}>
+          <h2 className="text-4xl md:text-5xl font-black tracking-tighter mb-6">inside the program</h2>
+          <p className={`text-xl mb-16 font-medium max-w-2xl mx-auto ${themeClasses.muted}`}>
             we don't just give you courses. we build your business infrastructure alongside you.
           </p>
 
@@ -252,8 +323,8 @@ export default function Coach() {
             ].map((feature, i) => (
               <div key={i} className={`p-8 rounded-2xl border-2 ${themeClasses.card}`}>
                 {feature.icon}
-                <h3 className="text-2xl font-black lowercase mb-4">{feature.title}</h3>
-                <p className={`font-medium lowercase leading-relaxed ${themeClasses.muted}`}>
+                <h3 className="text-2xl font-black mb-4">{feature.title}</h3>
+                <p className={`font-medium leading-relaxed ${themeClasses.muted}`}>
                   {feature.desc}
                 </p>
               </div>
@@ -264,26 +335,106 @@ export default function Coach() {
             {[
               {
                 icon: <Award className="w-8 h-8 mb-4 text-amber-500" />,
-                title: "apex L1 parkour",
+                title: "Apex L1 parkour",
                 desc: "our newly redesigned fundamental coaching certification for parkour coaches. the industry standard for safe, effective instruction."
               },
               {
                 icon: <Medal className="w-8 h-8 mb-4 text-amber-500" />,
-                title: "apex L2 parkour",
+                title: "Apex L2 parkour",
                 desc: "publicly available for the first time. advanced programming, skill progression, and coaching methodology for elite practitioners."
               },
               {
                 icon: <Zap className="w-8 h-8 mb-4 text-amber-500" />,
-                title: "apex mini-certs",
+                title: "Apex mini-certs",
                 desc: "for the first time, mini certifications to demonstrate expertise in specific styles of parkour training: strength, speed, and skill."
               }
             ].map((feature, i) => (
               <div key={i + 3} className={`p-8 rounded-2xl border-2 ${themeClasses.card}`}>
                 {feature.icon}
-                <h3 className="text-2xl font-black lowercase mb-4">{feature.title}</h3>
-                <p className={`font-medium lowercase leading-relaxed ${themeClasses.muted}`}>
+                <h3 className="text-2xl font-black mb-4">{feature.title}</h3>
+                <p className={`font-medium leading-relaxed ${themeClasses.muted}`}>
                   {feature.desc}
                 </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className={`py-32 px-6 border-t ${themeClasses.border} ${themeClasses.bg === 'bg-zinc-950' ? 'bg-zinc-900/30' : 'bg-neutral-50/50'}`}>
+        <div className="max-w-3xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-black tracking-tighter mb-4">frequently asked questions</h2>
+            <p className={`text-lg font-medium ${themeClasses.muted}`}>Everything you need to know about the Apex Method cohort.</p>
+          </div>
+          <div className="space-y-4">
+            {[
+              {
+                q: "I'm already making good money as a coach. Why do I need the Apex Method?",
+                a: "Even successful coaches often hit income and lifestyle ceilings. The Apex Method helps you break through to premium pricing while working fewer hours. Our most successful graduates were already good coaches who wanted to master the methodology that sets industry leaders apart."
+              },
+              {
+                q: "How is the Apex Method different from other fitness certifications?",
+                a: "Most certifications teach you information. Our program teaches you the complete Apex Method through implementation. You'll build your entire practice inside our ecosystem during the cohort, with direct feedback from the founders. You graduate with a functioning premium practice using proven methodology, not just a certificate."
+              },
+              {
+                q: "What exactly is the Apex Method of Coaching?",
+                a: "It's our comprehensive system for delivering truly personalized movement coaching. The Apex Method teaches you to assess each athlete systematically, design programs based on their unique needs that also include longevity and lifestyle considerations, and deliver ongoing coaching that creates lasting results. It's the methodology that separates premium coaches from the crowd."
+              },
+              {
+                q: "Can I complete this while coaching part-time or full time?",
+                a: "Yes. The Apex Method is designed for working coaches. Live sessions are scheduled to accommodate most work schedules, and all content is recorded for flexibility. The Apex Method is built to integrate into any coaching practice."
+              },
+              {
+                q: "What if I've never used online coaching platforms before?",
+                a: "Perfect! We include guided setup. The Apex Method is designed to work seamlessly with modern coaching tools - most coaches master the tech within 2-3 weeks. Our support team ensures you're confident with the technology."
+              },
+              {
+                q: "Is this only for parkour coaches?",
+                a: "No. The Apex Method works for any coach wanting to deliver personalized service: online coaches, gym owners, strength coaches, freerunning coaches, and movement practitioners. The methodology adapts to any coaching environment."
+              },
+              {
+                q: "What ongoing support do I get after graduation?",
+                a: "You'll get access to ongoing Apex Method education, a lifetime alumni community, monthly alumni calls, and opportunities for advanced business mentorship. Plus, the Apex Method gives you frameworks you'll use for your entire career."
+              },
+              {
+                q: "How quickly will I see results from implementing the Apex Method?",
+                a: "Most coaches start implementing premium pricing strategies by week 4 of the cohort. Full methodology mastery and practice transformation typically occurs within 3-6 months post-graduation, with income increases continuing as you refine your application of the Apex Method."
+              },
+              {
+                q: "What if I don't have clients to practice the Apex Method on?",
+                a: "We provide case studies and can connect you with volunteer clients if needed. Many coaches use this program and the Apex Method to attract their first premium clients through the professional systems and methodology they master during the program."
+              },
+              {
+                q: "Can I coach online or in-person?",
+                a: "The Apex Method works for both. Our systems seamlessly support remote coaching, in-person coaching, or hybrid approaches."
+              }
+            ].map((faq, i) => (
+              <div key={i} className={`border-4 overflow-hidden ${theme === 'dark' ? 'bg-zinc-950 border-white/10' : 'bg-white border-black/10'}`}>
+                <button 
+                  onClick={() => setOpenFaqIndex(openFaqIndex === i ? null : i)}
+                  className="w-full text-left p-6 md:p-8 flex items-center justify-between gap-4 focus:outline-none cursor-pointer"
+                >
+                  <h3 className="text-lg md:text-2xl font-black tracking-tight leading-tight pr-4">{faq.q}</h3>
+                  <div className={`shrink-0 w-8 h-8 rounded-none border-2 ${theme === 'dark' ? 'border-white/20 bg-white/5' : 'border-black/20 bg-black/5'} flex items-center justify-center transition-transform duration-300 ${openFaqIndex === i ? 'rotate-180' : ''}`}>
+                    <ChevronDown className="w-4 h-4 text-amber-500" />
+                  </div>
+                </button>
+                <AnimatePresence>
+                  {openFaqIndex === i && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: 'auto', opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      <div className={`px-6 pb-6 md:px-8 md:pb-8 pt-0 leading-relaxed text-sm md:text-base font-medium ${themeClasses.muted}`}>
+                        {faq.a}
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </div>
             ))}
           </div>
@@ -293,8 +444,8 @@ export default function Coach() {
       {/* CTA */}
       <section className={`py-32 px-6 text-center border-t ${themeClasses.border}`}>
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-5xl md:text-6xl font-black lowercase tracking-tighter mb-6">secure your spot for october 3rd.</h2>
-          <p className={`text-xl mb-12 font-medium lowercase ${themeClasses.muted}`}>
+          <h2 className="text-5xl md:text-6xl font-black tracking-tighter mb-6">secure your spot for october 3rd</h2>
+          <p className={`text-xl mb-12 font-medium ${themeClasses.muted}`}>
             we only accept a small group of coaches who have the drive to execute. let's build your empire.
           </p>
           <a 

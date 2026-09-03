@@ -8,3 +8,4 @@ export { FaqSection } from './FaqSection';
 export { FinalCtaSection } from './FinalCtaSection';
 export { LibrarySection } from './LibrarySection';
 export { ProjectsSection } from './ProjectsSection';
+export { BlogSection } from './BlogSection';

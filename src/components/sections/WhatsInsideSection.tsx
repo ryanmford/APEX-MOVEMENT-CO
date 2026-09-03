@@ -8,7 +8,7 @@ interface WhatsInsideSectionProps {
 }
 
 export function WhatsInsideSection({
-  title = <>your training just got an <span className="text-amber-500 inline-block border-b-4 border-amber-500">upgrade.</span></>,
+  title = <>your training just got an <span className="text-amber-500 inline-block border-b-4 border-amber-500">upgrade</span></>,
   description = "Coaching, Community, and Systems. Everything you need to train at a higher level, in one place."
 }: WhatsInsideSectionProps) {
   const { theme } = useAppContext();
@@ -17,8 +17,8 @@ export function WhatsInsideSection({
     <section className={`py-16 md:py-24 px-4 md:px-6 ${theme === 'dark' ? 'bg-zinc-950 border-white/5' : 'bg-white border-black/5'} border-t-2`}>
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16 md:mb-20 max-w-3xl mx-auto">
-            <h2 className={`text-4xl md:text-6xl font-black lowercase tracking-tighter mb-4 md:mb-6`}>{title}</h2>
-            <p className={`text-lg md:text-xl ${theme === 'dark' ? 'text-zinc-400' : 'text-zinc-600'} font-medium lowercase`}>{description}</p>
+            <h2 className={`text-4xl md:text-6xl font-black tracking-tighter mb-4 md:mb-6`}>{title}</h2>
+            <p className={`text-lg md:text-xl ${theme === 'dark' ? 'text-zinc-400' : 'text-zinc-600'} font-medium`}>{description}</p>
         </div>
 
         <div className="space-y-24 md:space-y-32">
@@ -53,8 +53,8 @@ export function WhatsInsideSection({
               <div className="inline-flex px-3 py-1 rounded-full bg-amber-400/10 text-amber-500 text-[10px] md:text-[11px] font-black tracking-widest uppercase mb-6">
                 Drill Book & Library
               </div>
-              <h3 className="text-3xl lg:text-5xl font-black lowercase tracking-tighter mb-4">apex movement library</h3>
-              <p className={`${theme === 'dark' ? 'text-zinc-400' : 'text-zinc-600'} leading-relaxed text-lg font-medium lowercase`}>Your go-to library of powerful, game-tested drills used to build our world champion parkour athletes. Build technical mastery and habits that transfer directly to the real world.</p>
+              <h3 className="text-3xl lg:text-5xl font-black tracking-tighter mb-4">Apex Movement library</h3>
+              <p className={`${theme === 'dark' ? 'text-zinc-400' : 'text-zinc-600'} leading-relaxed text-lg font-medium`}>Your go-to library of powerful, game-tested drills used to build our world champion parkour athletes. Build technical mastery and habits that transfer directly to the real world.</p>
             </div>
           </div>
 
@@ -64,8 +64,8 @@ export function WhatsInsideSection({
               <div className="inline-flex px-3 py-1 rounded-full bg-amber-400/10 text-amber-500 text-[10px] md:text-[11px] font-black tracking-widest uppercase mb-6">
                 The Skool Community
               </div>
-              <h3 className="text-3xl lg:text-5xl font-black lowercase tracking-tighter mb-4">your 24/7 coaching feed.</h3>
-              <p className={`${theme === 'dark' ? 'text-zinc-400' : 'text-zinc-600'} leading-relaxed text-lg font-medium lowercase`}>Our community runs natively on Skool, giving you an addictive, gamified, distraction-free environment to post your training clips, get expert film analysis, and level up with other athletes worldwide.</p>
+              <h3 className="text-3xl lg:text-5xl font-black tracking-tighter mb-4">your 24/7 coaching feed</h3>
+              <p className={`${theme === 'dark' ? 'text-zinc-400' : 'text-zinc-600'} leading-relaxed text-lg font-medium`}>Our community runs natively on Skool, giving you an addictive, gamified, distraction-free environment to post your training clips, get expert film analysis, and level up with other athletes worldwide.</p>
             </div>
             <div className="relative group perspective-1000">
               <div className="absolute -inset-1 bg-gradient-to-r from-amber-400/20 to-orange-500/20 blur-xl opacity-50 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>

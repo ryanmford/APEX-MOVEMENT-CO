@@ -10,10 +10,10 @@ export function TestimonialsSection() {
       <div className={`absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] ${theme === 'dark' ? 'from-amber-400/5 via-zinc-950 to-zinc-950' : 'from-amber-400/10 via-white to-white'} pointer-events-none`} />
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center max-w-2xl mx-auto mb-12 md:mb-16">
-          <h2 className={`text-4xl md:text-6xl font-black tracking-tighter lowercase mb-4 md:mb-6`}>
-            what athletes are saying about <span className="text-amber-500">apex.</span>
+          <h2 className={`text-4xl md:text-6xl font-black tracking-tighter mb-4 md:mb-6`}>
+            what athletes are saying about <span className="text-amber-500">Apex</span>
           </h2>
-          <p className={`text-base md:text-xl ${theme === 'dark' ? 'text-zinc-400' : 'text-zinc-600'} font-medium lowercase`}>
+          <p className={`text-base md:text-xl ${theme === 'dark' ? 'text-zinc-400' : 'text-zinc-600'} font-medium`}>
             Real feedback from tracers and competitors across every level who put Apex's systems to work.
           </p>
         </div>
@@ -51,7 +51,7 @@ export function TestimonialsSection() {
                    <Star key={j} className="w-4 h-4 text-amber-500 fill-current" />
                 ))}
               </div>
-              <p className={`${theme === 'dark' ? 'text-zinc-300' : 'text-zinc-700'} text-sm md:text-base font-medium leading-relaxed mb-6 block flex-1 lowercase italic`}>"{t.text}"</p>
+              <p className={`${theme === 'dark' ? 'text-zinc-300' : 'text-zinc-700'} text-sm md:text-base font-medium leading-relaxed mb-6 block flex-1 italic`}>"{t.text}"</p>
               <div className="flex items-center gap-3 mt-auto">
                 <div className={`w-10 h-10 ${theme === 'dark' ? 'bg-zinc-800 border-white/10' : 'bg-zinc-200 border-black/10'} border-2 flex items-center justify-center text-sm font-black uppercase`}>
                   {t.author.substring(0, 2)}

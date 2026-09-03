@@ -18,8 +18,8 @@ export function TheApexMethodSection() {
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-400/10 text-amber-500 text-sm font-bold tracking-widest uppercase mb-6">
               The 2-Tier Coaching Model
             </div>
-            <h2 className={`text-4xl md:text-5xl font-black lowercase tracking-tighter mb-4 md:mb-6`}>break the hourly class trap.</h2>
-            <p className={`text-lg md:text-xl ${theme === 'dark' ? 'text-zinc-400' : 'text-zinc-600'} mb-8 leading-relaxed font-medium lowercase`}>
+            <h2 className={`text-4xl md:text-5xl font-black tracking-tighter mb-4 md:mb-6`}>break the hourly class trap</h2>
+            <p className={`text-lg md:text-xl ${theme === 'dark' ? 'text-zinc-400' : 'text-zinc-600'} mb-8 leading-relaxed font-medium`}>
               Burnout happens when your income is capped by the number of group classes you can teach. The Apex Method is a two-tier operating system that feeds high-ticket individualized programming from your group class pipeline.
             </p>
             
@@ -34,8 +34,8 @@ export function TheApexMethodSection() {
                     {item.icon}
                   </div>
                   <div>
-                    <h4 className={`text-lg font-black lowercase tracking-tight mb-1`}>{item.title}</h4>
-                    <p className={`${theme === 'dark' ? 'text-zinc-400' : 'text-zinc-600'} leading-relaxed text-sm font-medium lowercase`}>{item.desc}</p>
+                    <h4 className={`text-lg font-black tracking-tight mb-1`}>{item.title}</h4>
+                    <p className={`${theme === 'dark' ? 'text-zinc-400' : 'text-zinc-600'} leading-relaxed text-sm font-medium`}>{item.desc}</p>
                   </div>
                 </div>
               ))}

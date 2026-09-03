@@ -28,11 +28,11 @@ export function ProjectsSection() {
                  <div className={`w-1.5 h-1.5 rounded-full ${theme === 'dark' ? 'bg-white' : 'bg-black'} opacity-50 group-hover:opacity-100 transition-all`}></div>
                  {project.year}
               </div>
-              <h3 className="text-2xl md:text-4xl font-black lowercase mb-4 md:mb-6 tracking-tight leading-[0.9] flex items-center justify-between gap-4 break-words">
+              <h3 className="text-2xl md:text-4xl font-black mb-4 md:mb-6 tracking-tight leading-[0.9] flex items-center justify-between gap-4 break-words">
                   {project.title}
                   <Plus size={18} className="shrink-0 opacity-50 group-hover:opacity-100 group-hover:rotate-90 transition-all duration-500" />
               </h3>
-              <p className="text-xs md:text-base opacity-70 leading-relaxed lowercase line-clamp-3 font-medium group-hover:opacity-100 transition-opacity">{project.description}</p>
+              <p className="text-xs md:text-base opacity-70 leading-relaxed line-clamp-3 font-medium group-hover:opacity-100 transition-opacity">{project.description}</p>
             </div>
           ))}
         </div>

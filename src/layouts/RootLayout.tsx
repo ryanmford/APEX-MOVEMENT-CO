@@ -26,8 +26,7 @@ export default function RootLayout() {
   }, [isMenuOpen]);
 
   return (
-    <div className={`min-h-screen font-sans antialiased overflow-x-hidden transition-colors duration-700 selection:bg-amber-400 selection:text-black 
-      ${theme === 'dark' ? 'bg-black text-white' : 'bg-white text-black'}`}>
+    <div className={`min-h-screen font-sans antialiased overflow-x-hidden transition-colors duration-700 selection:bg-amber-400 selection:text-black ${theme === 'dark' ? 'bg-black text-white' : 'bg-white text-black'}`}>
       
       <div className="fixed inset-0 pointer-events-none opacity-[0.03] z-[1000] bg-[url('https://grainy-gradients.vercel.app/noise.svg')]"></div>
 

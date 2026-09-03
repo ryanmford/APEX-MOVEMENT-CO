@@ -16,10 +16,10 @@ export function CoachesSection() {
             </span>
             20+ Years Coaching • 50,000+ People Taught
           </div>
-          <h2 className={`text-4xl md:text-6xl font-black lowercase tracking-tighter mb-4 md:mb-6`}>
+          <h2 className={`text-4xl md:text-6xl font-black tracking-tighter mb-4 md:mb-6`}>
             learn straight from the source.
           </h2>
-          <p className={`text-base md:text-xl ${theme === 'dark' ? 'text-zinc-400' : 'text-zinc-600'} font-medium lowercase`}>
+          <p className={`text-base md:text-xl ${theme === 'dark' ? 'text-zinc-400' : 'text-zinc-600'} font-medium`}>
             When you join our coaching programs, you aren't just getting curriculum. You get direct access and feedback from the industry's most elite coaches.
           </p>
         </div>
@@ -35,9 +35,9 @@ export function CoachesSection() {
                   <div className="absolute inset-0 bg-amber-400/10"></div>
                   <Users className={`w-10 h-10 ${theme === 'dark' ? 'text-zinc-500' : 'text-zinc-400'}`} />
                </div>
-               <h3 className={`text-2xl font-black lowercase tracking-tight mb-1`}>{coach.name}</h3>
+               <h3 className={`text-2xl font-black tracking-tight mb-1`}>{coach.name}</h3>
                <p className="text-amber-500 text-[10px] font-black tracking-[0.2em] uppercase mb-4">{coach.role}</p>
-               <p className={`${theme === 'dark' ? 'text-zinc-400' : 'text-zinc-600'} text-sm leading-relaxed font-medium lowercase`}>
+               <p className={`${theme === 'dark' ? 'text-zinc-400' : 'text-zinc-600'} text-sm leading-relaxed font-medium`}>
                  {coach.desc}
                </p>
              </div>

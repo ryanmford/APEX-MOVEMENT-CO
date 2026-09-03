@@ -59,8 +59,7 @@ export const Image = memo(({ src, alt, className = "", coloredOnHover = false, f
         src={src} 
         alt={alt} 
         onLoad={() => setLoaded(true)}
-        className={`w-full h-full object-cover transition-all duration-1000 ease-out ${loaded ? 'opacity-100 scale-100' : 'opacity-0 scale-105'} 
-        ${forceColor ? 'grayscale-0' : (coloredOnHover ? 'grayscale group-hover:grayscale-0 group-hover:scale-105' : 'grayscale-0')} ${className}`}
+        className={`w-full h-full object-cover transition-all duration-1000 ease-out ${loaded ? 'opacity-100 scale-100' : 'opacity-0 scale-105'} ${forceColor ? 'grayscale-0' : (coloredOnHover ? 'grayscale group-hover:grayscale-0 group-hover:scale-105' : 'grayscale-0')} ${className}`}
         loading="lazy"
       />
       <div className="absolute inset-0 pointer-events-none border-[1px] border-white/5 mix-blend-overlay"></div>
@@ -76,8 +75,8 @@ export const Image = memo(({ src, alt, className = "", coloredOnHover = false, f
 export const SectionHeader = memo(({ badge, title, description, theme = 'light' }: { badge: string, title: string, description: string, theme?: string }) => (
   <div className="space-y-4 md:space-y-6">
     <Badge theme={theme}>{badge}</Badge>
-    <h2 className="text-5xl sm:text-7xl md:text-9xl font-black tracking-tighter lowercase leading-none">{title}</h2>
-    <p className="text-base md:text-xl opacity-70 lowercase italic font-medium leading-tight max-w-md">
+    <h2 className="text-5xl sm:text-7xl md:text-9xl font-black tracking-tighter leading-none">{title}</h2>
+    <p className="text-base md:text-xl opacity-70 italic font-medium leading-tight max-w-md">
       {description}
     </p>
   </div>

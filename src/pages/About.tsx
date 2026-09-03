@@ -5,6 +5,7 @@ import { BIOS } from '../data';
 import { Button, Heading, Badge, Image } from '../components/ui';
 import { useAppContext } from '../contexts/AppContext';
 import { SEO } from '../components/SEO';
+import { ProjectsSection } from '../components/sections';
 
 const UI = { Button, Heading, Badge, Image };
 
@@ -34,23 +35,13 @@ export default function About() {
               <UI.Badge theme={theme} className="mb-6 md:mb-8">{bio.role}</UI.Badge>
               <h2 className="text-4xl sm:text-6xl md:text-8xl font-black uppercase tracking-tighter mb-6 md:mb-12 leading-none break-words">{bio.name}</h2>
               <p className="text-lg sm:text-xl md:text-3xl opacity-80 leading-relaxed mb-10 md:mb-12 max-w-2xl font-medium">{bio.story}</p>
-              <div className="grid grid-cols-2 gap-8 md:gap-12 pt-8 md:pt-12 border-t-2 border-current/20">
-                <div>
-                  <span className="text-[9px] md:text-[10px] font-black uppercase tracking-[0.4em] opacity-30 block mb-2 md:mb-4">Status</span>
-                  <span className="text-xl md:text-2xl font-black uppercase">{bio.metrics}</span>
-                </div>
-                {bio.focus.map((f, idx) => (
-                  <div key={idx}>
-                    <span className="text-[9px] md:text-[10px] font-black uppercase tracking-[0.4em] opacity-30 block mb-2 md:mb-4">Core 0{idx+1}</span>
-                    <span className="text-xl md:text-2xl font-black uppercase break-words leading-tight">{f}</span>
-                  </div>
-                ))}
-              </div>
+
             </div>
           </div>
         ))}
       </div>
     </section>
+    <ProjectsSection />
     </>
   );
 }

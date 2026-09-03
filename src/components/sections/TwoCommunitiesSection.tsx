@@ -11,8 +11,8 @@ export function TwoCommunitiesSection() {
     <section id="communities" className={`py-16 md:py-24 ${theme === 'dark' ? 'bg-zinc-900/50 border-white/5' : 'bg-neutral-100 border-black/5'} border-t-2 px-4 md:px-6`}>
       <div className="max-w-7xl mx-auto">
         <div className="text-center max-w-2xl mx-auto mb-12 md:mb-16">
-          <h2 className={`text-4xl md:text-5xl font-black lowercase tracking-tighter mb-4`}>two ways to train with us</h2>
-          <p className={`${theme === 'dark' ? 'text-zinc-400' : 'text-zinc-600'} text-base md:text-lg font-medium lowercase`}>Start in our free community, then upgrade your training. Or, if you're a coach, join our elite certification cohort.</p>
+          <h2 className={`text-4xl md:text-5xl font-black tracking-tighter mb-4`}>two ways to train with us</h2>
+          <p className={`${theme === 'dark' ? 'text-zinc-400' : 'text-zinc-600'} text-base md:text-lg font-medium`}>Start in our free community, then upgrade your training. Or, if you're a coach, join our elite certification cohort.</p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8">
@@ -26,13 +26,13 @@ export function TwoCommunitiesSection() {
             <div className={`w-14 h-14 ${theme === 'dark' ? 'bg-zinc-800 text-white' : 'bg-zinc-200 text-black'} flex items-center justify-center mb-6`}>
               <Mountain className="w-7 h-7" />
             </div>
-            <h3 className={`text-3xl font-black lowercase tracking-tighter mb-3`}>apex movement skool</h3>
-            <p className={`${theme === 'dark' ? 'text-zinc-400' : 'text-zinc-600'} mb-8 leading-relaxed font-medium lowercase`}>
+            <h3 className={`text-3xl font-black tracking-tighter mb-3`}>Apex Movement skool</h3>
+            <p className={`${theme === 'dark' ? 'text-zinc-400' : 'text-zinc-600'} mb-8 leading-relaxed font-medium`}>
               For athletes and coaches focused on their own movement. Connect with others for free, then upgrade inside the platform to group coaching or 1-on-1 individual design.
             </p>
             <ul className="space-y-4 mb-8">
               {['Free worldwide community & connections', 'Focus purely on your own training', 'Upgrade to group coaching or individualized design'].map((feature, i) => (
-                <li key={i} className={`flex items-start gap-3 ${theme === 'dark' ? 'text-zinc-300' : 'text-zinc-700'} font-medium lowercase`}>
+                <li key={i} className={`flex items-start gap-3 ${theme === 'dark' ? 'text-zinc-300' : 'text-zinc-700'} font-medium`}>
                   <CheckCircle2 className="w-5 h-5 text-zinc-500 shrink-0 mt-0.5" />
                   <span>{feature}</span>
                 </li>
@@ -61,13 +61,13 @@ export function TwoCommunitiesSection() {
               <div className="w-14 h-14 bg-amber-400/10 flex items-center justify-center mb-6 border-2 border-amber-500/20">
                 <span className="text-[20px] text-amber-500 font-black uppercase">AC</span>
               </div>
-              <h3 className={`text-3xl font-black lowercase tracking-tighter mb-3`}>premium coaches cohort</h3>
-              <p className={`${theme === 'dark' ? 'text-zinc-400' : 'text-zinc-600'} mb-8 leading-relaxed font-medium lowercase`}>
+              <h3 className={`text-3xl font-black tracking-tighter mb-3`}>premium coaches cohort</h3>
+              <p className={`${theme === 'dark' ? 'text-zinc-400' : 'text-zinc-600'} mb-8 leading-relaxed font-medium`}>
                 For gym owners and coaches ready to level up. Master the individual design model to increase income, get better results, and build a sustainable remote lifestyle.
               </p>
               <ul className="space-y-4 mb-8">
                 {['Level 1 & 2 Parkour Coaching Certification', '3-month intensive business & coaching cohort', 'Master the individual design training model', 'Build a sustainable & asynchronous income'].map((feature, i) => (
-                  <li key={i} className={`flex items-start gap-3 ${theme === 'dark' ? 'text-zinc-300' : 'text-zinc-700'} font-medium lowercase`}>
+                  <li key={i} className={`flex items-start gap-3 ${theme === 'dark' ? 'text-zinc-300' : 'text-zinc-700'} font-medium`}>
                     <CheckCircle2 className="w-5 h-5 text-amber-500 shrink-0 mt-0.5" />
                     <span>{feature}</span>
                   </li>

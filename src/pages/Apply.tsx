@@ -113,10 +113,10 @@ export default function Apply() {
                 <div className="inline-flex items-center justify-center gap-2 px-3 py-1 rounded-full bg-amber-400/10 text-amber-500 text-xs font-bold tracking-widest uppercase mb-6">
                   Step 1 of {questions.length + 1}
                 </div>
-                <h1 className="text-3xl md:text-5xl font-black lowercase tracking-tighter leading-tight mb-4">
+                <h1 className="text-3xl md:text-5xl font-black tracking-tighter leading-tight mb-4">
                   who are we speaking with?
                 </h1>
-                <p className={`text-lg font-medium lowercase ${theme === 'dark' ? 'text-zinc-400' : 'text-zinc-600'}`}>
+                <p className={`text-lg font-medium ${theme === 'dark' ? 'text-zinc-400' : 'text-zinc-600'}`}>
                   Enter your details to begin the application process.
                 </p>
               </div>
@@ -128,8 +128,7 @@ export default function Apply() {
                   placeholder="Full Name"
                   value={contactInfo.name}
                   onChange={(e) => setContactInfo({ ...contactInfo, name: e.target.value })}
-                  className={`w-full p-5 border-2 text-lg font-bold outline-none transition-colors
-                    ${theme === 'dark' ? 'bg-zinc-900 border-zinc-800 focus:border-zinc-500 placeholder-zinc-600' : 'bg-white border-zinc-200 focus:border-zinc-400 placeholder-zinc-400'}`}
+                  className={`w-full p-5 border-2 text-lg font-bold outline-none transition-colors ${theme === 'dark' ? 'bg-zinc-900 border-zinc-800 focus:border-zinc-500 placeholder-zinc-600' : 'bg-white border-zinc-200 focus:border-zinc-400 placeholder-zinc-400'}`}
                 />
                 <input 
                   type="email" 
@@ -137,13 +136,11 @@ export default function Apply() {
                   placeholder="Email Address"
                   value={contactInfo.email}
                   onChange={(e) => setContactInfo({ ...contactInfo, email: e.target.value })}
-                  className={`w-full p-5 border-2 text-lg font-bold outline-none transition-colors
-                    ${theme === 'dark' ? 'bg-zinc-900 border-zinc-800 focus:border-zinc-500 placeholder-zinc-600' : 'bg-white border-zinc-200 focus:border-zinc-400 placeholder-zinc-400'}`}
+                  className={`w-full p-5 border-2 text-lg font-bold outline-none transition-colors ${theme === 'dark' ? 'bg-zinc-900 border-zinc-800 focus:border-zinc-500 placeholder-zinc-600' : 'bg-white border-zinc-200 focus:border-zinc-400 placeholder-zinc-400'}`}
                 />
                 <button 
                   type="submit"
-                  className={`mt-4 w-full p-5 font-black uppercase tracking-[0.2em] flex items-center justify-center gap-2 transition-transform active:scale-[0.98]
-                    ${theme === 'dark' ? 'bg-white text-black hover:bg-zinc-200' : 'bg-black text-white hover:bg-zinc-800'}`}
+                  className={`mt-4 w-full p-5 font-black uppercase tracking-[0.2em] flex items-center justify-center gap-2 transition-transform active:scale-[0.98] ${theme === 'dark' ? 'bg-white text-black hover:bg-zinc-200' : 'bg-black text-white hover:bg-zinc-800'}`}
                 >
                   Start Application <ArrowRight size={18} />
                 </button>
@@ -164,7 +161,7 @@ export default function Apply() {
                 <div className="text-sm font-bold uppercase tracking-widest text-amber-500 mb-4">
                   Step {currentStepIndex + 2} of {questions.length + 1}
                 </div>
-                <h1 className="text-3xl md:text-5xl font-black lowercase tracking-tighter leading-tight">
+                <h1 className="text-3xl md:text-5xl font-black tracking-tighter leading-tight">
                   {currentQuestion.title}
                 </h1>
               </div>
@@ -174,13 +171,9 @@ export default function Apply() {
                   <button
                     key={idx}
                     onClick={() => handleOptionClick(option.label, option.next)}
-                    className={`w-full text-left p-6 border-2 transition-all duration-200 active:scale-[0.98]
-                      ${theme === 'dark' 
-                        ? 'border-zinc-800 bg-zinc-900/50 hover:bg-zinc-800 hover:border-zinc-600' 
-                        : 'border-zinc-200 bg-white hover:bg-zinc-50 hover:border-zinc-400'
-                      }`}
+                    className={`w-full text-left p-6 border-2 transition-all duration-200 active:scale-[0.98] ${theme === 'dark' ? 'border-zinc-800 bg-zinc-900/50 hover:bg-zinc-800 hover:border-zinc-600' : 'border-zinc-200 bg-white hover:bg-zinc-50 hover:border-zinc-400' }`}
                   >
-                    <span className="text-lg md:text-xl font-bold lowercase">
+                    <span className="text-lg md:text-xl font-bold">
                       {option.label}
                     </span>
                   </button>
@@ -204,7 +197,7 @@ export default function Apply() {
               className="w-full flex flex-col items-center justify-center text-center py-20"
             >
               <Loader2 className="w-12 h-12 animate-spin text-amber-500 mb-6" />
-              <h2 className="text-2xl font-black tracking-tighter lowercase">saving application...</h2>
+              <h2 className="text-2xl font-black tracking-tighter">saving application...</h2>
             </motion.div>
           )}
 
@@ -219,10 +212,10 @@ export default function Apply() {
               <div className="w-16 h-16 rounded-full bg-zinc-800 flex items-center justify-center mb-6">
                 <XCircle className="w-8 h-8 text-zinc-400" />
               </div>
-              <h1 className="text-3xl md:text-4xl font-black lowercase tracking-tighter mb-4">
-                Not quite ready yet.
+              <h1 className="text-3xl md:text-4xl font-black tracking-tighter mb-4">
+                Not quite ready yet
               </h1>
-              <p className={`text-lg mb-8 max-w-md ${theme === 'dark' ? 'text-zinc-400' : 'text-zinc-600'} lowercase font-medium`}>
+              <p className={`text-lg mb-8 max-w-md ${theme === 'dark' ? 'text-zinc-400' : 'text-zinc-600'} font-medium`}>
                 It looks like you aren't ready for the $3k intensive right now. That's okay. We recommend joining our community to level up your skills first.
               </p>
               <a 
@@ -244,10 +237,10 @@ export default function Apply() {
               <div className="w-16 h-16 rounded-full bg-amber-500/20 flex items-center justify-center mb-6">
                 <CheckCircle className="w-8 h-8 text-amber-500" />
               </div>
-              <h1 className="text-3xl md:text-4xl font-black lowercase tracking-tighter mb-4">
-                Application Accepted.
+              <h1 className="text-3xl md:text-4xl font-black tracking-tighter mb-4">
+                Application Accepted
               </h1>
-              <p className={`text-lg mb-8 max-w-md ${theme === 'dark' ? 'text-zinc-400' : 'text-zinc-600'} lowercase font-medium`}>
+              <p className={`text-lg mb-8 max-w-md ${theme === 'dark' ? 'text-zinc-400' : 'text-zinc-600'} font-medium`}>
                 You qualify for the cohort. Book your strategy session below to secure your spot before they fill up.
               </p>
               

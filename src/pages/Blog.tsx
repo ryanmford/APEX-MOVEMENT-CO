@@ -18,7 +18,7 @@ export default function Blog() {
           <ChevronLeft size={18} className="group-hover:-translate-x-2 transition-transform" /> Return Home
         </button>
         <Heading>blog.</Heading>
-        <p className="text-xl sm:text-2xl md:text-3xl font-medium opacity-60 lowercase mt-6 md:mt-10 break-words mx-auto md:mx-0 max-w-2xl">
+        <p className="text-xl sm:text-2xl md:text-3xl font-medium opacity-60 mt-6 md:mt-10 break-words mx-auto md:mx-0 max-w-2xl">
           we've moved our writing to substack. subscribe to get our latest articles on movement science, culture, and training directly in your inbox.
         </p>
       </div>
@@ -35,7 +35,7 @@ export default function Blog() {
         </div>
         
         <div className="text-center space-y-8">
-           <h2 className="text-2xl md:text-4xl font-black lowercase tracking-tighter">join the email list.</h2>
+           <h2 className="text-2xl md:text-4xl font-black tracking-tighter">join the email list</h2>
            <Button 
              onClick={() => window.open('https://apexmovement.substack.com/', '_blank')}
              theme={theme}

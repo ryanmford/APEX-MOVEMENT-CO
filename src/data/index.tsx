@@ -7,7 +7,7 @@ export const GIF_POOL = [
 ];
 
 export const CONFIG = {
-  brand: "apex movement",
+  brand: "Apex Movement",
   tagline: "move better in the real world.",
   subline: "efficiency is the highest form of truth.",
   cta: "JOIN THE COMMUNITY",
@@ -36,7 +36,7 @@ export const BIOS = [
     story: "Ryan founded the first dedicated parkour gym in the Western Hemisphere in 2006. Author of 'Parkour Strength Training', he has spent two decades decoding the physiological requirements of explosive movement.",
     focus: ["Anatomy", "Plyometric Load", "Pedagogy"],
     metrics: "Founder",
-    gif: GIF_POOL[0]
+    gif: "/ryan.jpg"
   }
 ];
 
@@ -84,7 +84,7 @@ export const PRODUCTS = [
   { 
     id: "cert", 
     title: "coaching standards", 
-    blurb: "The APCC Standard. APEX Parkour Coaching Certification. Transition from intuitive movement to formal pedagogy. Master the science of instructional logic and joined a global network.", 
+    blurb: "The APCC Standard. Apex Parkour Coaching Certification. Transition from intuitive movement to formal pedagogy. Master the science of instructional logic and joined a global network.", 
     cta: "get certified", 
     tag: "professional",
     gif: GIF_POOL[2] 

@@ -64,9 +64,9 @@ export function LibrarySection({
                  </span>
                  <ArrowRight size={18} className="opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500" />
               </div>
-              <h4 className="text-2xl md:text-4xl font-black lowercase leading-[0.9] tracking-tighter mb-6 md:mb-8 break-words">{item.title}</h4>
+              <h4 className="text-2xl md:text-4xl font-black leading-[0.9] tracking-tighter mb-6 md:mb-8 break-words">{item.title}</h4>
               <div className="pt-5 md:pt-6 border-t-2 border-current/10">
-                <p className="text-xs md:text-sm font-medium opacity-40 leading-snug lowercase italic">"{item.law}"</p>
+                <p className="text-xs md:text-sm font-medium opacity-40 leading-snug italic">"{item.law}"</p>
               </div>
             </div>
           </div>
