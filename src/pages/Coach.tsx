@@ -84,7 +84,7 @@ export default function Coach() {
               <a href="https://www.instagram.com/apexdenver" target="_blank" rel="noopener noreferrer" className={`block text-sm font-medium hover:opacity-80 transition-opacity ${themeClasses.accent}`}>6.4k Instagram</a>
             </div>
             <div>
-              <div className="text-2xl font-black mb-1">Melissa McQueen</div>
+              <div className="text-2xl font-black mb-1">Mel McQueen</div>
               <div className={`text-xs font-bold tracking-widest uppercase mb-1 ${themeClasses.muted}`}>Mar 2023 Cohort</div>
               <a href="https://www.instagram.com/mel2toes" target="_blank" rel="noopener noreferrer" className={`block text-sm font-medium hover:opacity-80 transition-opacity ${themeClasses.accent}`}>68.7k Instagram</a>
             </div>
@@ -117,6 +117,11 @@ export default function Coach() {
               <div className="text-2xl font-black mb-1">Masa Suzuki</div>
               <div className={`text-xs font-bold tracking-widest uppercase mb-1 ${themeClasses.muted}`}>Mar 2017 Cohort</div>
               <a href="https://www.instagram.com/shinobi_mover" target="_blank" rel="noopener noreferrer" className={`block text-sm font-medium hover:opacity-80 transition-opacity ${themeClasses.accent}`}>39.1k Instagram</a>
+            </div>
+            <div>
+              <div className="text-2xl font-black mb-1">Ken Kao</div>
+              <div className={`text-xs font-bold tracking-widest uppercase mb-1 ${themeClasses.muted}`}>Nov 2013 Cohort</div>
+              <a href="https://www.instagram.com/doctorkenpoleninja" target="_blank" rel="noopener noreferrer" className={`block text-sm font-medium hover:opacity-80 transition-opacity ${themeClasses.accent}`}>25.4k Instagram</a>
             </div>
             <div>
               <div className="text-2xl font-black mb-1">Brandon Douglass</div>
@@ -154,13 +159,23 @@ export default function Coach() {
               <a href="https://www.youtube.com/@FiMParkourGym" target="_blank" rel="noopener noreferrer" className={`block text-sm font-medium hover:opacity-80 transition-opacity ${themeClasses.accent}`}>12.1k YouTube</a>
             </div>
             <div>
+              <div className="text-2xl font-black mb-1">Alan Connealy</div>
+              <div className={`text-xs font-bold tracking-widest uppercase mb-1 ${themeClasses.muted}`}>Dec 2011 Cohort</div>
+              <a href="https://www.instagram.com/alanconnealy" target="_blank" rel="noopener noreferrer" className={`block text-sm font-medium hover:opacity-80 transition-opacity ${themeClasses.accent}`}>6.8k Instagram</a>
+            </div>
+            <div>
+              <div className="text-2xl font-black mb-1">Marlo Fisken</div>
+              <div className={`text-xs font-bold tracking-widest uppercase mb-1 ${themeClasses.muted}`}>Nov 2013 Cohort</div>
+              <a href="hhttps://www.instagram.com/marlofisken/" target="_blank" rel="noopener noreferrer" className={`block text-sm font-medium hover:opacity-80 transition-opacity ${themeClasses.accent}`}>125k Instagram</a>
+            </div>
+            <div>
               <div className="text-2xl font-black mb-1">Dylan Baker</div>
               <div className={`text-xs font-bold tracking-widest uppercase mb-1 ${themeClasses.muted}`}>Nov 2013 Cohort</div>
               <a href="https://www.instagram.com/dylanwellsbaker" target="_blank" rel="noopener noreferrer" className={`block text-sm font-medium hover:opacity-80 transition-opacity ${themeClasses.accent}`}>12.7k Instagram</a>
             </div>
             <div>
               <div className="text-2xl font-black mb-1">Megan McQueen</div>
-              <div className={`text-xs font-bold tracking-widest uppercase mb-1 ${themeClasses.muted}`}>Feb 2013 Cohort</div>
+              <div className={`text-xs font-bold tracking-widest uppercase mb-1 ${themeClasses.muted}`}>Mar 2023 Cohort</div>
               <a href="https://www.instagram.com/meganmcqueen_" target="_blank" rel="noopener noreferrer" className={`block text-sm font-medium hover:opacity-80 transition-opacity ${themeClasses.accent}`}>7.6k Instagram</a>
             </div>
             <div>
@@ -174,6 +189,11 @@ export default function Coach() {
               <a href="https://www.instagram.com/vinniecoryell" target="_blank" rel="noopener noreferrer" className={`block text-sm font-medium hover:opacity-80 transition-opacity ${themeClasses.accent}`}>7.95k YouTube</a>
             </div>
             <div>
+              <div className="text-2xl font-black mb-1">Brandee Laird</div>
+              <div className={`text-xs font-bold tracking-widest uppercase mb-1 ${themeClasses.muted}`}>Mar 2015 Cohort</div>
+              <a href="https://www.instagram.com/monkeemoves" target="_blank" rel="noopener noreferrer" className={`block text-sm font-medium hover:opacity-80 transition-opacity ${themeClasses.accent}`}>2.8k Instagram</a>
+            </div>
+            <div>
               <div className="text-2xl font-black mb-1">Jamie Rahn</div>
               <div className={`text-xs font-bold tracking-widest uppercase mb-1 ${themeClasses.muted}`}>Jul 2012 Cohort</div>
               <a href="https://www.instagram.com/jamierahn" target="_blank" rel="noopener noreferrer" className={`block text-sm font-medium hover:opacity-80 transition-opacity ${themeClasses.accent}`}>52.1k Instagram</a>
@@ -182,6 +202,16 @@ export default function Coach() {
               <div className="text-2xl font-black mb-1">Dante Grazioli</div>
               <div className={`text-xs font-bold tracking-widest uppercase mb-1 ${themeClasses.muted}`}>Jul 2013 Cohort</div>
               <a href="https://www.youtube.com/@grazida0276" target="_blank" rel="noopener noreferrer" className={`block text-sm font-medium hover:opacity-80 transition-opacity ${themeClasses.accent}`}>10k YouTube</a>
+            </div>
+            <div>
+              <div className="text-2xl font-black mb-1">Cory Storm Hollingsworth</div>
+              <div className={`text-xs font-bold tracking-widest uppercase mb-1 ${themeClasses.muted}`}>Mar 2013 Cohort</div>
+              <a href="https://www.instagram.com/coryjumps" target="_blank" rel="noopener noreferrer" className={`block text-sm font-medium hover:opacity-80 transition-opacity ${themeClasses.accent}`}>4.5k Instagram</a>
+            </div>
+            <div>
+              <div className="text-2xl font-black mb-1">Travis Lee</div>
+              <div className={`text-xs font-bold tracking-widest uppercase mb-1 ${themeClasses.muted}`}>Jul 2013 Cohort</div>
+              <a href="https://www.instagram.com/travisgrantlee" target="_blank" rel="noopener noreferrer" className={`block text-sm font-medium hover:opacity-80 transition-opacity ${themeClasses.accent}`}>10.7k Instagram</a>
             </div>
             <div>
               <div className="text-2xl font-black mb-1">Amos Rendao</div>
@@ -280,11 +310,11 @@ export default function Coach() {
           <div className="grid md:grid-cols-3 gap-6">
             <div className={`rounded-2xl border-2 ${themeClasses.card} overflow-hidden flex flex-col`}>
               <div className="aspect-square w-full overflow-hidden">
-                <img src="/taylor.jpg" alt="Taylor Carpenter" className="w-full h-full object-cover" />
+                <img src="/taylor-carpenter.JPG" alt="Taylor Carpenter" className="w-full h-full object-cover object-top" />
               </div>
               <div className="p-6 text-center flex-grow flex flex-col justify-center">
                 <h3 className="text-2xl font-black tracking-tighter mb-1">taylor carpenter</h3>
-                <p className={`text-sm font-medium mb-4 ${themeClasses.muted}`}>professional athlete & creator (633k IG)</p>
+                <p className={`text-sm font-medium mb-4 ${themeClasses.muted}`}>pro athlete & creator</p>
                 <div className="font-bold text-xs tracking-widest uppercase text-amber-500 mt-auto pt-2">coaching, content, branding</div>
               </div>
             </div>
@@ -295,7 +325,7 @@ export default function Coach() {
               </div>
               <div className="p-6 text-center flex-grow flex flex-col justify-center">
                 <h3 className="text-2xl font-black tracking-tighter mb-1">rob schihl</h3>
-                <p className={`text-sm font-medium mb-4 ${themeClasses.muted}`}>Apex Denver owner & WCT World Champion</p>
+                <p className={`text-sm font-medium mb-4 ${themeClasses.muted}`}>Apex Denver owner & World Champion</p>
                 <div className="font-bold text-xs tracking-widest uppercase text-amber-500 mt-auto pt-2">coaching, community, & culture</div>
               </div>
             </div>
@@ -485,7 +515,7 @@ export default function Coach() {
             rel="noopener noreferrer"
             className={`inline-flex items-center justify-center gap-3 px-10 py-6 font-black uppercase tracking-[0.2em] text-[13px] md:text-[14px] ${themeClasses.accentBg} hover:scale-105 active:scale-95 transition-all shadow-[0_0_40px_-10px_rgba(251,191,36,0.4)]`}
           >
-            Submit your application <ArrowRight className="w-5 h-5" />
+            Apply now <ArrowRight className="w-5 h-5" />
           </a>
         </div>
       </section>
