@@ -12,7 +12,7 @@ function SkoolHero() {
   const bgImage = GIF_POOL[0 % GIF_POOL.length];
   
   return (
-    <section className={`relative min-h-[100svh] flex flex-col justify-center pt-24 pb-16 md:pt-48 md:pb-32 overflow-hidden px-4 md:px-8 ${theme === 'dark' ? 'bg-zinc-950' : 'bg-neutral-50'}`}>
+    <section className={`relative min-h-[100svh] flex flex-col justify-center pt-28 pb-12 md:pt-48 md:pb-32 overflow-hidden px-4 md:px-8 ${theme === 'dark' ? 'bg-zinc-950' : 'bg-neutral-50'}`}>
       <div className="absolute inset-0 z-0">
         <div className={`absolute inset-0 bg-gradient-to-br ${theme === 'dark' ? 'from-zinc-950/95 via-zinc-950/80 to-zinc-950/95' : 'from-white/95 via-white/80 to-white/95'} z-10 transition-colors duration-1000`} />
         
@@ -56,11 +56,10 @@ function SkoolHero() {
       </div>
       
       <div 
-        className="absolute bottom-6 md:bottom-10 left-1/2 -translate-x-1/2 z-30 flex flex-col items-center gap-2 cursor-pointer opacity-30 hover:opacity-100 transition-opacity" 
+        className="absolute bottom-4 md:bottom-10 left-1/2 -translate-x-1/2 z-30 flex flex-col items-center gap-2 cursor-pointer opacity-30 hover:opacity-100 transition-opacity" 
         onClick={() => window.scrollBy({ top: window.innerHeight, behavior: 'smooth' })}
       >
-        <span className="text-[10px] font-black uppercase tracking-[0.3em]">more</span>
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="animate-bounce"><path d="m6 9 6 6 6-6"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="animate-bounce"><path d="m6 9 6 6 6-6"/></svg>
       </div>
     </section>
   );
@@ -71,22 +70,22 @@ function CoachStickySection() {
   const bgImage = GIF_POOL[1 % GIF_POOL.length];
   
   return (
-    <section className="py-32 md:py-48 px-6 bg-zinc-950 text-white relative overflow-hidden">
+    <section className="relative min-h-[100svh] flex flex-col justify-center pt-28 pb-12 md:pt-48 md:pb-24 px-6 bg-zinc-950 text-white overflow-hidden">
       <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-overlay pointer-events-none" />
-      <div className="max-w-7xl mx-auto relative z-10">
+      <div className="max-w-7xl mx-auto w-full relative z-10">
         <motion.div 
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8 }}
-          className="w-full mb-16 md:mb-24"
+          className="w-full mb-6 md:mb-16"
         >
-          <h2 className="text-[clamp(3rem,8vw,8rem)] font-black tracking-tighter leading-[0.85]">
+          <h2 className="text-[clamp(2.5rem,8vw,8rem)] font-black tracking-tighter leading-[0.85]">
             make parkour<br/>coaching a<br/>sustainable<br/>career.
           </h2>
         </motion.div>
         
-        <div className="flex flex-col md:flex-row gap-12 md:gap-24 items-start">
+        <div className="flex flex-col md:flex-row gap-8 md:gap-24 items-start">
            <div className="md:w-1/4 hidden md:block">
              <div className="w-full aspect-[3/4] border-[1px] subtractive-border-dark overflow-hidden bg-zinc-900 shadow-2xl">
                 <img src={bgImage} className="w-full h-full object-cover opacity-60 grayscale hover:grayscale-0 transition-all duration-700" alt="Coach" />
@@ -98,7 +97,7 @@ function CoachStickySection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.8, delay: 0.1 }}
-                className="text-2xl md:text-4xl text-zinc-400 font-medium leading-relaxed mb-12"
+                className="text-lg sm:text-2xl md:text-4xl text-zinc-400 font-medium leading-relaxed mb-6 md:mb-12"
              >
                Book a call to see if our 3-month program is a good fit. 12 spots per cohort. Enrollment closes September 29.
              </motion.p>
@@ -127,22 +126,29 @@ function CoachStickySection() {
            </div>
         </div>
       </div>
+      
+      <div 
+        className="absolute bottom-4 md:bottom-10 left-1/2 -translate-x-1/2 z-30 flex flex-col items-center gap-2 cursor-pointer opacity-30 hover:opacity-100 transition-opacity" 
+        onClick={() => window.scrollBy({ top: window.innerHeight, behavior: 'smooth' })}
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="animate-bounce"><path d="m6 9 6 6 6-6"/></svg>
+      </div>
     </section>
   );
 }
 
 function AthleteAsymmetricSection() {
   return (
-    <section className="py-32 md:py-64 px-6 bg-neutral-100 text-black border-y border-neutral-200 relative overflow-hidden">
-      <div className="max-w-7xl mx-auto relative z-10">
+    <section className="relative min-h-[100svh] flex flex-col justify-center pt-28 pb-12 md:pt-48 md:pb-32 px-6 bg-neutral-100 text-black border-y border-neutral-200 overflow-hidden">
+      <div className="max-w-7xl mx-auto w-full relative z-10">
         <motion.div 
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8 }}
-          className="w-full md:w-[85%] mb-16 md:mb-32"
+          className="w-full md:w-[85%] mb-8 md:mb-24"
         >
-          <h2 className="text-6xl sm:text-7xl md:text-[8rem] lg:text-[10rem] font-black tracking-tighter leading-[0.8] uppercase">
+          <h2 className="text-[clamp(3rem,8vw,10rem)] font-black tracking-tighter leading-[0.85] uppercase">
             train like an athlete.<br/>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-black to-neutral-400">
               move like a human.
@@ -150,12 +156,12 @@ function AthleteAsymmetricSection() {
           </h2>
         </motion.div>
         
-        <div className="flex flex-col md:flex-row gap-12 md:gap-24 items-start">
+        <div className="flex flex-col md:flex-row gap-8 md:gap-24 items-start">
            <div className="md:w-1/4 hidden md:block">
              <div className="w-full aspect-square bg-black mb-8 transform -rotate-3 hover:rotate-0 transition-transform duration-500 shadow-[16px_16px_0px_0px_rgba(0,0,0,0.1)]" />
            </div>
            <div className="md:w-3/4 max-w-3xl">
-             <p className="text-2xl md:text-4xl text-zinc-600 font-medium leading-relaxed mb-12">
+             <p className="text-lg sm:text-2xl md:text-4xl text-zinc-600 font-medium leading-relaxed mb-6 md:mb-12">
                Whether you're starting your parkour journey or pushing past plateaus, our curriculum is designed to help you master the art of movement.
              </p>
              <Link 
@@ -166,6 +172,13 @@ function AthleteAsymmetricSection() {
               </Link>
            </div>
         </div>
+      </div>
+
+      <div 
+        className="absolute bottom-4 md:bottom-10 left-1/2 -translate-x-1/2 z-30 flex flex-col items-center gap-2 cursor-pointer opacity-30 hover:opacity-100 transition-opacity" 
+        onClick={() => window.scrollBy({ top: window.innerHeight, behavior: 'smooth' })}
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="animate-bounce"><path d="m6 9 6 6 6-6"/></svg>
       </div>
     </section>
   );
@@ -178,12 +191,12 @@ function LayeredAdsSection() {
   return (
     <div className="relative">
       {/* Apex Speed Run - Sticky Background */}
-      <div className="sticky top-0 h-screen overflow-hidden flex flex-col items-center justify-center bg-zinc-950 text-white z-0">
+      <div className="sticky top-0 h-screen overflow-hidden flex flex-col items-center justify-center pt-28 md:pt-48 bg-zinc-950 text-white z-0">
         <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-zinc-950 z-10" />
         <img src={bgImage1} alt="Speed Run" className="absolute inset-0 w-full h-full object-cover opacity-40 grayscale mix-blend-overlay" />
         
         <div className="relative z-20 text-center px-4 max-w-5xl mx-auto flex flex-col items-center">
-          <h2 className="text-[clamp(3rem,8vw,10rem)] font-black uppercase tracking-tighter leading-none mb-6">Apex Speed Run</h2>
+          <h2 className="text-[clamp(1.8rem,9vw,10rem)] sm:text-[clamp(3rem,8vw,10rem)] font-black uppercase tracking-tighter leading-none mb-6 whitespace-nowrap">Apex Speed Run</h2>
           <p className="text-xl md:text-3xl text-zinc-400 font-medium mb-10 lowercase">finding the fastest humans <span className="uppercase">IRL</span> 🌎</p>
           <a 
             href="https://apexspeedrun.com"
@@ -194,6 +207,13 @@ function LayeredAdsSection() {
             Explore ASR <ExternalLink className="w-5 h-5" />
           </a>
         </div>
+        
+        <div 
+          className="absolute bottom-4 md:bottom-10 left-1/2 -translate-x-1/2 z-30 flex flex-col items-center gap-2 cursor-pointer opacity-30 hover:opacity-100 transition-opacity" 
+          onClick={() => window.scrollBy({ top: window.innerHeight, behavior: 'smooth' })}
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="animate-bounce"><path d="m6 9 6 6 6-6"/></svg>
+        </div>
       </div>
 
       {/* Apex Denver - Scrolls over the sticky section */}
@@ -201,13 +221,13 @@ function LayeredAdsSection() {
         <div className="absolute inset-0 bg-gradient-to-b from-white/90 to-white/50 z-10" />
         <img src={bgImage2} alt="Apex Denver" className="absolute inset-0 w-full h-full object-cover opacity-20 grayscale" />
         
-        <div className="relative z-20 text-center px-4 max-w-5xl mx-auto flex flex-col items-center py-32">
+        <div className="relative z-20 text-center px-4 max-w-5xl mx-auto flex flex-col items-center pt-28 pb-12 md:pt-48 md:pb-32">
           <motion.h2 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8 }}
-            className="text-[clamp(3rem,8vw,10rem)] font-black uppercase tracking-tighter leading-none mb-6"
+            className="text-[clamp(2.2rem,11vw,10rem)] sm:text-[clamp(3rem,8vw,10rem)] font-black uppercase tracking-tighter leading-none mb-6 whitespace-nowrap"
           >
             Apex Denver
           </motion.h2>
@@ -235,6 +255,13 @@ function LayeredAdsSection() {
               Visit IRL <ArrowRight className="w-5 h-5" />
             </a>
           </motion.div>
+        </div>
+
+        <div 
+          className="absolute bottom-4 md:bottom-10 left-1/2 -translate-x-1/2 z-30 flex flex-col items-center gap-2 cursor-pointer opacity-30 hover:opacity-100 transition-opacity text-black" 
+          onClick={() => window.scrollBy({ top: window.innerHeight, behavior: 'smooth' })}
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="animate-bounce"><path d="m6 9 6 6 6-6"/></svg>
         </div>
       </div>
     </div>
