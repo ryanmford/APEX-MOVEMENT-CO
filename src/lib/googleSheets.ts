@@ -51,6 +51,7 @@ export async function fetchMovements(): Promise<Movement[]> {
       why: row.c[4]?.v || "Efficiency optimization.",
       how: (row.c[5]?.v || "").toString().split(',').map((item: string) => item.trim()).filter(Boolean),
       level: row.c[13]?.v || "Fundamental",
+      dominantColor: "#f59e0b" // amber-500 default placeholder
     }));
     return parsed.sort(() => Math.random() - 0.5);
   }
@@ -61,7 +62,8 @@ export async function fetchMovements(): Promise<Movement[]> {
     intro: "Impact absorption basics.", 
     why: "Efficiency optimization.",
     how: ["Balls of feet", "Quiet"], 
-    level: "level 1" 
+    level: "level 1",
+    dominantColor: "#f59e0b"
   }];
 }
 
@@ -75,12 +77,13 @@ export async function fetchProjects(): Promise<Project[]> {
       description: row.c[2]?.v || "No description provided.",
       detail: row.c[3]?.v || row.c[2]?.v || "No details available.",
       link: row.c[4]?.v || null,
-      gif: row.c[5]?.v || GIF_POOL[0]
+      gif: row.c[5]?.v || GIF_POOL[0],
+      dominantColor: "#f59e0b"
     }));
   }
   return [
-    { year: "2006", title: "Apex Denver", description: "Founded the original standard.", detail: "The world's first dedicated parkour gym.", gif: GIF_POOL[0], link: null },
-    { year: "2025", title: "Skool App", description: "Apex Skool of Movement.", detail: "Centralizing our 20-year archive.", gif: GIF_POOL[2], link: CONFIG.skoolLink },
+    { year: "2006", title: "Apex Denver", description: "Founded the original standard.", detail: "The world's first dedicated parkour gym.", gif: GIF_POOL[0], link: null, dominantColor: "#f59e0b" },
+    { year: "2025", title: "Skool App", description: "Apex Skool of Movement.", detail: "Centralizing our 20-year archive.", gif: GIF_POOL[2], link: CONFIG.skoolLink, dominantColor: "#3b82f6" },
   ];
 }
 

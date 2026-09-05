@@ -4,7 +4,7 @@ import { SectionHeader, ExpandButton } from '../ui';
 import { useAppContext } from '../../contexts/AppContext';
 
 export function ProjectsSection() {
-  const { theme, projects, setActiveProject } = useAppContext();
+  const { theme, projects, setActiveProject, setDominantColor } = useAppContext();
   
   const [visibleProjectsRow, setVisibleProjectsRow] = useState(1);
   const projectsPerRow = 4;
@@ -21,9 +21,20 @@ export function ProjectsSection() {
           />
         </div>
         
-        <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px ${theme === 'dark' ? 'bg-white/10 border border-white/10' : 'bg-black/10 border border-black/10'} overflow-hidden`}>
+        <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px ${theme === 'dark' ? 'bg-white/5 border border-white/5' : 'bg-black/5 border border-black/5'} overflow-hidden group/list`}>
           {projects.slice(0, visibleProjectsRow * projectsPerRow).map((project, index) => (
-            <div key={index} onClick={() => setActiveProject(project)} className={`p-8 md:p-12 ${theme === 'dark' ? 'bg-zinc-950 hover:bg-white/[0.04]' : 'bg-white hover:bg-black/[0.02]'} transition-all group cursor-pointer active:scale-[0.98] animate-in fade-in duration-700`} style={{ animationDelay: `${(index % projectsPerRow) * 80}ms` }}>
+            <div 
+              key={index} 
+              onClick={() => setActiveProject(project)} 
+              onMouseEnter={() => {
+                if (project.dominantColor) setDominantColor(project.dominantColor);
+              }}
+              onMouseLeave={() => {
+                setDominantColor(null);
+              }}
+              className={`p-8 md:p-12 ${theme === 'dark' ? 'bg-zinc-950' : 'bg-white'} transition-all group cursor-pointer active:scale-[0.98] animate-in fade-in duration-700 group-hover/list:opacity-40 hover:!opacity-100`} 
+              style={{ animationDelay: `${(index % projectsPerRow) * 80}ms` }}
+            >
               <div className="text-[10px] md:text-[11px] font-bold opacity-70 mb-6 md:mb-8 uppercase tracking-[0.3em] md:tracking-[0.4em] flex items-center gap-2">
                  <div className={`w-1.5 h-1.5 rounded-full ${theme === 'dark' ? 'bg-white' : 'bg-black'} opacity-50 group-hover:opacity-100 transition-all`}></div>
                  {project.year}

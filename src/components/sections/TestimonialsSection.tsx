@@ -10,7 +10,7 @@ export function TestimonialsSection() {
       <div className={`absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] ${theme === 'dark' ? 'from-amber-400/5 via-zinc-950 to-zinc-950' : 'from-amber-400/10 via-white to-white'} pointer-events-none`} />
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center max-w-2xl mx-auto mb-12 md:mb-16">
-          <h2 className={`text-4xl md:text-6xl font-black tracking-tighter mb-4 md:mb-6`}>
+          <h2 className={`fluid-h2 font-black uppercase mb-4 md:mb-6`}>
             what athletes are saying about <span className="text-amber-500">Apex</span>
           </h2>
           <p className={`text-base md:text-xl ${theme === 'dark' ? 'text-zinc-400' : 'text-zinc-600'} font-medium`}>
@@ -18,7 +18,9 @@ export function TestimonialsSection() {
           </p>
         </div>
 
-        <div className="flex overflow-x-auto snap-x snap-mandatory hide-scrollbar md:grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 pb-8 md:pb-0 -mx-4 px-4 md:mx-0 md:px-0">
+        <div 
+          className="flex overflow-x-auto snap-x snap-mandatory hide-scrollbar md:grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 pb-8 md:pb-0 -mx-4 px-4 md:mx-0 md:px-0 group/list"
+        >
           {[
             {
               text: "The programming completely transformed my movement speed and power. Easily the best investment I've ever made in my training.",
@@ -45,13 +47,13 @@ export function TestimonialsSection() {
               author: "Malyiek M.", role: "Parkour Instructor"
             }
           ].map((t, i) => (
-            <div key={i} className={`w-[80vw] sm:w-[50vw] md:w-auto shrink-0 snap-center md:snap-align-none break-inside-avoid ${theme === 'dark' ? 'bg-zinc-900/50 border-white/10' : 'bg-neutral-50 border-black/10'} border-2 p-6 md:p-8 flex flex-col`}>
+            <div key={i} className={`w-[80vw] sm:w-[50vw] md:w-auto shrink-0 snap-center md:snap-align-none break-inside-avoid ${theme === 'dark' ? 'bg-zinc-900/50 subtractive-border-dark' : 'bg-neutral-50 subtractive-border-light'} border-[1px] p-6 md:p-8 flex flex-col transition-opacity duration-500 group-hover/list:opacity-40 hover:!opacity-100`}>
               <div className="flex gap-1 mb-4 md:mb-5">
                 {[...Array(5)].map((_, j) => (
                    <Star key={j} className="w-4 h-4 text-amber-500 fill-current" />
                 ))}
               </div>
-              <p className={`${theme === 'dark' ? 'text-zinc-300' : 'text-zinc-700'} text-sm md:text-base font-medium leading-relaxed mb-6 block flex-1 italic`}>"{t.text}"</p>
+              <p className={`${theme === 'dark' ? 'text-zinc-300' : 'text-zinc-700'} text-sm md:text-base font-medium leading-relaxed mb-6 block flex-1 italic hanging-quote`}>"{t.text}"</p>
               <div className="flex items-center gap-3 mt-auto">
                 <div className={`w-10 h-10 ${theme === 'dark' ? 'bg-zinc-800 border-white/10' : 'bg-zinc-200 border-black/10'} border-2 flex items-center justify-center text-sm font-black uppercase`}>
                   {t.author.substring(0, 2)}

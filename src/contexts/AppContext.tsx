@@ -12,6 +12,8 @@ interface AppContextType {
   setActiveManual: (m: Movement | null) => void;
   activeProject: Project | null;
   setActiveProject: (p: Project | null) => void;
+  dominantColor: string | null;
+  setDominantColor: (c: string | null) => void;
 }
 
 const AppContext = createContext<AppContextType | null>(null);
@@ -26,6 +28,7 @@ export const AppProvider = ({ children }: { children: React.ReactNode }) => {
   const [theme, setTheme] = useState<'light' | 'dark'>('dark');
   const [activeManual, setActiveManual] = useState<Movement | null>(null);
   const [activeProject, setActiveProject] = useState<Project | null>(null);
+  const [dominantColor, setDominantColor] = useState<string | null>(null);
 
   const [movements, setMovements] = useState<Movement[]>([]);
   const [projects, setProjects] = useState<Project[]>([]);
@@ -57,7 +60,8 @@ export const AppProvider = ({ children }: { children: React.ReactNode }) => {
       theme, toggleTheme,
       movements, projects, isLoadingMovements,
       activeManual, setActiveManual,
-      activeProject, setActiveProject
+      activeProject, setActiveProject,
+      dominantColor, setDominantColor
     }}>
       {children}
     </AppContext.Provider>

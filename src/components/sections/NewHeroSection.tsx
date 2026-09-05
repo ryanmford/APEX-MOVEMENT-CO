@@ -86,13 +86,13 @@ export function NewHeroSection() {
 
             <div className="max-w-7xl mx-auto relative z-10 w-full flex flex-col">
               <motion.div 
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 15 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-20%" }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
+                transition={{ type: "spring", stiffness: 100, damping: 20 }}
                 className="max-w-4xl flex flex-col items-start text-left"
               >
-                <h1 className={`text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-[0.85] mb-6 md:mb-8`}>
+                <h1 className={`fluid-h1 font-black uppercase mb-6 md:mb-8`}>
                   {slide.heading}
                 </h1>
                 

@@ -15,7 +15,7 @@ export function LibrarySection({
   title = "library.",
   description = "A repository of human kinetic potential. Synchronized mechanical samples."
 }: LibrarySectionProps) {
-  const { theme, movements, isLoadingMovements, setActiveManual } = useAppContext();
+  const { theme, movements, isLoadingMovements, setActiveManual, setDominantColor } = useAppContext();
   
   const [hasExpandedLibrary, setHasExpandedLibrary] = useState(false);
   const [libraryDisplayCount, setLibraryDisplayCount] = useState(3);
@@ -46,16 +46,22 @@ export function LibrarySection({
         )}
       </div>
       
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 mb-16 md:mb-20">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 mb-16 md:mb-20 group/list">
         {movements.slice(0, libraryDisplayCount).map((item, index) => (
           <div 
             key={index} 
             onClick={() => setActiveManual(item)} 
-            className={`group border-4 border-current ${theme === 'dark' ? 'bg-zinc-900/50 hover:shadow-[12px_12px_0px_0px_rgba(255,255,255,1)]' : 'bg-white hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)]'} overflow-hidden transition-all duration-500 ease-out cursor-pointer active:scale-[0.98] animate-in fade-in slide-in-from-bottom-12 max-w-sm mx-auto w-full`} 
-            style={{ animationDelay: `${index * 150}ms` }}
+            onMouseEnter={() => {
+              if (item.dominantColor) setDominantColor(item.dominantColor);
+            }}
+            onMouseLeave={() => {
+              setDominantColor(null);
+            }}
+            className={`group border-[1px] ${theme === 'dark' ? 'bg-zinc-900/50 subtractive-border-dark' : 'bg-white subtractive-border-light'} overflow-hidden transition-all duration-500 ease-out cursor-pointer active:scale-[0.98] animate-in fade-in slide-in-from-bottom-12 max-w-sm mx-auto w-full group-hover/list:opacity-50 hover:!opacity-100 hover:scale-[1.02]`} 
+            style={{ animationDelay: `${index * 100}ms` }}
           >
-            <div className={`relative overflow-hidden border-b-4 border-current aspect-[4/5] ${theme === 'dark' ? 'bg-zinc-800' : 'bg-neutral-100'}`}>
-              <Image src={item.gif} alt={item.title} coloredOnHover={true} />
+            <div className={`relative overflow-hidden border-b-[1px] aspect-[4/5] ${theme === 'dark' ? 'bg-zinc-800 subtractive-border-dark' : 'bg-neutral-100 subtractive-border-light'}`}>
+              <Image src={item.gif} alt={item.title} coloredOnHover={true} blurColor={item.dominantColor} />
             </div>
             <div className="p-6 md:p-10">
               <div className="flex justify-between items-start mb-4">

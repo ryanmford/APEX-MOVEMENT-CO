@@ -51,8 +51,8 @@ export function Navigation({ isMenuOpen, setIsMenuOpen }: NavigationProps) {
 
   return (
     <>
-      <div className={`fixed top-0 w-full z-[310] h-[30px] md:h-[32px] flex items-center justify-center px-2 text-center text-[9px] min-[375px]:text-[10px] sm:text-[11px] md:text-xs font-black uppercase tracking-wide sm:tracking-widest whitespace-nowrap bg-amber-400 text-zinc-950`}>
-        OCT 3 COHORT: 9 / 12 SPOTS LEFT. ENROLLMENT ENDS SEP 29
+      <div className={`fixed top-0 w-full z-[310] h-[30px] md:h-[34px] flex items-center justify-center px-2 text-center text-[11px] sm:text-xs md:text-sm font-black uppercase tracking-wider whitespace-nowrap bg-amber-400 text-zinc-950`}>
+        OCTOBER 3 COACH COHORT: ONLY 8 OF 12 SPOTS LEFT
       </div>
       {isMenuOpen && (
         <div role="dialog" aria-modal="true" aria-label="Mobile Navigation" className={`fixed inset-0 z-[400] pt-24 pb-[calc(2rem+env(safe-area-inset-bottom))] px-8 flex flex-col transition-all duration-500 animate-in fade-in slide-in-from-right-full ${theme === 'dark' ? 'bg-black text-white' : 'bg-white text-black shadow-2xl'}`}>

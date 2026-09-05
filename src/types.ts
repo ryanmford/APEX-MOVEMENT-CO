@@ -43,6 +43,7 @@ export interface Movement {
   how: string[];
   why?: string;
   level: string;
+  dominantColor?: string;
 }
 
 export interface Project {
@@ -52,6 +53,7 @@ export interface Project {
   detail: string;
   link: string | null;
   gif: string;
+  dominantColor?: string;
 }
 
 export interface ThemeContextType {

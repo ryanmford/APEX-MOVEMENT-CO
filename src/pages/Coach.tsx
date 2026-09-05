@@ -37,7 +37,7 @@ export default function Coach() {
           </h1>
           
           <p className={`text-base sm:text-lg md:text-xl mb-10 md:mb-12 font-medium max-w-3xl mx-auto leading-relaxed ${themeClasses.muted}`}>            
-            Apply and book a call to see if our 3-month Apex Method Mentorship is a good fit. Only 9 of 12 spots left in the next cohort starting Oct 3. Enrollment closes Sep 29.
+            Apply and book a call to see if our 3-month Apex Method Mentorship is a good fit. Only 8 of 12 spots left in the next cohort starting Oct 3. Enrollment closes Sep 29.
           </p>
           
           <a 
