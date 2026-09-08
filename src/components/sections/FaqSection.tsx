@@ -11,7 +11,7 @@ export function FaqSection() {
     <section className={`py-16 md:py-24 px-4 md:px-6 ${theme === 'dark' ? 'bg-zinc-900 border-white/5' : 'bg-neutral-100 border-black/5'} border-t-2`}>
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-12 md:mb-16">
-          <h2 className={`text-4xl md:text-5xl font-black tracking-tighter mb-3 md:mb-4`}>frequently asked questions</h2>
+          <h2 className={`text-4xl md:text-5xl font-black tracking-tighter mb-3 md:mb-4`}>FAQs</h2>
           <p className={`${theme === 'dark' ? 'text-zinc-400' : 'text-zinc-600'} text-sm md:text-base font-medium`}>Everything you need to know before you join.</p>
         </div>
         <div className="space-y-4 md:space-y-6">

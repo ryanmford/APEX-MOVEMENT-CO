@@ -10,12 +10,12 @@ const slides = [
     id: 'skool',
     heading: (
       <>
-        move better<br />in the real world.
+        move<br />better<br />in the<br />real world
       </>
     ),
-    description: "Join our free Skool community. Access our foundational curriculum, connect with global athletes, and start your path to mastery.",
+    description: "Join our free Parkour Skool app. Start your parkour journey, follow our foundational curriculum, and connect with an international community of athletes and coaches.",
     primaryButton: {
-      text: "Join Skool App",
+      text: "Join Parkour Skool",
       href: "https://www.skool.com/apexmovement",
       external: true
     },
@@ -25,12 +25,12 @@ const slides = [
     id: 'coach',
     heading: (
       <>
-        make parkour coaching<br />a sustainable career.
+        if you want to make<br />parkour coaching<br />a sustainable career…
       </>
     ),
     description: "Book a call to see if our 3-month program is a good fit. 12 spots per cohort. Enrollment closes September 29.",
     primaryButton: {
-      text: "Apply for Oct 3 Cohort",
+      text: "APPLY NOW",
       href: "https://calendly.com/apexmovement/strategy",
       external: true
     },

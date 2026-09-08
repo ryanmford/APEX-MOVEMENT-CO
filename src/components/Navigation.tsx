@@ -34,12 +34,16 @@ export function Navigation({ isMenuOpen, setIsMenuOpen }: NavigationProps) {
   const handleNav = useCallback((view: string, anchor: string | null = null) => {
     setIsMenuOpen(false);
     
+    if (view === currentView && !anchor) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    
     if (anchor) {
       navigate(view === 'home' ? `/${anchor}` : `/${view}${anchor}`);
     } else {
       navigate(view === 'home' ? '/' : `/${view}`);
     }
-  }, [navigate, setIsMenuOpen]);
+  }, [navigate, setIsMenuOpen, currentView]);
 
   const navLinks = useMemo(() => [
     { label: 'for coaches', onClick: () => handleNav('coach'), active: currentView === 'coach', external: false, href: undefined },

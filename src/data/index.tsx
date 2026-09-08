@@ -8,7 +8,7 @@ export const GIF_POOL = [
 
 export const CONFIG = {
   brand: "Apex Movement",
-  tagline: "move better in the real world.",
+  tagline: "move better in the real world",
   subline: "efficiency is the highest form of truth.",
   cta: "JOIN THE COMMUNITY",
   skoolLink: "https://www.skool.com/apexmovement/about",
@@ -36,7 +36,7 @@ export const BIOS = [
     story: "In 2006, Ryan founded the first parkour program in the Western Hemisphere. Author of 'Parkour Strength Training', he has dedicated over 20 years to parkour .",
     focus: ["Anatomy", "Plyometric Load", "Pedagogy"],
     metrics: "Founder",
-    gif: "/ryan.jpg"
+    gif: "/ryanford.jpg"
   }
 ];
 

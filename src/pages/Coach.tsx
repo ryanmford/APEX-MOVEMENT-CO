@@ -30,13 +30,13 @@ export default function Coach() {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="pt-32 md:pt-40 pb-24 md:pb-32 px-6">
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="relative min-h-[100svh] flex items-center justify-center px-6 overflow-hidden">
+        <div className="w-full max-w-4xl mx-auto text-center relative z-10 pt-20">
           <h1 className="text-[40px] leading-[1.1] sm:text-6xl md:text-7xl font-black tracking-tighter mb-5 md:mb-8">
             turn your parkour skills into scalable coaching <br className="hidden sm:block" /><span className="text-amber-500">systems, brands, & income</span>
           </h1>
           
-          <p className={`text-base sm:text-lg md:text-xl mb-10 md:mb-12 font-medium max-w-3xl mx-auto leading-relaxed ${themeClasses.muted}`}>            
+          <p className={`text-base sm:text-lg md:text-xl mb-8 md:mb-10 font-medium max-w-3xl mx-auto leading-relaxed ${themeClasses.muted}`}>            
             Apply and book a call to see if our 3-month Apex Method Mentorship is a good fit. Only 8 of 12 spots left in the next cohort starting Oct 3. Enrollment closes Sep 29.
           </p>
           
@@ -46,13 +46,29 @@ export default function Coach() {
             rel="noopener noreferrer"
             className={`inline-flex items-center justify-center gap-3 px-8 py-5 font-black uppercase tracking-[0.2em] text-[13px] transition-all hover:scale-105 active:scale-95 ${themeClasses.accentBg} shadow-[0_0_40px_-10px_rgba(251,191,36,0.4)]`}
           >
-            Apply now <ArrowRight className="w-5 h-5" />
+            APPLY NOW <ArrowRight className="w-5 h-5" />
           </a>
+        </div>
+
+        <div 
+          className="absolute bottom-4 md:bottom-10 left-1/2 -translate-x-1/2 z-30 flex flex-col items-center gap-2 cursor-pointer opacity-30 hover:opacity-100 transition-opacity" 
+          onClick={(e) => {
+            const currentSection = e.currentTarget.closest('section');
+            const nextSection = currentSection?.nextElementSibling;
+            if (nextSection) {
+              nextSection.scrollIntoView({ behavior: 'smooth' });
+            } else {
+              window.scrollBy({ top: window.innerHeight, behavior: 'smooth' });
+            }
+          }}
+        >
+          <span className="text-[10px] font-black uppercase tracking-[0.3em]">more</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="animate-bounce"><path d="m6 9 6 6 6-6"/></svg>
         </div>
       </section>
 
       {/* Social Proof Logo Cloud */}
-      <section className={`py-12 border-y ${themeClasses.border} bg-black/5`}>
+      <section className={`py-12 border-y ${themeClasses.border} bg-black/5 scroll-mt-24`}>
         <div className="max-w-7xl mx-auto px-6">
           <p className={`text-center text-sm font-bold tracking-widest uppercase mb-8 ${themeClasses.muted}`}>
             we've helped 350+ parkour coaches, gym owners, leaders, teachers, parents, & educational creators scale their skills, brands, & income:
@@ -263,7 +279,7 @@ export default function Coach() {
             <div className="md:col-span-5 relative">
               <div className="aspect-[4/5] rounded-2xl overflow-hidden">
                 <img 
-                  src="/ryan.jpg" 
+                  src="/ryanford.jpg" 
                   alt="Ryan Ford, Founder & Head Coach" 
                   className="w-full h-full object-cover"
                 />
@@ -426,7 +442,7 @@ export default function Coach() {
       <section className={`py-32 px-6 border-t ${themeClasses.border} ${themeClasses.bg === 'bg-zinc-950' ? 'bg-zinc-900/30' : 'bg-neutral-50/50'}`}>
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-black tracking-tighter mb-4">frequently asked questions</h2>
+            <h2 className="text-4xl md:text-5xl font-black tracking-tighter mb-4">FAQs</h2>
             <p className={`text-lg font-medium ${themeClasses.muted}`}>Everything you need to know about the Apex Method cohort.</p>
           </div>
           <div className="space-y-4">

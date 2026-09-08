@@ -35,11 +35,11 @@ function SkoolHero() {
           className="max-w-4xl flex flex-col items-start text-left"
         >
           <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black tracking-tighter leading-[0.85] mb-6 md:mb-8">
-            move better<br />in the real world.
+            move<br />better<br />in the<br />real world
           </h1>
           
           <p className={`text-lg md:text-2xl ${theme === 'dark' ? 'text-zinc-400' : 'text-zinc-600'} mb-10 md:mb-12 max-w-2xl leading-relaxed font-medium`}>
-            Join our free Skool community. Access our foundational curriculum, connect with global athletes, and start your path to mastery.
+            Join our free Parkour Skool app. Start your parkour journey, follow our foundational curriculum, and connect with an international community of athletes and coaches.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
@@ -49,7 +49,7 @@ function SkoolHero() {
               rel="noopener noreferrer"
               className={`inline-flex items-center justify-center gap-3 px-10 py-6 font-black uppercase tracking-[0.2em] text-[13px] transition-all duration-300 active:scale-95 ${theme === 'dark' ? 'bg-white text-black hover:bg-zinc-200 shadow-[0_0_40px_-10px_rgba(255,255,255,0.3)]' : 'bg-zinc-900 text-white hover:bg-black shadow-xl'}`}
             >
-              Join Skool App <ArrowRight className="w-5 h-5" />
+              Join Parkour Skool <ArrowRight className="w-5 h-5" />
             </a>
           </div>
         </motion.div>
@@ -114,7 +114,7 @@ function CoachStickySection() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-3 px-10 py-6 font-black uppercase tracking-[0.2em] text-[13px] bg-white text-black hover:bg-zinc-200 transition-all active:scale-95 shadow-[0_0_40px_-10px_rgba(255,255,255,0.3)]"
                 >
-                  Apply for Oct 3 Cohort <ArrowRight className="w-5 h-5" />
+                  APPLY NOW <ArrowRight className="w-5 h-5" />
                 </a>
                 <Link 
                   to="/coach"
@@ -196,15 +196,15 @@ function LayeredAdsSection() {
         <img src={bgImage1} alt="Speed Run" className="absolute inset-0 w-full h-full object-cover opacity-40 grayscale mix-blend-overlay" />
         
         <div className="relative z-20 text-center px-4 max-w-5xl mx-auto flex flex-col items-center">
-          <h2 className="text-[clamp(1.8rem,9vw,10rem)] sm:text-[clamp(3rem,8vw,10rem)] font-black uppercase tracking-tighter leading-none mb-6 whitespace-nowrap">Apex Speed Run</h2>
-          <p className="text-xl md:text-3xl text-zinc-400 font-medium mb-10 lowercase">finding the fastest humans <span className="uppercase">IRL</span> 🌎</p>
+          <h2 className="text-[clamp(1.8rem,9vw,10rem)] sm:text-[clamp(3rem,8vw,10rem)] font-black uppercase tracking-tighter leading-none mb-6 whitespace-nowrap">APEX SPEED RUN</h2>
+          <p className="text-[clamp(1rem,4.5vw,1.875rem)] md:text-3xl text-zinc-400 font-medium mb-10 lowercase whitespace-nowrap">finding the fastest humans <span className="uppercase">IRL</span> 🌎 🌍 🌏</p>
           <a 
             href="https://apexspeedrun.com"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-3 px-10 py-6 font-black uppercase tracking-[0.2em] text-[13px] bg-white text-black hover:bg-zinc-200 transition-all active:scale-95 shadow-[0_0_40px_-10px_rgba(255,255,255,0.3)]"
           >
-            Explore ASR <ExternalLink className="w-5 h-5" />
+            PLAY ASR <ExternalLink className="w-5 h-5" />
           </a>
         </div>
         
