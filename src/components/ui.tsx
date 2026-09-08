@@ -1,6 +1,6 @@
 import React, { useState, memo, useRef } from 'react';
 import { Loader2 } from 'lucide-react';
-import { motion, useSpring, useTransform } from 'motion/react';
+import { motion } from 'motion/react';
 
 export const Badge = memo(({ children, className = "", theme = 'light' }: { children: React.ReactNode, className?: string, theme?: string }) => (
   <div className={`px-2.5 py-1 border text-[9px] font-black uppercase tracking-[0.3em] inline-flex items-center gap-2 opacity-70 ${theme === 'dark' ? 'subtractive-border-dark' : 'subtractive-border-light'} ${className}`}>
@@ -11,10 +11,6 @@ export const Badge = memo(({ children, className = "", theme = 'light' }: { chil
 export const Button = memo(({ children, primary = true, className = "", onClick, theme = 'light', type = "button", ...props }: { children: React.ReactNode, primary?: boolean, className?: string, onClick?: () => void, theme?: string, type?: "button" | "submit" | "reset" } & React.ButtonHTMLAttributes<HTMLButtonElement>) => {
   const buttonRef = useRef<HTMLButtonElement>(null);
   
-  // Magnetic spring physics
-  const x = useSpring(0, { stiffness: 150, damping: 15, mass: 0.1 });
-  const y = useSpring(0, { stiffness: 150, damping: 15, mass: 0.1 });
-
   const handleMouseMove = (e: React.MouseEvent<HTMLButtonElement>) => {
     if (!buttonRef.current) return;
     const rect = buttonRef.current.getBoundingClientRect();
@@ -22,20 +18,6 @@ export const Button = memo(({ children, primary = true, className = "", onClick,
     // Gradient track
     buttonRef.current.style.setProperty('--x', `${e.clientX - rect.left}px`);
     buttonRef.current.style.setProperty('--y', `${e.clientY - rect.top}px`);
-    
-    // Magnetic pull
-    const centerX = rect.left + rect.width / 2;
-    const centerY = rect.top + rect.height / 2;
-    const distanceX = e.clientX - centerX;
-    const distanceY = e.clientY - centerY;
-    
-    x.set(distanceX * 0.2);
-    y.set(distanceY * 0.2);
-  };
-  
-  const handleMouseLeave = () => {
-    x.set(0);
-    y.set(0);
   };
 
   const base = "relative overflow-hidden px-6 md:px-10 py-4 md:py-5 font-black transition-colors duration-200 border-[1px] text-[11px] md:text-[12px] uppercase tracking-[0.2em] md:tracking-[0.25em] flex items-center justify-center cursor-pointer rounded-none text-center whitespace-normal break-words min-h-[44px]";
@@ -56,9 +38,7 @@ export const Button = memo(({ children, primary = true, className = "", onClick,
       type={type} 
       onClick={onClick} 
       onMouseMove={handleMouseMove as any}
-      onMouseLeave={handleMouseLeave as any}
       whileTap={{ scale: 0.95 }}
-      style={{ x, y } as any}
       className={`${base} ${colors} ${className} group`} 
       {...props as any}
     >

@@ -51,7 +51,7 @@ export default function Coach() {
         </div>
 
         <div 
-          className="absolute bottom-8 md:bottom-10 left-1/2 -translate-x-1/2 z-30 flex flex-col items-center gap-2 cursor-pointer opacity-30 hover:opacity-100 transition-opacity" 
+          className="absolute bottom-4 md:bottom-6 left-1/2 -translate-x-1/2 z-30 flex flex-col items-center gap-2 cursor-pointer opacity-30 hover:opacity-100 transition-opacity p-4" 
           onClick={(e) => {
             const currentSection = e.currentTarget.closest('section');
             const nextSection = currentSection?.nextElementSibling;
