@@ -19,7 +19,7 @@ export default function Coach() {
     muted: theme === 'dark' ? 'text-zinc-400' : 'text-zinc-600',
     border: theme === 'dark' ? 'border-zinc-800' : 'border-zinc-200',
     card: theme === 'dark' ? 'bg-zinc-900 border-zinc-800' : 'bg-zinc-50 border-zinc-200',
-    accent: 'text-amber-500',
+    accent: theme === 'dark' ? 'text-amber-500' : 'text-amber-700',
     accentBg: 'bg-amber-500 text-zinc-950',
   };
 
@@ -30,10 +30,10 @@ export default function Coach() {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative min-h-[100svh] flex items-center justify-center px-6 overflow-hidden">
-        <div className="w-full max-w-4xl mx-auto text-center relative z-10 pt-20">
-          <h1 className="text-[40px] leading-[1.1] sm:text-6xl md:text-7xl font-black tracking-tighter mb-5 md:mb-8">
-            turn your parkour skills into scalable coaching <br className="hidden sm:block" /><span className="text-amber-500">systems, brands, & income</span>
+      <section className="relative min-h-[100svh] flex items-center justify-center px-6 pt-32 pb-24 md:pt-32 md:pb-24 overflow-hidden">
+        <div className="w-full max-w-4xl mx-auto text-center relative z-10">
+          <h1 className="text-[36px] sm:text-[40px] leading-[1.1] md:text-7xl font-black tracking-tighter mb-6 md:mb-8">
+            turn your parkour skills into scalable coaching <br className="hidden sm:block" /><span className={themeClasses.accent}>systems, brands, & income</span>
           </h1>
           
           <p className={`text-base sm:text-lg md:text-xl mb-8 md:mb-10 font-medium max-w-3xl mx-auto leading-relaxed ${themeClasses.muted}`}>            
@@ -51,7 +51,7 @@ export default function Coach() {
         </div>
 
         <div 
-          className="absolute bottom-4 md:bottom-10 left-1/2 -translate-x-1/2 z-30 flex flex-col items-center gap-2 cursor-pointer opacity-30 hover:opacity-100 transition-opacity" 
+          className="absolute bottom-8 md:bottom-10 left-1/2 -translate-x-1/2 z-30 flex flex-col items-center gap-2 cursor-pointer opacity-30 hover:opacity-100 transition-opacity" 
           onClick={(e) => {
             const currentSection = e.currentTarget.closest('section');
             const nextSection = currentSection?.nextElementSibling;
@@ -62,8 +62,7 @@ export default function Coach() {
             }
           }}
         >
-          <span className="text-[10px] font-black uppercase tracking-[0.3em]">more</span>
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="animate-bounce"><path d="m6 9 6 6 6-6"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="animate-bounce"><path d="m6 9 6 6 6-6"/></svg>
         </div>
       </section>
 
@@ -331,7 +330,7 @@ export default function Coach() {
               <div className="p-6 text-center flex-grow flex flex-col justify-center">
                 <h3 className="text-2xl font-black tracking-tighter mb-1">taylor carpenter</h3>
                 <p className={`text-sm font-medium mb-4 ${themeClasses.muted}`}>pro athlete & creator</p>
-                <div className="font-bold text-xs tracking-widest uppercase text-amber-500 mt-auto pt-2">coaching, content, branding</div>
+                <div className={`font-bold text-xs tracking-widest uppercase mt-auto pt-2 ${themeClasses.accent}`}>coaching, content, branding</div>
               </div>
             </div>
             
@@ -342,7 +341,7 @@ export default function Coach() {
               <div className="p-6 text-center flex-grow flex flex-col justify-center">
                 <h3 className="text-2xl font-black tracking-tighter mb-1">rob schihl</h3>
                 <p className={`text-sm font-medium mb-4 ${themeClasses.muted}`}>Apex Denver owner & World Champion</p>
-                <div className="font-bold text-xs tracking-widest uppercase text-amber-500 mt-auto pt-2">coaching, community, & culture</div>
+                <div className={`font-bold text-xs tracking-widest uppercase mt-auto pt-2 ${themeClasses.accent}`}>coaching, community, & culture</div>
               </div>
             </div>
 
@@ -353,7 +352,7 @@ export default function Coach() {
               <div className="p-6 text-center flex-grow flex flex-col justify-center">
                 <h3 className="text-2xl font-black tracking-tighter mb-1">autumn goodridge</h3>
                 <p className={`text-sm font-medium mb-4 ${themeClasses.muted}`}>Apex Denver owner</p>
-                <div className="font-bold text-xs tracking-widest uppercase text-amber-500 mt-auto pt-2">leadership, business, & sales</div>
+                <div className={`font-bold text-xs tracking-widest uppercase mt-auto pt-2 ${themeClasses.accent}`}>leadership, business, & sales</div>
               </div>
             </div>
           </div>
@@ -371,19 +370,19 @@ export default function Coach() {
           <div className="grid md:grid-cols-3 gap-8 text-left mb-8">
             {[
               {
-                icon: <Award className="w-8 h-8 text-amber-500" />,
+                icon: <Award className={`w-8 h-8 ${themeClasses.accent}`} />,
                 title: "Apex L1 parkour coaching certification",
                 desc: "our fundamental coaching certification for parkour coaches, accredited by the United States Parkour Association. the industry standard for safe, effective instruction.",
                 timeline: "month 1"
               },
               {
-                icon: <Medal className="w-8 h-8 text-amber-500" />,
+                icon: <Medal className={`w-8 h-8 ${themeClasses.accent}`} />,
                 title: "Apex L2 parkour coaching certification",
                 desc: "publicly available for the first time. individualized programming, curriculum, game design, content, branding, online coaching tech.",
                 timeline: "month 2"
               },
               {
-                icon: <Zap className="w-8 h-8 text-amber-500" />,
+                icon: <Zap className={`w-8 h-8 ${themeClasses.accent}`} />,
                 title: "Apex parkour specialist certifications",
                 desc: "for the first time, specialized certifications to demonstrate expertise in specific styles of parkour training.",
                 timeline: "month 3"
@@ -392,7 +391,7 @@ export default function Coach() {
               <div key={i} className={`p-8 rounded-2xl border-2 ${themeClasses.card}`}>
                 <div className="flex justify-between items-start mb-4">
                   {feature.icon}
-                  <div className="text-xs font-bold tracking-widest uppercase text-amber-500/70">{feature.timeline}</div>
+                  <div className={`text-xs font-bold tracking-widest uppercase opacity-70 ${themeClasses.accent}`}>{feature.timeline}</div>
                 </div>
                 <h3 className="text-2xl font-black mb-4">{feature.title}</h3>
                 <p className={`font-medium leading-relaxed ${themeClasses.muted}`}>
@@ -405,19 +404,19 @@ export default function Coach() {
           <div className="grid md:grid-cols-3 gap-8 text-left">
             {[
               {
-                icon: <Users className="w-8 h-8 text-amber-500" />,
+                icon: <Users className={`w-8 h-8 ${themeClasses.accent}`} />,
                 title: "offer architecture",
                 desc: "design a high-ticket coaching offer or digital product suite that perfectly aligns with your specific audience and movement style.",
                 timeline: "months 1-3"
               },
               {
-                icon: <TrendingUp className="w-8 h-8 text-amber-500" />,
+                icon: <TrendingUp className={`w-8 h-8 ${themeClasses.accent}`} />,
                 title: "content conversion",
                 desc: "stop making content just for views. we'll implement funnels that seamlessly convert your millions of impressions into paying clients.",
                 timeline: "months 1-3"
               },
               {
-                icon: <ShieldCheck className="w-8 h-8 text-amber-500" />,
+                icon: <ShieldCheck className={`w-8 h-8 ${themeClasses.accent}`} />,
                 title: "operational scale",
                 desc: "templates, automations, and team-building strategies so your business can run and grow without you being on your phone 24/7.",
                 timeline: "months 1-3"
@@ -426,7 +425,7 @@ export default function Coach() {
               <div key={i + 3} className={`p-8 rounded-2xl border-2 ${themeClasses.card}`}>
                 <div className="flex justify-between items-start mb-4">
                   {feature.icon}
-                  <div className="text-xs font-bold tracking-widest uppercase text-amber-500/70">{feature.timeline}</div>
+                  <div className={`text-xs font-bold tracking-widest uppercase opacity-70 ${themeClasses.accent}`}>{feature.timeline}</div>
                 </div>
                 <h3 className="text-2xl font-black mb-4">{feature.title}</h3>
                 <p className={`font-medium leading-relaxed ${themeClasses.muted}`}>
@@ -495,7 +494,7 @@ export default function Coach() {
                 >
                   <h3 className="text-lg md:text-2xl font-black tracking-tight leading-tight pr-4">{faq.q}</h3>
                   <div className={`shrink-0 w-8 h-8 rounded-none border-2 ${theme === 'dark' ? 'border-white/20 bg-white/5' : 'border-black/20 bg-black/5'} flex items-center justify-center transition-transform duration-300 ${openFaqIndex === i ? 'rotate-180' : ''}`}>
-                    <ChevronDown className="w-4 h-4 text-amber-500" />
+                    <ChevronDown className={`w-4 h-4 ${themeClasses.accent}`} />
                   </div>
                 </button>
                 <AnimatePresence>

@@ -12,7 +12,7 @@ function SkoolHero() {
   const bgImage = GIF_POOL[0 % GIF_POOL.length];
   
   return (
-    <section className={`relative min-h-[100svh] flex flex-col justify-center pt-28 pb-12 md:pt-48 md:pb-32 overflow-hidden px-4 md:px-8 ${theme === 'dark' ? 'bg-zinc-950' : 'bg-neutral-50'}`}>
+    <section className={`relative min-h-[100svh] flex flex-col justify-center pt-28 pb-24 md:pt-48 md:pb-32 overflow-hidden px-4 md:px-8 ${theme === 'dark' ? 'bg-zinc-950' : 'bg-neutral-50'}`}>
       <div className="absolute inset-0 z-0">
         <div className={`absolute inset-0 bg-gradient-to-br ${theme === 'dark' ? 'from-zinc-950/95 via-zinc-950/80 to-zinc-950/95' : 'from-white/95 via-white/80 to-white/95'} z-10 transition-colors duration-1000`} />
         
@@ -56,7 +56,7 @@ function SkoolHero() {
       </div>
       
       <div 
-        className="absolute bottom-4 md:bottom-10 left-1/2 -translate-x-1/2 z-30 flex flex-col items-center gap-2 cursor-pointer opacity-30 hover:opacity-100 transition-opacity" 
+        className="absolute bottom-8 md:bottom-10 left-1/2 -translate-x-1/2 z-30 flex flex-col items-center gap-2 cursor-pointer opacity-30 hover:opacity-100 transition-opacity" 
         onClick={() => window.scrollBy({ top: window.innerHeight, behavior: 'smooth' })}
       >
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="animate-bounce"><path d="m6 9 6 6 6-6"/></svg>
@@ -70,7 +70,7 @@ function CoachStickySection() {
   const bgImage = GIF_POOL[1 % GIF_POOL.length];
   
   return (
-    <section className="relative min-h-[100svh] flex flex-col justify-center pt-28 pb-12 md:pt-48 md:pb-24 px-6 bg-zinc-950 text-white overflow-hidden">
+    <section className="relative min-h-[100svh] flex flex-col justify-center pt-28 pb-24 md:pt-48 md:pb-32 px-6 bg-zinc-950 text-white overflow-hidden">
       <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-overlay pointer-events-none" />
       <div className="max-w-7xl mx-auto w-full relative z-10">
         <motion.div 
@@ -128,7 +128,7 @@ function CoachStickySection() {
       </div>
       
       <div 
-        className="absolute bottom-4 md:bottom-10 left-1/2 -translate-x-1/2 z-30 flex flex-col items-center gap-2 cursor-pointer opacity-30 hover:opacity-100 transition-opacity" 
+        className="absolute bottom-8 md:bottom-10 left-1/2 -translate-x-1/2 z-30 flex flex-col items-center gap-2 cursor-pointer opacity-30 hover:opacity-100 transition-opacity" 
         onClick={() => window.scrollBy({ top: window.innerHeight, behavior: 'smooth' })}
       >
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="animate-bounce"><path d="m6 9 6 6 6-6"/></svg>
@@ -139,7 +139,7 @@ function CoachStickySection() {
 
 function AthleteAsymmetricSection() {
   return (
-    <section className="relative min-h-[100svh] flex flex-col justify-center pt-28 pb-12 md:pt-48 md:pb-32 px-6 bg-neutral-100 text-black border-y border-neutral-200 overflow-hidden">
+    <section className="relative min-h-[100svh] flex flex-col justify-center pt-28 pb-24 md:pt-48 md:pb-32 px-6 bg-neutral-100 text-black border-y border-neutral-200 overflow-hidden">
       <div className="max-w-7xl mx-auto w-full relative z-10">
         <motion.div 
           initial={{ opacity: 0, y: 40 }}
@@ -175,7 +175,7 @@ function AthleteAsymmetricSection() {
       </div>
 
       <div 
-        className="absolute bottom-4 md:bottom-10 left-1/2 -translate-x-1/2 z-30 flex flex-col items-center gap-2 cursor-pointer opacity-30 hover:opacity-100 transition-opacity" 
+        className="absolute bottom-8 md:bottom-10 left-1/2 -translate-x-1/2 z-30 flex flex-col items-center gap-2 cursor-pointer opacity-30 hover:opacity-100 transition-opacity" 
         onClick={() => window.scrollBy({ top: window.innerHeight, behavior: 'smooth' })}
       >
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="animate-bounce"><path d="m6 9 6 6 6-6"/></svg>
@@ -209,7 +209,7 @@ function LayeredAdsSection() {
         </div>
         
         <div 
-          className="absolute bottom-4 md:bottom-10 left-1/2 -translate-x-1/2 z-30 flex flex-col items-center gap-2 cursor-pointer opacity-30 hover:opacity-100 transition-opacity" 
+          className="absolute bottom-8 md:bottom-10 left-1/2 -translate-x-1/2 z-30 flex flex-col items-center gap-2 cursor-pointer opacity-30 hover:opacity-100 transition-opacity" 
           onClick={() => window.scrollBy({ top: window.innerHeight, behavior: 'smooth' })}
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="animate-bounce"><path d="m6 9 6 6 6-6"/></svg>
@@ -221,7 +221,7 @@ function LayeredAdsSection() {
         <div className="absolute inset-0 bg-gradient-to-b from-white/90 to-white/50 z-10" />
         <img src={bgImage2} alt="Apex Denver" className="absolute inset-0 w-full h-full object-cover opacity-20 grayscale" />
         
-        <div className="relative z-20 text-center px-4 max-w-5xl mx-auto flex flex-col items-center pt-28 pb-12 md:pt-48 md:pb-32">
+        <div className="relative z-20 text-center px-4 max-w-5xl mx-auto flex flex-col items-center pt-28 pb-24 md:pt-48 md:pb-32">
           <motion.h2 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -258,7 +258,7 @@ function LayeredAdsSection() {
         </div>
 
         <div 
-          className="absolute bottom-4 md:bottom-10 left-1/2 -translate-x-1/2 z-30 flex flex-col items-center gap-2 cursor-pointer opacity-30 hover:opacity-100 transition-opacity text-black" 
+          className="absolute bottom-8 md:bottom-10 left-1/2 -translate-x-1/2 z-30 flex flex-col items-center gap-2 cursor-pointer opacity-30 hover:opacity-100 transition-opacity text-black" 
           onClick={() => window.scrollBy({ top: window.innerHeight, behavior: 'smooth' })}
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="animate-bounce"><path d="m6 9 6 6 6-6"/></svg>

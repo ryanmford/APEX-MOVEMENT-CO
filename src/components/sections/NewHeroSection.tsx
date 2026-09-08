@@ -68,7 +68,7 @@ export function NewHeroSection() {
         return (
           <section 
             key={slide.id}
-            className={`relative min-h-[100svh] flex flex-col justify-center pt-28 pb-12 md:pt-48 md:pb-32 overflow-hidden px-4 md:px-8 ${theme === 'dark' ? 'bg-zinc-950' : 'bg-neutral-50'}`}
+            className={`relative min-h-[100svh] flex flex-col justify-center pt-28 pb-24 md:pt-48 md:pb-32 overflow-hidden px-4 md:px-8 ${theme === 'dark' ? 'bg-zinc-950' : 'bg-neutral-50'}`}
           >
             <div className="absolute inset-0 z-0">
               <div className={`absolute inset-0 bg-gradient-to-br ${theme === 'dark' ? 'from-zinc-950/95 via-zinc-950/80 to-zinc-950/95' : 'from-white/95 via-white/80 to-white/95'} z-10 transition-colors duration-1000`} />
@@ -143,7 +143,7 @@ export function NewHeroSection() {
             </div>
 
             <div 
-              className="absolute bottom-4 md:bottom-10 left-1/2 -translate-x-1/2 z-30 flex flex-col items-center gap-2 cursor-pointer opacity-30 hover:opacity-100 transition-opacity" 
+              className="absolute bottom-8 md:bottom-10 left-1/2 -translate-x-1/2 z-30 flex flex-col items-center gap-2 cursor-pointer opacity-30 hover:opacity-100 transition-opacity" 
               onClick={(e) => {
                 const currentSection = e.currentTarget.closest('section');
                 const nextSection = currentSection?.nextElementSibling;
@@ -160,8 +160,7 @@ export function NewHeroSection() {
                 }
               }}
             >
-              <span className="text-[10px] font-black uppercase tracking-[0.3em]">more</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="animate-bounce"><path d="m6 9 6 6 6-6"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="animate-bounce"><path d="m6 9 6 6 6-6"/></svg>
             </div>
           </section>
         );
