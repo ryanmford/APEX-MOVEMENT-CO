@@ -289,7 +289,7 @@ export default function Coach() {
               </div>
             </div>
             <div className="md:col-span-7">
-              <h2 className="text-4xl md:text-5xl font-black tracking-tighter mb-8">from athlete to coach to OG parkour gym owner</h2>
+              <h2 className="text-4xl md:text-5xl font-black tracking-tighter mb-8">from parkour athlete to coach to gym owner</h2>
               <div className={`space-y-6 text-lg leading-relaxed font-medium ${themeClasses.muted}`}>
                 <p>
                   I know the struggle because I lived it. when I started Apex, parkour was a fringe internet phenomenon. there was no blueprint for turning jumps into a legitimate career.
@@ -384,7 +384,7 @@ export default function Coach() {
               {
                 icon: <Zap className={`w-8 h-8 ${themeClasses.accent}`} />,
                 title: "Apex parkour specialist certifications",
-                desc: "for the first time, specialized certifications to demonstrate expertise in specific styles of parkour training.",
+                desc: "for the first time, specialized parkour certs to develop and qualify expertise in specific styles of parkour training.",
                 timeline: "month 3"
               }
             ].map((feature, i) => (
@@ -412,13 +412,13 @@ export default function Coach() {
               {
                 icon: <TrendingUp className={`w-8 h-8 ${themeClasses.accent}`} />,
                 title: "content conversion",
-                desc: "stop making content just for views. we'll implement funnels that seamlessly convert your millions of impressions into paying clients.",
+                desc: "stop making content just for likes. we'll help you create funnels that seamlessly attract and convert views into paying clients.",
                 timeline: "months 1-3"
               },
               {
                 icon: <ShieldCheck className={`w-8 h-8 ${themeClasses.accent}`} />,
                 title: "operational scale",
-                desc: "templates, automations, and team-building strategies so your business can run and grow without you being on your phone 24/7.",
+                desc: "templates, automations, and team-building strategies so you can run and grow without feeling constantly burnt out or overwhelmed.",
                 timeline: "months 1-3"
               }
             ].map((feature, i) => (
