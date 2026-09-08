@@ -7,7 +7,7 @@ export function Footer() {
   const { theme } = useAppContext();
   return (
     <div className="snap-start snap-always">
-      <footer className={`${theme === 'dark' ? 'bg-zinc-950 text-white' : 'bg-neutral-50 text-black'} py-20 px-6 relative z-20 transition-colors duration-1000`}>
+      <footer className={`${theme === 'dark' ? 'bg-zinc-950 text-white' : 'bg-neutral-50 text-black'} py-20 px-6 relative z-20 transition-colors duration-200`}>
         <div className="max-w-6xl mx-auto flex flex-col items-center gap-12">
           <div className="flex gap-12">
             {CONFIG.socials.map((s) => (

@@ -10,7 +10,7 @@ export function ProjectsSection() {
   const projectsPerRow = 4;
 
   return (
-    <section id="arc" className={`${theme === 'dark' ? 'bg-zinc-950 text-white' : 'bg-white border-y-2 border-black/5 text-black'} py-24 md:py-40 px-6 overflow-hidden scroll-mt-24 transition-colors duration-1000`}>
+    <section id="arc" className={`${theme === 'dark' ? 'bg-zinc-950 text-white' : 'bg-white border-y-2 border-black/5 text-black'} py-24 md:py-40 px-6 overflow-hidden scroll-mt-24 transition-colors duration-200`}>
       <div className="max-w-7xl mx-auto">
         <div className="mb-12 md:mb-24 flex flex-col md:flex-row md:items-end justify-between gap-6 md:gap-10">
           <SectionHeader 

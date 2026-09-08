@@ -3,28 +3,28 @@ import { useLocation, Link } from 'react-router-dom';
 import { SEO } from '../components/SEO';
 import { BlogSection } from '../components/sections';
 import { ArrowRight, ExternalLink } from 'lucide-react';
-import { useAppContext } from '../contexts/AppContext';
 import { GIF_POOL } from '../data';
 import { motion } from 'motion/react';
+import { useAppContext } from '../contexts/AppContext';
 
 function SkoolHero() {
   const { theme } = useAppContext();
   const bgImage = GIF_POOL[0 % GIF_POOL.length];
   
   return (
-    <section className={`relative min-h-[100svh] flex flex-col justify-center pt-28 pb-24 md:pt-48 md:pb-32 overflow-hidden px-4 md:px-8 ${theme === 'dark' ? 'bg-zinc-950' : 'bg-neutral-50'}`}>
+    <section className={`relative min-h-[100svh] flex flex-col justify-center pt-28 pb-24 md:pt-48 md:pb-32 overflow-hidden px-4 md:px-8 transition-colors duration-200 ${theme === 'dark' ? 'bg-zinc-950 text-white' : 'bg-neutral-50 text-black'}`}>
       <div className="absolute inset-0 z-0">
-        <div className={`absolute inset-0 bg-gradient-to-br ${theme === 'dark' ? 'from-zinc-950/95 via-zinc-950/80 to-zinc-950/95' : 'from-white/95 via-white/80 to-white/95'} z-10 transition-colors duration-1000`} />
+        <div className={`absolute inset-0 bg-gradient-to-br transition-colors duration-200 z-10 ${theme === 'dark' ? 'from-zinc-950/95 via-zinc-950/80 to-zinc-950/95' : 'from-white/95 via-white/80 to-white/95'}`} />
         
         <img 
           src={bgImage} 
           alt="Parkour Background" 
           fetchPriority="high"
           loading="eager"
-          className={`w-full h-full object-cover absolute inset-0 z-20 ${theme === 'dark' ? 'grayscale opacity-30 mix-blend-overlay' : 'grayscale-0 opacity-20'}`}
+          className={`w-full h-full object-cover absolute inset-0 z-20 mix-blend-overlay ${theme === 'dark' ? 'grayscale opacity-30' : 'grayscale-0 opacity-20'}`}
         />
         
-        <div className={`absolute inset-x-0 bottom-0 h-32 md:h-48 bg-gradient-to-t ${theme === 'dark' ? 'from-zinc-950' : 'from-neutral-50'} to-transparent z-30 transition-colors duration-1000`} />
+        <div className={`absolute inset-x-0 bottom-0 h-32 md:h-48 bg-gradient-to-t to-transparent z-30 transition-colors duration-200 ${theme === 'dark' ? 'from-zinc-950' : 'from-neutral-50'}`} />
       </div>
 
       <div className="max-w-7xl mx-auto relative z-10 w-full flex flex-col">
@@ -38,7 +38,7 @@ function SkoolHero() {
             move<br />better<br />in the<br />real world
           </h1>
           
-          <p className={`text-lg md:text-2xl ${theme === 'dark' ? 'text-zinc-400' : 'text-zinc-600'} mb-10 md:mb-12 max-w-2xl leading-relaxed font-medium`}>
+          <p className={`text-lg md:text-2xl mb-10 md:mb-12 max-w-2xl leading-relaxed font-medium transition-colors duration-200 ${theme === 'dark' ? 'text-zinc-400' : 'text-zinc-600'}`}>
             Join our free Parkour Skool app. Start your parkour journey, follow our foundational curriculum, and connect with an international community of athletes and coaches.
           </p>
           
@@ -47,7 +47,7 @@ function SkoolHero() {
               href="https://www.skool.com/apexmovement"
               target="_blank"
               rel="noopener noreferrer"
-              className={`inline-flex items-center justify-center gap-3 px-10 py-6 font-black uppercase tracking-[0.2em] text-[13px] transition-all duration-300 active:scale-95 ${theme === 'dark' ? 'bg-white text-black hover:bg-zinc-200 shadow-[0_0_40px_-10px_rgba(255,255,255,0.3)]' : 'bg-zinc-900 text-white hover:bg-black shadow-xl'}`}
+              className={`inline-flex items-center justify-center gap-3 px-10 py-6 font-black uppercase tracking-[0.2em] text-[13px] transition-all duration-300 active:scale-95 ${theme === 'dark' ? 'bg-white text-black hover:bg-zinc-200 shadow-[0_0_40px_-10px_rgba(255,255,255,0.3)]' : 'bg-black text-white hover:bg-zinc-800 shadow-[0_0_40px_-10px_rgba(0,0,0,0.3)]'}`}
             >
               Join Parkour Skool <ArrowRight className="w-5 h-5" />
             </a>
@@ -65,70 +65,71 @@ function SkoolHero() {
   );
 }
 
-function CoachStickySection() {
+function CoachSection() {
   const { theme } = useAppContext();
-  const bgImage = GIF_POOL[1 % GIF_POOL.length];
+  const bgImage = GIF_POOL[2 % GIF_POOL.length];
   
   return (
-    <section className="relative min-h-[100svh] flex flex-col justify-center pt-28 pb-24 md:pt-48 md:pb-32 px-6 bg-zinc-950 text-white overflow-hidden">
-      <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-overlay pointer-events-none" />
-      <div className="max-w-7xl mx-auto w-full relative z-10">
+    <section className={`relative min-h-[100svh] flex flex-col justify-center pt-28 pb-24 md:pt-48 md:pb-32 px-6 overflow-hidden transition-colors duration-200 ${theme === 'dark' ? 'bg-zinc-950 text-white' : 'bg-neutral-50 text-black'}`}>
+      <div className="absolute inset-0 z-0">
+        <div className={`absolute inset-0 bg-gradient-to-br transition-colors duration-200 z-10 ${theme === 'dark' ? 'from-zinc-950/95 via-zinc-950/80 to-zinc-950/95' : 'from-white/95 via-white/80 to-white/95'}`} />
+        <img 
+          src={bgImage} 
+          alt="Coach Background" 
+          className={`w-full h-full object-cover absolute inset-0 z-20 mix-blend-overlay ${theme === 'dark' ? 'grayscale opacity-30' : 'grayscale-0 opacity-20'}`}
+        />
+        <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-overlay z-30 pointer-events-none" />
+      </div>
+
+      <div className="max-w-7xl mx-auto w-full relative z-40 flex flex-col items-start text-left">
         <motion.div 
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8 }}
-          className="w-full mb-6 md:mb-16"
+          className="w-full mb-8 lg:mb-10 max-w-4xl"
         >
-          <h2 className="text-[clamp(2.5rem,8vw,8rem)] font-black tracking-tighter leading-[0.85]">
+          <h2 className="text-[clamp(3.5rem,7vw,7.5rem)] font-black tracking-tighter leading-[0.9]">
             make parkour<br/>coaching a<br/>sustainable<br/>career.
           </h2>
         </motion.div>
         
-        <div className="flex flex-col md:flex-row gap-8 md:gap-24 items-start">
-           <div className="md:w-1/4 hidden md:block">
-             <div className="w-full aspect-[3/4] border-[1px] subtractive-border-dark overflow-hidden bg-zinc-900 shadow-2xl">
-                <img src={bgImage} className="w-full h-full object-cover opacity-60 grayscale hover:grayscale-0 transition-all duration-700" alt="Coach" />
-             </div>
-           </div>
-           <div className="md:w-3/4 max-w-3xl">
-             <motion.p 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.8, delay: 0.1 }}
-                className="text-lg sm:text-2xl md:text-4xl text-zinc-400 font-medium leading-relaxed mb-6 md:mb-12"
-             >
-               Book a call to see if our 3-month program is a good fit. 12 spots per cohort. Enrollment closes September 29.
-             </motion.p>
-             <motion.div 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                className="flex flex-col sm:flex-row gap-4"
-              >
-                <a 
-                  href="https://calendly.com/apexmovement/strategy"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-3 px-10 py-6 font-black uppercase tracking-[0.2em] text-[13px] bg-white text-black hover:bg-zinc-200 transition-all active:scale-95 shadow-[0_0_40px_-10px_rgba(255,255,255,0.3)]"
-                >
-                  APPLY NOW <ArrowRight className="w-5 h-5" />
-                </a>
-                <Link 
-                  to="/coach"
-                  className="inline-flex items-center justify-center gap-3 px-10 py-6 font-black uppercase tracking-[0.2em] text-[13px] border-[1px] subtractive-border-dark text-zinc-300 hover:border-white hover:text-white transition-all active:scale-95"
-                >
-                  Learn More
-                </Link>
-              </motion.div>
-           </div>
-        </div>
+        <motion.p 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8, delay: 0.1 }}
+          className={`text-lg md:text-2xl font-medium leading-relaxed mb-10 lg:mb-12 max-w-2xl transition-colors duration-200 ${theme === 'dark' ? 'text-zinc-400' : 'text-zinc-600'}`}
+        >
+          Book a call to see if our 3-month program is a good fit. 12 spots per cohort. Enrollment closes September 29.
+        </motion.p>
+        
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto"
+        >
+          <a 
+            href="https://calendly.com/apexmovement/strategy"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`inline-flex w-full sm:w-auto items-center justify-center gap-3 px-10 py-6 font-black uppercase tracking-[0.2em] text-[13px] transition-all active:scale-95 ${theme === 'dark' ? 'bg-white text-black hover:bg-zinc-200 shadow-[0_0_40px_-10px_rgba(255,255,255,0.3)]' : 'bg-black text-white hover:bg-zinc-800 shadow-[0_0_40px_-10px_rgba(0,0,0,0.3)]'}`}
+          >
+            APPLY NOW <ArrowRight className="w-5 h-5" />
+          </a>
+          <Link 
+            to="/coach"
+            className={`inline-flex w-full sm:w-auto items-center justify-center gap-3 px-10 py-6 font-black uppercase tracking-[0.2em] text-[13px] border transition-all active:scale-95 ${theme === 'dark' ? 'border-zinc-800 text-zinc-300 hover:border-zinc-600 hover:text-white hover:bg-zinc-900' : 'border-zinc-300 text-zinc-700 hover:border-zinc-500 hover:text-black hover:bg-zinc-100'}`}
+          >
+            Learn More
+          </Link>
+        </motion.div>
       </div>
       
       <div 
-        className="absolute bottom-8 md:bottom-10 left-1/2 -translate-x-1/2 z-30 flex flex-col items-center gap-2 cursor-pointer opacity-30 hover:opacity-100 transition-opacity" 
+        className="absolute bottom-8 md:bottom-10 left-1/2 -translate-x-1/2 z-40 flex flex-col items-center gap-2 cursor-pointer opacity-30 hover:opacity-100 transition-opacity" 
         onClick={() => window.scrollBy({ top: window.innerHeight, behavior: 'smooth' })}
       >
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="animate-bounce"><path d="m6 9 6 6 6-6"/></svg>
@@ -137,45 +138,66 @@ function CoachStickySection() {
   );
 }
 
-function AthleteAsymmetricSection() {
+function AthleteSection() {
+  const { theme } = useAppContext();
+  const bgImage = GIF_POOL[4 % GIF_POOL.length];
+  
   return (
-    <section className="relative min-h-[100svh] flex flex-col justify-center pt-28 pb-24 md:pt-48 md:pb-32 px-6 bg-neutral-100 text-black border-y border-neutral-200 overflow-hidden">
-      <div className="max-w-7xl mx-auto w-full relative z-10">
+    <section className={`relative min-h-[100svh] flex flex-col justify-center pt-28 pb-24 md:pt-48 md:pb-32 px-6 overflow-hidden transition-colors duration-200 ${theme === 'dark' ? 'bg-zinc-950 text-white' : 'bg-neutral-50 text-black'}`}>
+      <div className="absolute inset-0 z-0">
+        <div className={`absolute inset-0 bg-gradient-to-br transition-colors duration-200 z-10 ${theme === 'dark' ? 'from-zinc-950/95 via-zinc-950/80 to-zinc-950/95' : 'from-white/95 via-white/80 to-white/95'}`} />
+        <img 
+          src={bgImage} 
+          alt="Athlete Background" 
+          className={`w-full h-full object-cover absolute inset-0 z-20 mix-blend-overlay ${theme === 'dark' ? 'grayscale opacity-30' : 'grayscale-0 opacity-20'}`}
+        />
+        <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-overlay z-30 pointer-events-none" />
+      </div>
+
+      <div className="max-w-7xl mx-auto w-full relative z-40 flex flex-col items-start text-left">
         <motion.div 
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8 }}
-          className="w-full md:w-[85%] mb-8 md:mb-24"
+          className="w-full mb-8 lg:mb-10 max-w-4xl"
         >
-          <h2 className="text-[clamp(3rem,8vw,10rem)] font-black tracking-tighter leading-[0.85] uppercase">
+          <h2 className="text-[clamp(3.5rem,7vw,7.5rem)] font-black tracking-tighter leading-[0.9] uppercase">
             train like an athlete.<br/>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-black to-neutral-400">
+            <span className={`text-transparent bg-clip-text bg-gradient-to-r transition-colors duration-200 ${theme === 'dark' ? 'from-white to-zinc-500' : 'from-black to-zinc-400'}`}>
               move like a human.
             </span>
           </h2>
         </motion.div>
         
-        <div className="flex flex-col md:flex-row gap-8 md:gap-24 items-start">
-           <div className="md:w-1/4 hidden md:block">
-             <div className="w-full aspect-square bg-black mb-8 transform -rotate-3 hover:rotate-0 transition-transform duration-500 shadow-[16px_16px_0px_0px_rgba(0,0,0,0.1)]" />
-           </div>
-           <div className="md:w-3/4 max-w-3xl">
-             <p className="text-lg sm:text-2xl md:text-4xl text-zinc-600 font-medium leading-relaxed mb-6 md:mb-12">
-               Whether you're starting your parkour journey or pushing past plateaus, our curriculum is designed to help you master the art of movement.
-             </p>
-             <Link 
-                to="/train"
-                className="inline-flex items-center justify-center gap-3 px-10 py-6 font-black uppercase tracking-[0.2em] text-[13px] bg-black text-white hover:bg-zinc-800 transition-all shadow-xl active:scale-95"
-              >
-                Learn More <ArrowRight className="w-5 h-5" />
-              </Link>
-           </div>
-        </div>
+        <motion.p 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8, delay: 0.1 }}
+          className={`text-lg md:text-2xl font-medium leading-relaxed mb-10 lg:mb-12 max-w-2xl transition-colors duration-200 ${theme === 'dark' ? 'text-zinc-400' : 'text-zinc-600'}`}
+        >
+          Whether you're starting your parkour journey or pushing past plateaus, our curriculum is designed to help you master the art of movement.
+        </motion.p>
+        
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="w-full sm:w-auto"
+        >
+          <Link 
+            to="/train"
+            className={`inline-flex w-full sm:w-auto items-center justify-center gap-3 px-10 py-6 font-black uppercase tracking-[0.2em] text-[13px] transition-all active:scale-95 ${theme === 'dark' ? 'bg-white text-black hover:bg-zinc-200 shadow-[0_0_40px_-10px_rgba(255,255,255,0.3)]' : 'bg-black text-white hover:bg-zinc-800 shadow-[0_0_40px_-10px_rgba(0,0,0,0.3)]'}`}
+          >
+            Learn More <ArrowRight className="w-5 h-5" />
+          </Link>
+        </motion.div>
       </div>
 
       <div 
-        className="absolute bottom-8 md:bottom-10 left-1/2 -translate-x-1/2 z-30 flex flex-col items-center gap-2 cursor-pointer opacity-30 hover:opacity-100 transition-opacity" 
+        className="absolute bottom-8 md:bottom-10 left-1/2 -translate-x-1/2 z-40 flex flex-col items-center gap-2 cursor-pointer opacity-30 hover:opacity-100 transition-opacity" 
         onClick={() => window.scrollBy({ top: window.innerHeight, behavior: 'smooth' })}
       >
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="animate-bounce"><path d="m6 9 6 6 6-6"/></svg>
@@ -184,87 +206,94 @@ function AthleteAsymmetricSection() {
   );
 }
 
-function LayeredAdsSection() {
-  const bgImage1 = GIF_POOL[2 % GIF_POOL.length];
-  const bgImage2 = GIF_POOL[3 % GIF_POOL.length];
+function ApexSpeedRunSection() {
+  const { theme } = useAppContext();
+  const bgImage = GIF_POOL[1 % GIF_POOL.length];
 
   return (
-    <div className="relative">
-      {/* Apex Speed Run - Sticky Background */}
-      <div className="sticky top-0 h-screen overflow-hidden flex flex-col items-center justify-center pt-28 md:pt-48 bg-zinc-950 text-white z-0">
-        <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-zinc-950 z-10" />
-        <img src={bgImage1} alt="Speed Run" className="absolute inset-0 w-full h-full object-cover opacity-40 grayscale mix-blend-overlay" />
-        
-        <div className="relative z-20 text-center px-4 max-w-5xl mx-auto flex flex-col items-center">
-          <h2 className="text-[clamp(1.8rem,9vw,10rem)] sm:text-[clamp(3rem,8vw,10rem)] font-black uppercase tracking-tighter leading-none mb-6 whitespace-nowrap">APEX SPEED RUN</h2>
-          <p className="text-[clamp(1rem,4.5vw,1.875rem)] md:text-3xl text-zinc-400 font-medium mb-10 lowercase whitespace-nowrap">finding the fastest humans <span className="uppercase">IRL</span> 🌎 🌍 🌏</p>
+    <section className={`relative min-h-[100svh] flex flex-col items-center justify-center pt-28 pb-24 md:pt-48 overflow-hidden border-y transition-colors duration-200 ${theme === 'dark' ? 'bg-neutral-100 text-black border-neutral-200' : 'bg-zinc-950 text-white border-white/10'}`}>
+      <div className="absolute inset-0 z-0">
+        <div className={`absolute inset-0 bg-gradient-to-br transition-colors duration-200 z-10 ${theme === 'dark' ? 'from-white/95 via-white/80 to-white/95' : 'from-zinc-950/95 via-zinc-950/80 to-zinc-950/95'}`} />
+        <img src={bgImage} alt="Speed Run" className={`absolute inset-0 w-full h-full object-cover z-20 ${theme === 'dark' ? 'opacity-20 grayscale-0' : 'opacity-30 grayscale mix-blend-overlay'}`} />
+        {theme !== 'dark' && <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-overlay z-30 pointer-events-none" />}
+      </div>
+      
+      <div className="relative z-40 text-center px-4 max-w-5xl mx-auto flex flex-col items-center">
+        <h2 className="text-[clamp(1.8rem,9vw,10rem)] sm:text-[clamp(3rem,8vw,10rem)] font-black uppercase tracking-tighter leading-none mb-6 whitespace-nowrap">APEX SPEED RUN</h2>
+        <p className={`text-[clamp(1rem,4.5vw,1.875rem)] md:text-3xl font-medium mb-10 lowercase whitespace-nowrap transition-colors duration-200 ${theme === 'dark' ? 'text-zinc-600' : 'text-zinc-400'}`}>finding the fastest humans <span className="uppercase">IRL</span> 🌎 🌍 🌏</p>
+        <a 
+          href="https://apexspeedrun.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`inline-flex items-center justify-center gap-3 px-10 py-6 font-black uppercase tracking-[0.2em] text-[13px] transition-all active:scale-95 ${theme === 'dark' ? 'bg-black text-white hover:bg-zinc-800 shadow-[0_0_40px_-10px_rgba(0,0,0,0.3)]' : 'bg-white text-black hover:bg-zinc-200 shadow-[0_0_40px_-10px_rgba(255,255,255,0.3)]'}`}
+        >
+          PLAY ASR <ExternalLink className="w-5 h-5" />
+        </a>
+      </div>
+      
+      <div 
+        className="absolute bottom-8 md:bottom-10 left-1/2 -translate-x-1/2 z-40 flex flex-col items-center gap-2 cursor-pointer opacity-30 hover:opacity-100 transition-opacity" 
+        onClick={() => window.scrollBy({ top: window.innerHeight, behavior: 'smooth' })}
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="animate-bounce"><path d="m6 9 6 6 6-6"/></svg>
+      </div>
+    </section>
+  );
+}
+
+function ApexDenverSection() {
+  const { theme } = useAppContext();
+  const bgImage = GIF_POOL[3 % GIF_POOL.length];
+
+  return (
+    <section className={`relative z-10 min-h-[100svh] flex flex-col items-center justify-center shadow-[0_-20px_50px_rgba(0,0,0,0.5)] overflow-hidden transition-colors duration-200 ${theme === 'dark' ? 'bg-white text-black' : 'bg-zinc-950 text-white'}`}>
+      <div className={`absolute inset-0 bg-gradient-to-b z-10 transition-colors duration-200 ${theme === 'dark' ? 'from-white/90 to-white/50' : 'from-zinc-950/90 to-zinc-950/50'}`} />
+      <img src={bgImage} alt="Apex Denver" className={`absolute inset-0 w-full h-full object-cover grayscale transition-opacity duration-1000 ${theme === 'dark' ? 'opacity-20' : 'opacity-30 mix-blend-overlay'}`} />
+      {theme !== 'dark' && <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-overlay z-30 pointer-events-none" />}
+      
+      <div className="relative z-20 text-center px-4 max-w-5xl mx-auto flex flex-col items-center pt-28 pb-24 md:pt-48 md:pb-32">
+        <motion.h2 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8 }}
+          className="text-[clamp(2.2rem,11vw,10rem)] sm:text-[clamp(3rem,8vw,10rem)] font-black uppercase tracking-tighter leading-none mb-6 whitespace-nowrap"
+        >
+          Apex Denver
+        </motion.h2>
+        <motion.p 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8, delay: 0.1 }}
+          className={`text-xl md:text-3xl font-medium mb-10 lowercase transition-colors duration-200 ${theme === 'dark' ? 'text-zinc-600' : 'text-zinc-400'}`}
+        >
+          the original Apex parkour gym, est. 2009
+        </motion.p>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
           <a 
-            href="https://apexspeedrun.com"
+            href="https://apexdenver.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-3 px-10 py-6 font-black uppercase tracking-[0.2em] text-[13px] bg-white text-black hover:bg-zinc-200 transition-all active:scale-95 shadow-[0_0_40px_-10px_rgba(255,255,255,0.3)]"
+            className={`inline-flex items-center justify-center gap-3 px-10 py-6 font-black uppercase tracking-[0.2em] text-[13px] transition-all active:scale-95 ${theme === 'dark' ? 'bg-black text-white hover:bg-zinc-800 shadow-[0_0_40px_-10px_rgba(0,0,0,0.3)]' : 'bg-white text-black hover:bg-zinc-200 shadow-[0_0_40px_-10px_rgba(255,255,255,0.3)]'}`}
           >
-            PLAY ASR <ExternalLink className="w-5 h-5" />
+            Visit IRL <ArrowRight className="w-5 h-5" />
           </a>
-        </div>
-        
-        <div 
-          className="absolute bottom-8 md:bottom-10 left-1/2 -translate-x-1/2 z-30 flex flex-col items-center gap-2 cursor-pointer opacity-30 hover:opacity-100 transition-opacity" 
-          onClick={() => window.scrollBy({ top: window.innerHeight, behavior: 'smooth' })}
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="animate-bounce"><path d="m6 9 6 6 6-6"/></svg>
-        </div>
+        </motion.div>
       </div>
 
-      {/* Apex Denver - Scrolls over the sticky section */}
-      <div className="relative z-10 min-h-[100svh] bg-white text-black flex flex-col items-center justify-center shadow-[0_-20px_50px_rgba(0,0,0,0.5)] overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-white/90 to-white/50 z-10" />
-        <img src={bgImage2} alt="Apex Denver" className="absolute inset-0 w-full h-full object-cover opacity-20 grayscale" />
-        
-        <div className="relative z-20 text-center px-4 max-w-5xl mx-auto flex flex-col items-center pt-28 pb-24 md:pt-48 md:pb-32">
-          <motion.h2 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8 }}
-            className="text-[clamp(2.2rem,11vw,10rem)] sm:text-[clamp(3rem,8vw,10rem)] font-black uppercase tracking-tighter leading-none mb-6 whitespace-nowrap"
-          >
-            Apex Denver
-          </motion.h2>
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8, delay: 0.1 }}
-            className="text-xl md:text-3xl text-zinc-600 font-medium mb-10 lowercase"
-          >
-            the original Apex parkour gym, est. 2009
-          </motion.p>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            <a 
-              href="https://apexdenver.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-3 px-10 py-6 font-black uppercase tracking-[0.2em] text-[13px] bg-black text-white hover:bg-zinc-800 transition-all active:scale-95 shadow-xl"
-            >
-              Visit IRL <ArrowRight className="w-5 h-5" />
-            </a>
-          </motion.div>
-        </div>
-
-        <div 
-          className="absolute bottom-8 md:bottom-10 left-1/2 -translate-x-1/2 z-30 flex flex-col items-center gap-2 cursor-pointer opacity-30 hover:opacity-100 transition-opacity text-black" 
-          onClick={() => window.scrollBy({ top: window.innerHeight, behavior: 'smooth' })}
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="animate-bounce"><path d="m6 9 6 6 6-6"/></svg>
-        </div>
+      <div 
+        className="absolute bottom-8 md:bottom-10 left-1/2 -translate-x-1/2 z-30 flex flex-col items-center gap-2 cursor-pointer opacity-30 hover:opacity-100 transition-opacity text-black" 
+        onClick={() => window.scrollBy({ top: window.innerHeight, behavior: 'smooth' })}
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="animate-bounce"><path d="m6 9 6 6 6-6"/></svg>
       </div>
-    </div>
+    </section>
   );
 }
 
@@ -293,10 +322,11 @@ export default function Home() {
     <div className="flex flex-col w-full bg-zinc-950">
       <SEO />
       <SkoolHero />
-      <CoachStickySection />
-      <AthleteAsymmetricSection />
-      <LayeredAdsSection />
-      <div className="relative z-20 bg-zinc-950">
+      <ApexSpeedRunSection />
+      <CoachSection />
+      <ApexDenverSection />
+      <AthleteSection />
+      <div className="relative z-20 bg-neutral-100">
         <BlogSection />
       </div>
     </div>

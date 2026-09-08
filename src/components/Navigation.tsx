@@ -110,7 +110,7 @@ export function Navigation({ isMenuOpen, setIsMenuOpen }: NavigationProps) {
         </div>
       )}
 
-      <nav className={`fixed top-[30px] md:top-[32px] w-full z-[300] transition-all duration-700 px-4 md:px-6 py-4 flex justify-between items-center gap-4 ${scrolled || currentView !== 'home' ? (theme === 'dark' ? 'bg-black/95 border-b-2 border-white/10 text-white' : 'bg-white/95 border-b-2 border-black/10 text-black') : (theme === 'dark' ? 'bg-transparent text-white' : 'bg-transparent text-black')} backdrop-blur-md`}>
+      <nav className={`fixed top-[30px] md:top-[32px] w-full z-[300] transition-all duration-200 px-4 md:px-6 py-4 flex justify-between items-center gap-4 ${scrolled || currentView !== 'home' ? (theme === 'dark' ? 'bg-black/95 border-b-2 border-white/10 text-white' : 'bg-white/95 border-b-2 border-black/10 text-black') : (theme === 'dark' ? 'bg-transparent text-white' : 'bg-transparent text-black')} backdrop-blur-md`}>
         <a href="/" onClick={(e) => { e.preventDefault(); handleNav('home'); }} className="text-[15px] min-[360px]:text-lg sm:text-xl md:text-2xl font-display font-bold tracking-tight uppercase cursor-pointer flex items-center gap-2 md:gap-3 shrink-0" aria-label="Go to home">
             <div className="relative flex items-center justify-center w-8 h-8 md:w-10 md:h-10 shrink-0 hover:-translate-y-[1px] active:scale-[0.98] active:translate-y-0 transition-all duration-150 ease-out">
               <img src="/apexlogo.png" alt="" className={`absolute max-w-none h-[90px] md:h-[110px] w-auto transition-all duration-150 ${theme === 'dark' ? 'invert' : ''}`} aria-hidden="true" />

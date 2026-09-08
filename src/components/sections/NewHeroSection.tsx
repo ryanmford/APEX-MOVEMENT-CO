@@ -71,7 +71,7 @@ export function NewHeroSection() {
             className={`relative min-h-[100svh] flex flex-col justify-center pt-28 pb-24 md:pt-48 md:pb-32 overflow-hidden px-4 md:px-8 ${theme === 'dark' ? 'bg-zinc-950' : 'bg-neutral-50'}`}
           >
             <div className="absolute inset-0 z-0">
-              <div className={`absolute inset-0 bg-gradient-to-br ${theme === 'dark' ? 'from-zinc-950/95 via-zinc-950/80 to-zinc-950/95' : 'from-white/95 via-white/80 to-white/95'} z-10 transition-colors duration-1000`} />
+              <div className={`absolute inset-0 bg-gradient-to-br ${theme === 'dark' ? 'from-zinc-950/95 via-zinc-950/80 to-zinc-950/95' : 'from-white/95 via-white/80 to-white/95'} z-10 transition-colors duration-200`} />
               
               <img 
                 src={currentBg} 
@@ -81,7 +81,7 @@ export function NewHeroSection() {
                 className={`w-full h-full object-cover absolute inset-0 z-20 ${theme === 'dark' ? 'grayscale opacity-30 mix-blend-overlay' : 'grayscale-0 opacity-20'}`}
               />
               
-              <div className={`absolute inset-x-0 bottom-0 h-32 md:h-48 bg-gradient-to-t ${theme === 'dark' ? 'from-zinc-950' : 'from-neutral-50'} to-transparent z-30 transition-colors duration-1000`} />
+              <div className={`absolute inset-x-0 bottom-0 h-32 md:h-48 bg-gradient-to-t ${theme === 'dark' ? 'from-zinc-950' : 'from-neutral-50'} to-transparent z-30 transition-colors duration-200`} />
             </div>
 
             <div className="max-w-7xl mx-auto relative z-10 w-full flex flex-col">

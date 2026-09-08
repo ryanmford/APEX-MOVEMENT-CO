@@ -38,7 +38,7 @@ export const Button = memo(({ children, primary = true, className = "", onClick,
     y.set(0);
   };
 
-  const base = "relative overflow-hidden px-6 md:px-10 py-4 md:py-5 font-black transition-colors duration-300 border-[1px] text-[11px] md:text-[12px] uppercase tracking-[0.2em] md:tracking-[0.25em] flex items-center justify-center cursor-pointer rounded-none text-center whitespace-normal break-words min-h-[44px]";
+  const base = "relative overflow-hidden px-6 md:px-10 py-4 md:py-5 font-black transition-colors duration-200 border-[1px] text-[11px] md:text-[12px] uppercase tracking-[0.2em] md:tracking-[0.25em] flex items-center justify-center cursor-pointer rounded-none text-center whitespace-normal break-words min-h-[44px]";
   let colors = "";
   if (theme === 'dark') {
     colors = primary 
@@ -52,15 +52,15 @@ export const Button = memo(({ children, primary = true, className = "", onClick,
   
   return (
     <motion.button 
-      ref={buttonRef} 
+      ref={buttonRef as any} 
       type={type} 
       onClick={onClick} 
-      onMouseMove={handleMouseMove}
-      onMouseLeave={handleMouseLeave}
+      onMouseMove={handleMouseMove as any}
+      onMouseLeave={handleMouseLeave as any}
       whileTap={{ scale: 0.95 }}
-      style={{ x, y }}
+      style={{ x, y } as any}
       className={`${base} ${colors} ${className} group`} 
-      {...props}
+      {...props as any}
     >
       <span className="relative z-10 flex items-center justify-center gap-3 w-full h-full">{children}</span>
       {primary && (
