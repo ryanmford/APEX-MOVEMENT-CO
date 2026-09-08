@@ -367,7 +367,8 @@ export default function Coach() {
             we don't just give you courses. we build your business infrastructure alongside you.
           </p>
 
-          <div className="grid md:grid-cols-3 gap-8 text-left mb-8">
+          <h3 className="text-3xl font-black tracking-tighter mb-8 text-left">coaching skills</h3>
+          <div className="grid md:grid-cols-3 gap-8 text-left mb-16">
             {[
               {
                 icon: <Award className={`w-8 h-8 ${themeClasses.accent}`} />,
@@ -401,25 +402,26 @@ export default function Coach() {
             ))}
           </div>
 
+          <h3 className="text-3xl font-black tracking-tighter mb-8 text-left">business skills</h3>
           <div className="grid md:grid-cols-3 gap-8 text-left">
             {[
               {
                 icon: <Users className={`w-8 h-8 ${themeClasses.accent}`} />,
-                title: "offer architecture",
-                desc: "design a high-ticket coaching offer or digital product suite that perfectly aligns with your specific audience and movement style.",
-                timeline: "months 1-3"
+                title: "attract",
+                desc: "define your niche, build your offer, and create compelling content to attract your ideal clients.",
+                timeline: "month 1"
               },
               {
                 icon: <TrendingUp className={`w-8 h-8 ${themeClasses.accent}`} />,
-                title: "content conversion",
-                desc: "stop making content just for likes. we'll help you create funnels that seamlessly attract and convert views into paying clients.",
-                timeline: "months 1-3"
+                title: "convert",
+                desc: "master the sales process to effectively sell to your leads. turn passive followers into paying clients.",
+                timeline: "month 2"
               },
               {
                 icon: <ShieldCheck className={`w-8 h-8 ${themeClasses.accent}`} />,
-                title: "operational scale",
-                desc: "templates, automations, and team-building strategies so you can run and grow without feeling constantly burnt out or overwhelmed.",
-                timeline: "months 1-3"
+                title: "deliver",
+                desc: "deliver high-quality coaching and programming to your clients, using our proven templates, systems, and best practices.",
+                timeline: "month 3"
               }
             ].map((feature, i) => (
               <div key={i + 3} className={`p-8 rounded-2xl border-2 ${themeClasses.card}`}>
@@ -447,32 +449,32 @@ export default function Coach() {
           <div className="space-y-4">
             {[
               {
-                q: "I'm already making good money as a coach. Why do I need the Apex Method?",
-                a: "Even successful coaches often hit income and lifestyle ceilings. The Apex Method helps you break through to premium pricing while working fewer hours. Our most successful graduates were already good coaches who wanted to master the methodology that sets industry leaders apart."
+                q: "I already make good money as a coach. Why do I need the Apex Method?",
+                a: "Even successful coaches hit income and lifestyle ceilings. The Apex Method helps you break through to premium pricing while working fewer hours. Our most successful graduates were already good coaches who wanted to master the methodology that sets industry leaders apart."
               },
               {
                 q: "How is the Apex Method different from other parkour certifications?",
-                a: "Most certifications teach you information. Our program teaches you the complete Apex Method through implementation. You'll build your entire practice inside our ecosystem during the cohort, with direct feedback from the founders. You graduate with a functioning premium practice using proven methodology, not just a certificate."
+                a: "Most parkour certifications teach you information. Our program teaches you the complete Apex Method through implementation. You'll build your entire practice inside our ecosystem during the cohort, with direct feedback from our team. You graduate with a functioning premium practice using proven methodology, not just a certificate."
               },
               {
                 q: "What exactly is the Apex Method?",
-                a: "It's our comprehensive system for delivering truly personalized movement coaching. The Apex Method teaches you to assess each athlete systematically, design programs based on their unique needs that also include longevity and lifestyle considerations, and deliver ongoing coaching that creates lasting results. It's the methodology that separates premium coaches from the crowd."
+                a: "It's our comprehensive system for delivering truly personalized parkour coaching. The Apex Method teaches you to systematically assess each client, design programs based on their unique needs that also include longevity and lifestyle considerations, and deliver ongoing coaching that creates lasting results. It's the methodology that separates premium coaches from the crowd."
               },
               {
-                q: "Can I complete this while coaching part-time or full time?",
-                a: "Yes. The Apex Method is designed for working coaches. Live sessions are scheduled to accommodate most work schedules, and all content is recorded for flexibility. The Apex Method is built to integrate into any coaching practice."
+                q: "Can I complete this while working part-time or full-time?",
+                a: "Yes. The Apex Method is designed for working coaches. Live sessions are scheduled to accommodate most work schedules, and all content is recorded and reposted for both live and asynchronous consumption. The Apex Method is built to integrate into any coaching practice."
               },
               {
                 q: "What if I've never used online coaching platforms before?",
-                a: "Perfect! We include guided setup. The Apex Method is designed to work seamlessly with modern coaching tools - most coaches master the tech within 2-3 weeks. Our support team ensures you're confident with the technology."
+                a: "Perfect! We include guided setup. The Apex Method is designed to work seamlessly with modern coaching tools. Our support team ensures you're confident with the technology."
               },
               {
                 q: "Is this only for parkour coaches?",
-                a: "No. The Apex Method works for any coach wanting to deliver personalized service: online coaches, gym owners, strength coaches, freerunning coaches, and movement practitioners. The methodology adapts to any coaching environment."
+                a: "No. The Apex Method works for any movement coach wanting to deliver personalized service: IRL/online/hybrid coaches, program directors, gym owners, and more. The methodology adapts to any coaching environment."
               },
               {
                 q: "What ongoing support do I get after graduation?",
-                a: "You'll get access to ongoing Apex Method education, a lifetime alumni community, monthly alumni calls, and opportunities for advanced business mentorship. Plus, the Apex Method gives you frameworks you'll use for your entire career."
+                a: "You'll get a lifetime alumni community and opportunities for advanced business mentorship. Plus, the Apex Method gives you frameworks you'll use for your entire career."
               },
               {
                 q: "How quickly will I see results from implementing the Apex Method?",
@@ -520,7 +522,7 @@ export default function Coach() {
       {/* CTA */}
       <section className={`py-32 px-6 text-center border-t ${themeClasses.border}`}>
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-5xl md:text-6xl font-black tracking-tighter mb-6">secure your spot for october 3rd</h2>
+          <h2 className="text-5xl md:text-6xl font-black tracking-tighter mb-6">secure your spot for oct 3</h2>
           <p className={`text-xl mb-12 font-medium ${themeClasses.muted}`}>
             we only accept a small group of coaches who have the drive to execute. let's build together.
           </p>
