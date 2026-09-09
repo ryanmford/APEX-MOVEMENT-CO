@@ -1,11 +1,1 @@
-export { NewHeroSection } from './NewHeroSection';
-export { TheApexMethodSection } from './TheApexMethodSection';
-export { WhatsInsideSection } from './WhatsInsideSection';
-export { TwoCommunitiesSection } from './TwoCommunitiesSection';
-export { TestimonialsSection } from './TestimonialsSection';
-export { CoachesSection } from './CoachesSection';
-export { FaqSection } from './FaqSection';
-export { FinalCtaSection } from './FinalCtaSection';
-export { LibrarySection } from './LibrarySection';
-export { ProjectsSection } from './ProjectsSection';
 export { BlogSection } from './BlogSection';

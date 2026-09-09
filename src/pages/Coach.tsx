@@ -16,7 +16,7 @@ export default function Coach() {
   const themeClasses = {
     bg: theme === 'dark' ? 'bg-zinc-950' : 'bg-white',
     text: theme === 'dark' ? 'text-white' : 'text-zinc-900',
-    muted: theme === 'dark' ? 'text-zinc-400' : 'text-zinc-600',
+    muted: theme === 'dark' ? 'text-zinc-200' : 'text-zinc-900',
     border: theme === 'dark' ? 'border-zinc-800' : 'border-zinc-200',
     card: theme === 'dark' ? 'bg-zinc-900 border-zinc-800' : 'bg-zinc-50 border-zinc-200',
     accent: theme === 'dark' ? 'text-amber-500' : 'text-amber-700',

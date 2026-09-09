@@ -11,7 +11,7 @@ export const CONFIG = {
   tagline: "move better in the real world",
   subline: "efficiency is the highest form of truth.",
   cta: "JOIN THE COMMUNITY",
-  skoolLink: "https://www.skool.com/apexmovement/about",
+  skoolLink: "https://www.skool.com/apexmovement/about?ref=ceaa23f64b494958924a0fe4b69e4be1",
   merchLink: "https://shop.apexmovement.com/",
   sheetId: "14MMo3dYdQC96YMTsL0MhZEhuCOCl4c8JVw0C6TuH_fs", 
   socials: [
@@ -21,72 +21,3 @@ export const CONFIG = {
   ]
 };
 
-export const BIOS = [
-  {
-    name: "Apex Movement",
-    role: "The Collective Standard",
-    story: "Founded in 2006, Apex is a movement logic collective dedicated to extracting the universal laws of physical performance. We don't teach style; we teach the architecture of human output.",
-    focus: ["Biomechanics", "Kinetic Chains", "Physics First"],
-    metrics: "Est. 2006",
-    gif: GIF_POOL[2]
-  },
-  {
-    name: "Ryan Ford",
-    role: "The Movement Architect",
-    story: "In 2006, Ryan founded the first parkour program in the Western Hemisphere. Author of 'Parkour Strength Training', he has dedicated over 20 years to parkour .",
-    focus: ["Anatomy", "Plyometric Load", "Pedagogy"],
-    metrics: "Founder",
-    gif: "/ryanford.jpg"
-  }
-];
-
-export const PRODUCTS = [
-  { 
-    id: "101", 
-    title: "parkour 101", 
-    blurb: "The Comprehensive Architecture. A structured deconstruction of 150+ foundational mechanics. Eliminate the trial-and-error gap and master the primary kinetic chains of parkour.", 
-    cta: "master the basics", 
-    tag: "foundations",
-    gif: GIF_POOL[0] 
-  },
-  { 
-    id: "strength", 
-    title: "parkour strength", 
-    blurb: "Structural Prep & Resilience. Specific physical preparation (SPP) for the parkour athlete. Build the 'anatomical armor' required to sustain high-impact loading and bone density adaptation.", 
-    cta: "build armor", 
-    tag: "prep",
-    gif: GIF_POOL[1] 
-  },
-  { 
-    id: "power", 
-    title: "power program", 
-    blurb: "Verticality & Force Production. The Power^Up Protocol. Optimize high-threshold motor unit recruitment to maximize explosive vertical and horizontal output for elite performance.", 
-    cta: "maximize force", 
-    tag: "power",
-    gif: GIF_POOL[2] 
-  },
-  { 
-    id: "climb", 
-    title: "climb-up blueprint", 
-    blurb: "The Mechanical Solution. A deep-dive blueprint for mastering the wall-to-ledge transition. Optimize leverage, pulling mechanics, and transit speed to solve the wall.", 
-    cta: "solve the wall", 
-    tag: "climbing",
-    gif: GIF_POOL[0] 
-  },
-  { 
-    id: "remote", 
-    title: "remote training", 
-    blurb: "Biomechanical Auditing. Direct remote oversight. One-on-one video analysis of your movement geometry with individualized programming parameters and custom coaching protocols.", 
-    cta: "get audited", 
-    tag: "individualized",
-    gif: GIF_POOL[1] 
-  },
-  { 
-    id: "cert", 
-    title: "coaching standards", 
-    blurb: "The APCC Standard. Apex Parkour Coaching Certification. Transition from intuitive movement to formal pedagogy. Master the science of instructional logic and joined a global network.", 
-    cta: "get certified", 
-    tag: "professional",
-    gif: GIF_POOL[2] 
-  }
-];

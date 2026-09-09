@@ -1,5 +1,5 @@
 import React, { useMemo, useCallback } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate, Link } from 'react-router-dom';
 import { Mountain, Menu, Moon, Sun, X, ChevronRight, ExternalLink } from 'lucide-react';
 import { useAppContext } from '../contexts/AppContext';
 import { useScroll } from '../hooks/useScroll';
@@ -46,9 +46,7 @@ export function Navigation({ isMenuOpen, setIsMenuOpen }: NavigationProps) {
   }, [navigate, setIsMenuOpen, currentView]);
 
   const navLinks = useMemo(() => [
-    { label: 'for coaches', onClick: () => handleNav('coach'), active: currentView === 'coach', external: false, href: undefined },
-    { label: 'for athletes', onClick: () => handleNav('train'), active: currentView === 'train', external: false, href: undefined },
-    { label: 'about', onClick: () => handleNav('about'), active: currentView === 'about', external: false, href: undefined },
+    { label: 'coach', onClick: () => handleNav('coach'), active: currentView === 'coach', external: false, href: '/coach' },
     { label: 'blog', onClick: undefined, active: false, external: true, href: 'https://apexmovement.substack.com/' },
     { label: 'merch', onClick: undefined, active: false, external: true, href: CONFIG.merchLink },
   ], [handleNav, currentView]);
@@ -62,38 +60,46 @@ export function Navigation({ isMenuOpen, setIsMenuOpen }: NavigationProps) {
         OCTOBER 3 COACH COHORT: ONLY 8 OF 12 SPOTS LEFT
       </button>
       {isMenuOpen && (
-        <div role="dialog" aria-modal="true" aria-label="Mobile Navigation" className={`fixed inset-0 z-[400] pt-24 pb-[calc(2rem+env(safe-area-inset-bottom))] px-8 flex flex-col transition-all duration-500 animate-in fade-in slide-in-from-right-full ${theme === 'dark' ? 'bg-black text-white' : 'bg-white text-black shadow-2xl'}`}>
+        <div role="dialog" aria-modal="true" aria-label="Mobile Navigation" className={`fixed inset-0 z-[400] pt-24 pb-[calc(2rem+env(safe-area-inset-bottom))] px-8 flex flex-col transition-all duration-200 animate-in fade-in slide-in-from-right-full ${theme === 'dark' ? 'bg-black text-white' : 'bg-white text-black shadow-2xl'}`}>
 
           <div className="flex justify-between items-center gap-4 mb-12 shrink-0 border-b-2 border-current/10 pb-8">
-            <div className="text-[15px] min-[360px]:text-lg sm:text-xl md:text-2xl font-display font-bold tracking-tight uppercase cursor-pointer flex items-center gap-2 sm:gap-3 shrink-0" onClick={() => handleNav('home')} tabIndex={0} role="button" aria-label="Go to home" onKeyDown={(e) => e.key === 'Enter' && handleNav('home')}>
+            <Link to="/" className="text-[15px] min-[360px]:text-lg sm:text-xl md:text-2xl font-display font-bold tracking-tight uppercase cursor-pointer flex items-center gap-2 sm:gap-3 shrink-0" onClick={(e) => { e.preventDefault(); handleNav('home'); }} aria-label="Go to home">
               <div className="relative flex items-center justify-center w-8 md:w-10 h-8 shrink-0 hover:-translate-y-[1px] active:scale-[0.98] active:translate-y-0 transition-all duration-150 ease-out group">
                 <img src="/apexlogo.png" alt="" className={`absolute max-w-none h-[90px] md:h-[110px] w-auto transition-all duration-150 ${theme === 'dark' ? 'invert' : ''}`} aria-hidden="true" />
               </div>
               <span className="whitespace-nowrap leading-none mt-1">{CONFIG.brand}</span>
-            </div>
+            </Link>
             <button aria-label="Close menu" autoFocus className="shrink-0 cursor-pointer p-3 min-w-[44px] min-h-[44px] border-2 border-current rounded-full hover:rotate-90 active:scale-95 transition-transform duration-300 bg-transparent text-current flex items-center justify-center" onClick={() => setIsMenuOpen(false)}><X size={24} /></button>
           </div>
           
           <div className="flex-grow flex flex-col space-y-4 overflow-y-auto pb-10 scrollbar-hide">
             {navLinks.map((link, i) => (
-              <a 
-                key={i} 
-                href={link.href} 
-                target={link.external ? "_blank" : undefined}
-                rel={link.external ? "noopener noreferrer" : undefined}
-                onClick={(e) => { 
-                  if (!link.external) {
+              link.external ? (
+                <a 
+                  key={i} 
+                  href={link.href} 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setIsMenuOpen(false)} 
+                  className={`group flex items-center justify-between text-4xl font-black tracking-tighter cursor-pointer border-b border-current/5 py-5 min-h-[60px] transition-all active:scale-[0.98] ${link.active ? 'opacity-100' : 'opacity-50 hover:opacity-100'}`}
+                >
+                  <span>{link.label}</span>
+                  <ExternalLink size={16} className="opacity-20" />
+                </a>
+              ) : (
+                <Link 
+                  key={i} 
+                  to={link.href || '/'}
+                  onClick={(e) => { 
                     e.preventDefault();
                     if (link.onClick) link.onClick(); 
-                  } else {
-                    setIsMenuOpen(false);
-                  }
-                }} 
-                className={`group flex items-center justify-between text-4xl font-black tracking-tighter cursor-pointer border-b border-current/5 py-5 min-h-[60px] transition-all active:scale-[0.98] ${link.active ? 'opacity-100' : 'opacity-50 hover:opacity-100'}`}
-              >
-                <span>{link.label}</span>
-                {link.external ? <ExternalLink size={16} className="opacity-20" /> : <ChevronRight size={16} className="opacity-20" />}
-              </a>
+                  }} 
+                  className={`group flex items-center justify-between text-4xl font-black tracking-tighter cursor-pointer border-b border-current/5 py-5 min-h-[60px] transition-all active:scale-[0.98] ${link.active ? 'opacity-100' : 'opacity-50 hover:opacity-100'}`}
+                >
+                  <span>{link.label}</span>
+                  <ChevronRight size={16} className="opacity-20" />
+                </Link>
+              )
             ))}
           </div>
           
@@ -111,33 +117,43 @@ export function Navigation({ isMenuOpen, setIsMenuOpen }: NavigationProps) {
       )}
 
       <nav className={`fixed top-[30px] md:top-[32px] w-full z-[300] transition-all duration-200 px-4 md:px-6 py-4 flex justify-between items-center gap-4 ${scrolled || currentView !== 'home' ? (theme === 'dark' ? 'bg-black/95 border-b-2 border-white/10 text-white' : 'bg-white/95 border-b-2 border-black/10 text-black') : (theme === 'dark' ? 'bg-transparent text-white' : 'bg-transparent text-black')} backdrop-blur-md`}>
-        <a href="/" onClick={(e) => { e.preventDefault(); handleNav('home'); }} className="text-[15px] min-[360px]:text-lg sm:text-xl md:text-2xl font-display font-bold tracking-tight uppercase cursor-pointer flex items-center gap-2 md:gap-3 shrink-0" aria-label="Go to home">
+        <Link to="/" onClick={(e) => { e.preventDefault(); handleNav('home'); }} className="text-[15px] min-[360px]:text-lg sm:text-xl md:text-2xl font-display font-bold tracking-tight uppercase cursor-pointer flex items-center gap-2 md:gap-3 shrink-0" aria-label="Go to home">
             <div className="relative flex items-center justify-center w-8 h-8 md:w-10 md:h-10 shrink-0 hover:-translate-y-[1px] active:scale-[0.98] active:translate-y-0 transition-all duration-150 ease-out">
               <img src="/apexlogo.png" alt="" className={`absolute max-w-none h-[90px] md:h-[110px] w-auto transition-all duration-150 ${theme === 'dark' ? 'invert' : ''}`} aria-hidden="true" />
             </div>
             <span className="whitespace-nowrap leading-none mt-1">{CONFIG.brand}</span>
-        </a>
+        </Link>
         
         <div className="hidden lg:flex flex-grow justify-center px-4 overflow-hidden">
           <div className="flex gap-4 lg:gap-5 xl:gap-10 items-center font-black text-[9px] xl:text-[10px] tracking-[0.2em] xl:tracking-[0.4em]" role="navigation" aria-label="Main Navigation">
             {navLinks.map((link, i) => (
-              <a 
-                key={i} 
-                href={link.href} 
-                target={link.external ? "_blank" : undefined}
-                rel={link.external ? "noopener noreferrer" : undefined}
-                onClick={(e) => { 
-                  if (!link.external) {
+              link.external ? (
+                <a 
+                  key={i} 
+                  href={link.href} 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`transition-all cursor-pointer relative group flex items-center gap-1 xl:gap-2 uppercase ${link.active ? 'opacity-100' : 'opacity-40 hover:opacity-100'} whitespace-nowrap ${i >= 4 ? 'hidden xl:flex' : ''}`}
+                  aria-current={link.active ? 'page' : undefined}
+                >
+                  <span>{link.label}</span>
+                  <span className={`absolute -bottom-1 left-0 h-[2px] bg-current transition-all duration-500 ${link.active ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
+                </a>
+              ) : (
+                <Link 
+                  key={i} 
+                  to={link.href || '/'}
+                  onClick={(e) => { 
                     e.preventDefault();
                     if (link.onClick) link.onClick(); 
-                  }
-                }} 
-                className={`transition-all cursor-pointer relative group flex items-center gap-1 xl:gap-2 uppercase ${link.active ? 'opacity-100' : 'opacity-40 hover:opacity-100'} whitespace-nowrap ${i >= 4 ? 'hidden xl:flex' : ''}`}
-                aria-current={link.active ? 'page' : undefined}
-              >
-                <span>{link.label}</span>
-                <span className={`absolute -bottom-1 left-0 h-[2px] bg-current transition-all duration-500 ${link.active ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
-              </a>
+                  }} 
+                  className={`transition-all cursor-pointer relative group flex items-center gap-1 xl:gap-2 uppercase ${link.active ? 'opacity-100' : 'opacity-40 hover:opacity-100'} whitespace-nowrap ${i >= 4 ? 'hidden xl:flex' : ''}`}
+                  aria-current={link.active ? 'page' : undefined}
+                >
+                  <span>{link.label}</span>
+                  <span className={`absolute -bottom-1 left-0 h-[2px] bg-current transition-all duration-500 ${link.active ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
+                </Link>
+              )
             ))}
           </div>
         </div>

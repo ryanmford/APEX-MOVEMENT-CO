@@ -4,9 +4,7 @@ import { HelmetProvider } from 'react-helmet-async';
 import { AppProvider } from './contexts/AppContext';
 import RootLayout from './layouts/RootLayout';
 import Home from './pages/Home';
-import Train from './pages/Train';
 import Blog from './pages/Blog';
-import About from './pages/About';
 import Apply from './pages/Apply';
 import Coach from './pages/Coach';
 
@@ -18,9 +16,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<RootLayout />}>
               <Route index element={<Home />} />
-              <Route path="train" element={<Train />} />
               <Route path="blog" element={<Blog />} />
-              <Route path="about" element={<About />} />
               <Route path="coach" element={<Coach />} />
             </Route>
             <Route path="/apply" element={<Apply />} />

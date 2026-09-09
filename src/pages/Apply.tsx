@@ -116,7 +116,7 @@ export default function Apply() {
                 <h1 className="text-3xl md:text-5xl font-black tracking-tighter leading-tight mb-4">
                   who are we speaking with?
                 </h1>
-                <p className={`text-lg font-medium ${theme === 'dark' ? 'text-zinc-400' : 'text-zinc-600'}`}>
+                <p className={`text-lg font-medium ${theme === 'dark' ? 'text-zinc-200' : 'text-zinc-900'}`}>
                   Enter your details to begin the application process.
                 </p>
               </div>
@@ -215,11 +215,11 @@ export default function Apply() {
               <h1 className="text-3xl md:text-4xl font-black tracking-tighter mb-4">
                 Not quite ready yet
               </h1>
-              <p className={`text-lg mb-8 max-w-md ${theme === 'dark' ? 'text-zinc-400' : 'text-zinc-600'} font-medium`}>
+              <p className={`text-lg mb-8 max-w-md ${theme === 'dark' ? 'text-zinc-200' : 'text-zinc-900'} font-medium`}>
                 It looks like you aren't ready for the $3k intensive right now. That's okay. We recommend joining our community to level up your skills first.
               </p>
               <a 
-                href="https://www.skool.com/apexmovement"
+                href="https://www.skool.com/apexmovement/about?ref=ceaa23f64b494958924a0fe4b69e4be1"
                 className={`inline-flex items-center justify-center gap-3 px-8 py-5 font-black uppercase tracking-[0.2em] text-[12px] md:text-[13px] transition-all duration-300 active:scale-95 ${theme === 'dark' ? 'bg-white text-black hover:bg-zinc-200 shadow-[0_0_40px_-10px_rgba(255,255,255,0.3)]' : 'bg-zinc-900 text-white hover:bg-black shadow-xl'}`}
               >
                 Join Skool Community
@@ -240,7 +240,7 @@ export default function Apply() {
               <h1 className="text-3xl md:text-4xl font-black tracking-tighter mb-4">
                 Application Accepted
               </h1>
-              <p className={`text-lg mb-8 max-w-md ${theme === 'dark' ? 'text-zinc-400' : 'text-zinc-600'} font-medium`}>
+              <p className={`text-lg mb-8 max-w-md ${theme === 'dark' ? 'text-zinc-200' : 'text-zinc-900'} font-medium`}>
                 You qualify for the cohort. Book your strategy session below to secure your spot before they fill up.
               </p>
               

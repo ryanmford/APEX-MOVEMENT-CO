@@ -13,6 +13,14 @@ export default function RootLayout() {
   const currentOutlet = useOutlet();
 
   useEffect(() => {
+    document.documentElement.style.scrollBehavior = 'auto';
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    setTimeout(() => {
+      document.documentElement.style.scrollBehavior = '';
+    }, 10);
+  }, [pathname]);
+
+  useEffect(() => {
     if (hash) {
       // If there's a hash, we let the browser handle it, or we could handle it here.
     }
@@ -46,16 +54,7 @@ export default function RootLayout() {
 
       <GlobalModals />
       <main className="relative z-10">
-        <AnimatePresence 
-          mode="wait"
-          onExitComplete={() => {
-            document.documentElement.style.scrollBehavior = 'auto';
-            window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
-            setTimeout(() => {
-              document.documentElement.style.scrollBehavior = '';
-            }, 10);
-          }}
-        >
+        <AnimatePresence>
           <motion.div
             key={pathname || 'empty'}
             initial={{ opacity: 0, y: 15 }}
@@ -63,11 +62,6 @@ export default function RootLayout() {
               opacity: 1, 
               y: 0,
               transition: { type: "spring", stiffness: 400, damping: 30 }
-            }}
-            exit={{ 
-              opacity: 0, 
-              y: -15,
-              transition: { duration: 0.15, ease: "easeIn" }
             }}
           >
             {currentOutlet}
