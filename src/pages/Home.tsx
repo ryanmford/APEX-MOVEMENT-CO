@@ -39,11 +39,11 @@ function SkoolHero() {
           className="max-w-4xl flex flex-col items-start text-left mt-8 md:mt-0"
         >
           <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black tracking-tighter leading-[0.85] mb-4 md:mb-8">
-            move<br />better<br />in the<br />real world
+            move better<br />in the real world
           </h1>
           
           <p className={`text-base md:text-2xl mb-6 md:mb-12 max-w-2xl leading-relaxed font-medium transition-colors duration-200 ${theme === 'dark' ? 'text-zinc-200' : 'text-zinc-900'}`}>
-            Join our free Parkour Skool app. Start your parkour journey, follow our foundational curriculum, and connect with an international community of athletes and coaches.
+            Learn parkour, build strength, and apply your skills in the real world with our progressions, challenges, and training programs. Develop creativity, explore movement, and become more confident in yourself.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
