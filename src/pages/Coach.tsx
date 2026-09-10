@@ -292,19 +292,19 @@ export default function Coach() {
               <h2 className="text-4xl md:text-5xl font-black tracking-tighter mb-8">from athlete to coach to founder</h2>
               <div className={`space-y-6 text-lg leading-relaxed font-medium ${themeClasses.muted}`}>
                 <p>
-                  I taught myself parkour from internet videos in 2004. 2 years later, I started the first parkour classes in the Americas while working as an athlete with brands like K-Swiss, ESPN, HP, Cisco, and Steve Madden.
+                  At 16, I taught myself parkour by downloading parkour videos on a dial-up modem before YouTube existed. At 19, I started the first parkour classes in the Americas while working as an athlete with brands like ESPN, HP, and K-Swiss. At 21, I accidentally opened one of the first parkour gyms in the world: Apex Movement in Denver, Colorado.
                 </p>
                 <p>
-                  No blueprint existed for turning jumps into a legitimate career. I spent years training, grinding, learning, teaching, and figuring out how to teach parkour safely at scale, IRL and online. In 2009, we opened the first Apex location in Denver. We built a world-renowned curriculum, helped open many more gyms, and coached hundreds of top parkour athletes and coaches.
+                  No blueprint existed for turning parkour into a legitimate career. We had to build the industry ourselves. Over the next 2 decades, we scaled Apex to 6 locations, pioneered parkour coaching IRL and online, and created a coaching certification taken by 350+ coaches worldwide and now accredited by the United States Parkour Association.
                 </p>
                 <p>
-                  But the landscape shifted. Modern parkour educational professionals need more than an IRL training space; they need digital infrastructure.
+                  We didn't just want a gym. We wanted to set the standards for high-performance parkour training and coaching. By combining parkour skill work with rigorous strength and conditioning, our systems helped 25+ champions in parkour, chase tag, and ninja.
                 </p>
                 <p className={`text-xl font-bold ${themeClasses.text}`}>
-                  I took everything I learned scaling a physical gym empire, writing the Parkour Strength Training book, designing curriculum used by tens of thousands of students, programming for 25+ champions, and building a 100k-sub YouTube channel, and adapted it for you.
+                  I took everything I learned scaling my gyms, writing the Parkour Strength Training book, designing curriculum for tens of thousands of students, and building a 100k-sub YouTube channel—and broke it down into systems and skills that you can use too.
                 </p>
                 <p className={`text-xl font-bold ${themeClasses.text}`}>
-                  The Apex Mentorship is the exact system and knowledge base I wish I had when I started as a parkour coach in 2006 and a parkour gym owner in 2009.
+                  The Apex Mentorship is the parkour and business coaching I wish I had when I started coaching parkour in 2006 and when I opened my first gym in 2009.
                 </p>
               </div>
             </div>
