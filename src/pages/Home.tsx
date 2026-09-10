@@ -25,7 +25,7 @@ function SkoolHero() {
           alt="Parkour Background" 
           fetchPriority="high"
           loading="eager"
-          className={`w-full h-full object-cover absolute inset-0 z-20 mix-blend-overlay ${theme === 'dark' ? 'grayscale opacity-30' : 'grayscale-0 opacity-20'}`}
+          className={`w-full h-full object-cover absolute inset-0 z-20 mix-blend-overlay ${theme === 'dark' ? 'grayscale opacity-40' : 'grayscale-0 opacity-30'}`}
         />
         
         <div className={`absolute inset-x-0 bottom-0 h-32 md:h-48 bg-gradient-to-t to-transparent z-30 transition-colors duration-200 ${theme === 'dark' ? 'from-zinc-950' : 'from-neutral-50'}`} />
@@ -85,7 +85,7 @@ function CoachSection() {
         <img 
           src={bgImage} 
           alt="Coach Background" 
-          className={`w-full h-full object-cover absolute inset-0 z-20 mix-blend-overlay ${theme === 'dark' ? 'grayscale opacity-30' : 'grayscale-0 opacity-20'}`}
+          className={`w-full h-full object-cover absolute inset-0 z-20 mix-blend-overlay ${theme === 'dark' ? 'grayscale opacity-40' : 'grayscale-0 opacity-30'}`}
         />
         <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-overlay z-30 pointer-events-none" />
       </div>
@@ -163,7 +163,7 @@ function AthleteSection() {
         <img 
           src={bgImage} 
           alt="Athlete Background" 
-          className={`w-full h-full object-cover absolute inset-0 z-20 mix-blend-overlay ${theme === 'dark' ? 'grayscale opacity-30' : 'grayscale-0 opacity-20'}`}
+          className={`w-full h-full object-cover absolute inset-0 z-20 mix-blend-overlay ${theme === 'dark' ? 'grayscale opacity-40' : 'grayscale-0 opacity-30'}`}
         />
         <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-overlay z-30 pointer-events-none" />
       </div>
@@ -233,7 +233,7 @@ function ApexSpeedRunSection() {
     <section id="asr" className={`relative min-h-[100svh] flex flex-col items-center justify-center pt-28 pb-20 md:pt-48 overflow-hidden border-y transition-colors duration-200 ${theme === 'dark' ? 'bg-neutral-100 text-black border-neutral-200' : 'bg-zinc-950 text-white border-white/10'}`}>
       <div className="absolute inset-0 z-0">
         <div className={`absolute inset-0 bg-gradient-to-br transition-colors duration-200 z-10 ${theme === 'dark' ? 'from-white/95 via-white/80 to-white/95' : 'from-zinc-950/95 via-zinc-950/80 to-zinc-950/95'}`} />
-        <img src={bgImage} alt="Speed Run" className={`absolute inset-0 w-full h-full object-cover z-20 ${theme === 'dark' ? 'opacity-20 grayscale-0' : 'opacity-30 grayscale mix-blend-overlay'}`} />
+        <img src={bgImage} alt="Speed Run" className={`absolute inset-0 w-full h-full object-cover z-20 ${theme === 'dark' ? 'opacity-30 grayscale-0' : 'opacity-40 grayscale mix-blend-overlay'}`} />
         {theme !== 'dark' && <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-overlay z-30 pointer-events-none" />}
       </div>
       
@@ -272,7 +272,7 @@ function ApexDenverSection() {
   return (
     <section id="denver" className={`relative z-10 min-h-[100svh] flex flex-col items-center justify-center shadow-[0_-20px_50px_rgba(0,0,0,0.5)] overflow-hidden transition-colors duration-200 ${theme === 'dark' ? 'bg-white text-black' : 'bg-zinc-950 text-white'}`}>
       <div className={`absolute inset-0 bg-gradient-to-b z-10 transition-colors duration-200 ${theme === 'dark' ? 'from-white/90 to-white/50' : 'from-zinc-950/90 to-zinc-950/50'}`} />
-      <img src={bgImage} alt="Apex Denver" className={`absolute inset-0 w-full h-full object-cover grayscale transition-opacity duration-1000 ${theme === 'dark' ? 'opacity-20' : 'opacity-30 mix-blend-overlay'}`} />
+      <img src={bgImage} alt="Apex Denver" className={`absolute inset-0 w-full h-full object-cover grayscale transition-opacity duration-1000 ${theme === 'dark' ? 'opacity-30' : 'opacity-40 mix-blend-overlay'}`} />
       {theme !== 'dark' && <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-overlay z-30 pointer-events-none" />}
       
       <div className="relative z-20 text-center px-4 max-w-5xl mx-auto flex flex-col items-center pt-28 pb-20 md:pt-48 md:pb-32 mt-8 md:mt-0">

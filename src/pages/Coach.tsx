@@ -289,22 +289,22 @@ export default function Coach() {
               </div>
             </div>
             <div className="md:col-span-7">
-              <h2 className="text-4xl md:text-5xl font-black tracking-tighter mb-8">from parkour athlete to coach to gym owner</h2>
+              <h2 className="text-4xl md:text-5xl font-black tracking-tighter mb-8">from athlete to coach to founder</h2>
               <div className={`space-y-6 text-lg leading-relaxed font-medium ${themeClasses.muted}`}>
                 <p>
-                  I know the struggle because I lived it. when I started Apex, parkour was a fringe internet phenomenon. there was no blueprint for turning jumps into a legitimate career.
+                  I taught myself parkour from internet videos in 2004. 2 years later, I started the first parkour classes in the Americas while working as an athlete with brands like K-Swiss, ESPN, HP, Cisco, and Steve Madden.
                 </p>
                 <p>
-                  I spent years grinding on concrete, building communities, and figuring out how to teach movement safely at scale. we built the world's leading parkour curriculum, opened massive facilities, and certified thousands of coaches.
+                  No blueprint existed for turning jumps into a legitimate career. I spent years training, grinding, learning, teaching, and figuring out how to teach parkour safely at scale, IRL and online. In 2009, we opened the first Apex location in Denver. We built a world-renowned curriculum, helped open many more gyms, and coached hundreds of top parkour athletes and coaches.
                 </p>
                 <p>
-                  but the landscape has changed. the modern athlete doesn't just need a gym—they need a digital infrastructure.
+                  But the landscape shifted. Modern parkour educational professionals need more than an IRL training space; they need digital infrastructure.
                 </p>
                 <p className={`text-xl font-bold ${themeClasses.text}`}>
-                  I took everything I learned scaling a physical parkour gym, as well as scaling a YouTube channel to 100k subs, and adapted it for the modern parkour coaches and creators working online and IRL.
+                  I took everything I learned scaling a physical gym empire, writing the Parkour Strength Training book, designing curriculum used by tens of thousands of students, programming for 25+ champions, and building a 100k-sub YouTube channel, and adapted it for you.
                 </p>
                 <p className={`text-xl font-bold ${themeClasses.text}`}>
-                  this is the exact system I wish I had when I started coaching parkour in 2006, when I opened my first gym in 2009, and when I started coaching online in 2016.
+                  The Apex Mentorship is the exact system and knowledge base I wish I had when I started as a parkour coach in 2006 and a parkour gym owner in 2009.
                 </p>
               </div>
             </div>
@@ -444,7 +444,6 @@ export default function Coach() {
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-black tracking-tighter mb-4">FAQs</h2>
-            <p className={`text-lg font-medium ${themeClasses.muted}`}>Everything you need to know about the Apex Method cohort.</p>
           </div>
           <div className="space-y-4">
             {[
