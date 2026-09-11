@@ -14,7 +14,7 @@ export function SEO({
   image,
   url,
 }: SEOProps) {
-  const currentOrigin = typeof window !== 'undefined' ? window.location.origin : 'https://ais-pre-xbevpiihumjbnvp7hdpvn2-67113201427.us-west2.run.app';
+  const currentOrigin = typeof window !== 'undefined' ? window.location.origin : 'https://apexmovement.co';
   const resolvedImage = image || `${currentOrigin}/apex-brick-logo-blur.jpg`;
   const resolvedUrl = url || currentOrigin;
 
