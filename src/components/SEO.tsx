@@ -11,7 +11,7 @@ interface SEOProps {
 export function SEO({
   title = "Apex Movement",
   description = "Apex Movement: The world's leading parkour coaching collective. Physics-based training protocols and biomechanical analysis.",
-  image = "https://images.unsplash.com/photo-1574100511599-2777174db926?q=80&w=1200&h=630&fit=crop",
+  image = "https://apexmovement.com/apexlogo.png",
   url = "https://apexmovement.com",
 }: SEOProps) {
   const fullTitle = title === "Apex Movement" ? title : `${title} | Apex Movement`;
