@@ -57,7 +57,7 @@ export function Navigation({ isMenuOpen, setIsMenuOpen }: NavigationProps) {
         onClick={() => handleNav('coach')}
         className={`fixed top-0 w-full z-[310] h-[30px] md:h-[34px] flex items-center justify-center px-2 text-center text-[11px] sm:text-xs md:text-sm font-black uppercase tracking-wider whitespace-nowrap bg-amber-400 hover:bg-amber-300 transition-colors cursor-pointer text-zinc-950`}
       >
-        OCTOBER 3 COACH COHORT: ONLY 8 OF 12 SPOTS LEFT
+        OCTOBER 3 COACH COHORT: ONLY 7 OF 12 SPOTS LEFT
       </button>
       {isMenuOpen && (
         <div role="dialog" aria-modal="true" aria-label="Mobile Navigation" className={`fixed inset-0 z-[400] pt-24 pb-[calc(2rem+env(safe-area-inset-bottom))] px-8 flex flex-col transition-all duration-200 animate-in fade-in slide-in-from-right-full ${theme === 'dark' ? 'bg-black text-white' : 'bg-white text-black shadow-2xl'}`}>

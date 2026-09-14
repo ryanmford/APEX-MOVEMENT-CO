@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { ArrowRight, CheckCircle2, Users, TrendingUp, ShieldCheck, Award, Medal, Zap, ChevronDown } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { useAppContext } from '../contexts/AppContext';
-import { CONFIG } from '../data';
+import { SEO } from '../components/SEO';
 
 export default function Coach() {
   const { theme } = useAppContext();
@@ -25,9 +25,11 @@ export default function Coach() {
 
   return (
     <div className={`min-h-screen ${themeClasses.bg} ${themeClasses.text}`}>
-      <Helmet>
-        <title>The Educational Parkour Coach | {CONFIG.brand}</title>
-      </Helmet>
+      <SEO 
+        title="The Educational Parkour Coach" 
+        description="Turn your parkour skills into scalable coaching systems, brands, & income. Apply for the Apex Method Mentorship." 
+        url="https://apexmovement.co/coach"
+      />
 
       {/* Hero Section */}
       <section className="relative min-h-[100svh] flex items-center justify-center px-6 pt-32 pb-24 md:pt-32 md:pb-24 overflow-hidden">
@@ -37,7 +39,7 @@ export default function Coach() {
           </h1>
           
           <p className={`text-base sm:text-lg md:text-xl mb-8 md:mb-10 font-medium max-w-3xl mx-auto leading-relaxed ${themeClasses.muted}`}>            
-            Apply and book a call to see if our 3-month Apex Method Mentorship is a good fit. Only 8 of 12 spots left in the next cohort starting Oct 3. Enrollment closes Sep 29.
+            Apply and book a call to see if our 3-month Apex Method Mentorship is a good fit. Only 7 of 12 spots left in the next cohort starting Oct 3. Enrollment closes Sep 29.
           </p>
           
           <a 
