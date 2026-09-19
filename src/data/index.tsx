@@ -14,6 +14,28 @@ export const CONFIG = {
   skoolLink: "https://www.skool.com/apexmovement/about?ref=ceaa23f64b494958924a0fe4b69e4be1",
   merchLink: "https://shop.apexmovement.com/",
   sheetId: "14MMo3dYdQC96YMTsL0MhZEhuCOCl4c8JVw0C6TuH_fs", 
+  cohort: {
+    spotsLeft: 7,
+    totalSpots: 15,
+    date: "Oct 3",
+    fullDate: "October 3",
+    enrollmentDeadline: "Sep 30",
+    get bannerFull() {
+      return `${this.fullDate.toUpperCase()} COACH COHORT: ONLY ${this.spotsLeft} OF ${this.totalSpots} SPOTS LEFT`;
+    },
+    get bannerMedium() {
+      return `${this.date.toUpperCase()} COACH COHORT: ${this.spotsLeft} OF ${this.totalSpots} SPOTS LEFT`;
+    },
+    get bannerShort() {
+      return `${this.date.toUpperCase()}: ${this.spotsLeft} OF ${this.totalSpots} SPOTS LEFT`;
+    },
+    get bannerAria() {
+      return `${this.fullDate} coach cohort: only ${this.spotsLeft} of ${this.totalSpots} spots left`;
+    },
+    get description() {
+      return `We have ${this.spotsLeft} of ${this.totalSpots} spots left for the next cohort on ${this.date}. Enrollment closes ${this.enrollmentDeadline}.`;
+    }
+  },
   socials: [
     { key: "instagram", url: "https://instagram.com/apexmovement", icon: <Instagram size={18}/> },
     { key: "youtube", url: "https://youtube.com/apexmovement", icon: <Youtube size={18}/> },

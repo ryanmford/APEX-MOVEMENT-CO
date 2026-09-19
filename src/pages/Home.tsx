@@ -3,7 +3,7 @@ import { useLocation, Link } from 'react-router-dom';
 import { SEO } from '../components/SEO';
 import { BlogSection } from '../components/sections';
 import { ArrowRight, ExternalLink } from 'lucide-react';
-import { GIF_POOL } from '../data';
+import { GIF_POOL, CONFIG } from '../data';
 import { motion } from 'motion/react';
 import { useAppContext } from '../contexts/AppContext';
 
@@ -38,12 +38,14 @@ function SkoolHero() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="max-w-4xl flex flex-col items-start text-left mt-8 md:mt-0"
         >
-          <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black tracking-tighter leading-[0.85] mb-4 md:mb-8">
-            move better<br />in the real world
+          <h1 className="text-[clamp(2.1rem,10.2vw,4.5rem)] sm:text-7xl md:text-8xl lg:text-9xl font-black tracking-tighter leading-[0.85] mb-4 md:mb-8">
+            <span className="block whitespace-nowrap">move better</span>
+            <span className="block whitespace-nowrap">in the real world</span>
           </h1>
           
-          <p className={`text-base md:text-2xl mb-6 md:mb-12 max-w-2xl leading-relaxed font-medium transition-colors duration-200 ${theme === 'dark' ? 'text-zinc-200' : 'text-zinc-900'}`}>
-            Learn parkour, build strength, and apply your skills in the real world with our progressions, challenges, and training programs. Develop creativity, explore movement, and become more confident in yourself.
+          <p className={`text-[clamp(0.8rem,3.8vw,1.25rem)] md:text-2xl mb-6 md:mb-12 max-w-2xl leading-relaxed font-medium transition-colors duration-200 ${theme === 'dark' ? 'text-zinc-200' : 'text-zinc-900'}`}>
+            <span className="block whitespace-nowrap">Learn parkour with our worldwide community</span>
+            <span className="block whitespace-nowrap">for parkour athletes, artists, & coaches 🌎 🌍 🌏</span>
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
@@ -99,7 +101,7 @@ function CoachSection() {
           className="w-full mb-4 lg:mb-10 max-w-4xl"
         >
           <h2 className="text-[clamp(2rem,10vw,7.5rem)] sm:text-[clamp(3.5rem,7vw,7.5rem)] font-black tracking-tighter leading-[0.9]">
-            make parkour<br/>coaching a<br/>sustainable<br/>career.
+            make parkour<br/>coaching a<br/>sustainable<br/>career
           </h2>
         </motion.div>
         
@@ -110,7 +112,7 @@ function CoachSection() {
           transition={{ duration: 0.8, delay: 0.1 }}
           className={`text-base md:text-2xl font-medium leading-relaxed mb-6 lg:mb-12 max-w-2xl transition-colors duration-200 ${theme === 'dark' ? 'text-zinc-200' : 'text-zinc-900'}`}
         >
-          Book a call to see if our 3-month program is a good fit. 12 spots per cohort. Enrollment closes September 29.
+          Book a call to see if our 3-month program is a good fit. {CONFIG.cohort.description}
         </motion.p>
         
         <motion.div 
@@ -121,7 +123,7 @@ function CoachSection() {
           className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto"
         >
           <a 
-            href="https://calendly.com/apexmovement/strategy"
+            href="https://calendly.com/apexmovement/coach"
             target="_blank"
             rel="noopener noreferrer"
             className={`inline-flex w-full sm:w-auto items-center justify-center gap-3 px-8 py-5 md:px-10 md:py-6 font-black uppercase tracking-[0.2em] text-[12px] md:text-[13px] transition-all active:scale-95 ${theme === 'dark' ? 'bg-white text-black hover:bg-zinc-200 shadow-[0_0_40px_-10px_rgba(255,255,255,0.3)]' : 'bg-black text-white hover:bg-zinc-800 shadow-[0_0_40px_-10px_rgba(0,0,0,0.3)]'}`}
@@ -239,7 +241,7 @@ function ApexSpeedRunSection() {
       
       <div className="relative z-40 text-center px-4 max-w-5xl mx-auto flex flex-col items-center mt-8 md:mt-0">
         <h2 className="text-[clamp(2rem,10vw,10rem)] sm:text-[clamp(3rem,8vw,10rem)] font-black uppercase tracking-tighter leading-none mb-4 md:mb-6">APEX SPEED RUN</h2>
-        <p className={`text-[clamp(1rem,4.5vw,1.875rem)] md:text-3xl font-medium mb-8 md:mb-10 lowercase transition-colors duration-200 ${theme === 'dark' ? 'text-zinc-900' : 'text-zinc-200'}`}>finding the fastest humans <span className="uppercase">IRL</span> 🌎 🌍 🌏</p>
+        <p className={`text-[clamp(1rem,4.5vw,1.875rem)] md:text-3xl font-medium mb-8 md:mb-10 lowercase transition-colors duration-200 ${theme === 'dark' ? 'text-zinc-900' : 'text-zinc-200'}`}>finding the fastest humans <span className="uppercase">IRL</span> 🔥</p>
         <a 
           href="https://apexspeedrun.com"
           target="_blank"
@@ -292,7 +294,7 @@ function ApexDenverSection() {
           transition={{ duration: 0.8, delay: 0.1 }}
           className={`text-base md:text-3xl font-medium mb-8 md:mb-10 lowercase transition-colors duration-200 ${theme === 'dark' ? 'text-zinc-900' : 'text-zinc-200'}`}
         >
-          the original Apex parkour gym, est. 2009
+          the original Apex parkour gym, est. 2009 🏔️
         </motion.p>
         <motion.div
           initial={{ opacity: 0, y: 20 }}

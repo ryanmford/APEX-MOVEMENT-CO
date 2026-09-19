@@ -21,6 +21,7 @@ This file (`AGENTS.md`) is automatically read by the AI assistant at the start o
 
 ## App Development & Feature Mechanics (The "Low-Lift" Doctrine)
 * **The "Low-Lift" Engineering Rule:** Whenever possible, do not over-engineer. Unless absolutely necessary, avoid complex algorithms, heavy backend dependencies, or convoluted state management. As much as possible, rely on static data structures (`src/data/index.tsx`), manual booleans, and direct external links for complex flows (like scheduling or payments) until custom builds are strictly required. Do not fix what isn't broken.
+* **Cohort Spots & Dates (Single Source of Truth):** All cohort dates, spots left, total spot limits, and promotional banner strings are strictly governed by `CONFIG.cohort` in `src/data/index.tsx`. Whenever updating the number of spots or dates, you MUST update `CONFIG.cohort` in `src/data/index.tsx`. All components (including the top announcement bar in `Navigation.tsx`, `Coach.tsx`, and `Home.tsx`) consume this single source of truth so they always remain 100% synchronized.
 * **Clear Conversion Paths:** Every page (Apply, Hire, Learn, Certification) must have a singular, frictionless call to action.
 * **Micro-Narratives & Attribution:** Elevate our coaches and athletes. Whenever possible, display names, credentials, and portfolios for coaches, staff, and featured athletes.
 

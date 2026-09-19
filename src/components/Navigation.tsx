@@ -54,10 +54,14 @@ export function Navigation({ isMenuOpen, setIsMenuOpen }: NavigationProps) {
   return (
     <>
       <button 
+        id="top-cohort-banner"
         onClick={() => handleNav('coach')}
-        className={`fixed top-0 w-full z-[310] h-[30px] md:h-[34px] flex items-center justify-center px-2 text-center text-[11px] sm:text-xs md:text-sm font-black uppercase tracking-wider whitespace-nowrap bg-amber-400 hover:bg-amber-300 transition-colors cursor-pointer text-zinc-950`}
+        aria-label={CONFIG.cohort.bannerAria}
+        className={`fixed top-0 inset-x-0 w-full z-[310] h-[30px] md:h-[34px] flex items-center justify-center px-2 text-center text-[10px] min-[360px]:text-[11px] sm:text-xs md:text-sm font-black uppercase tracking-normal min-[480px]:tracking-wider whitespace-nowrap overflow-hidden bg-amber-400 hover:bg-amber-300 transition-colors cursor-pointer text-zinc-950 select-none`}
       >
-        OCTOBER 3 COACH COHORT: ONLY 7 OF 12 SPOTS LEFT
+        <span className="hidden min-[480px]:inline">{CONFIG.cohort.bannerFull}</span>
+        <span className="hidden min-[350px]:inline min-[480px]:hidden">{CONFIG.cohort.bannerMedium}</span>
+        <span className="min-[350px]:hidden">{CONFIG.cohort.bannerShort}</span>
       </button>
       {isMenuOpen && (
         <div role="dialog" aria-modal="true" aria-label="Mobile Navigation" className={`fixed inset-0 z-[400] pt-24 pb-[calc(2rem+env(safe-area-inset-bottom))] px-8 flex flex-col transition-all duration-200 animate-in fade-in slide-in-from-right-full ${theme === 'dark' ? 'bg-black text-white' : 'bg-white text-black shadow-2xl'}`}>
@@ -116,7 +120,7 @@ export function Navigation({ isMenuOpen, setIsMenuOpen }: NavigationProps) {
         </div>
       )}
 
-      <nav className={`fixed top-[30px] md:top-[32px] w-full z-[300] transition-all duration-200 px-4 md:px-6 py-4 flex justify-between items-center gap-4 ${scrolled || currentView !== 'home' ? (theme === 'dark' ? 'bg-black/95 border-b-2 border-white/10 text-white' : 'bg-white/95 border-b-2 border-black/10 text-black') : (theme === 'dark' ? 'bg-transparent text-white' : 'bg-transparent text-black')} backdrop-blur-md`}>
+      <nav className={`fixed top-[30px] md:top-[34px] w-full z-[300] transition-all duration-200 px-4 md:px-6 py-4 flex justify-between items-center gap-4 ${scrolled || currentView !== 'home' ? (theme === 'dark' ? 'bg-black/95 border-b-2 border-white/10 text-white' : 'bg-white/95 border-b-2 border-black/10 text-black') : (theme === 'dark' ? 'bg-transparent text-white' : 'bg-transparent text-black')} backdrop-blur-md`}>
         <Link to="/" onClick={(e) => { e.preventDefault(); handleNav('home'); }} className="text-[15px] min-[360px]:text-lg sm:text-xl md:text-2xl font-display font-bold tracking-tight uppercase cursor-pointer flex items-center gap-2 md:gap-3 shrink-0" aria-label="Go to home">
             <div className="relative flex items-center justify-center w-8 h-8 md:w-10 md:h-10 shrink-0 hover:-translate-y-[1px] active:scale-[0.98] active:translate-y-0 transition-all duration-150 ease-out">
               <img src="/apexlogo.png" alt="" className={`absolute max-w-none h-[90px] md:h-[110px] w-auto transition-all duration-150 ${theme === 'dark' ? 'invert' : ''}`} aria-hidden="true" />

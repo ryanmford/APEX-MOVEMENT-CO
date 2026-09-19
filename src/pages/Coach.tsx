@@ -4,6 +4,7 @@ import { ArrowRight, CheckCircle2, Users, TrendingUp, ShieldCheck, Award, Medal,
 import { motion, AnimatePresence } from 'motion/react';
 import { useAppContext } from '../contexts/AppContext';
 import { SEO } from '../components/SEO';
+import { CONFIG } from '../data';
 
 export default function Coach() {
   const { theme } = useAppContext();
@@ -39,11 +40,11 @@ export default function Coach() {
           </h1>
           
           <p className={`text-base sm:text-lg md:text-xl mb-8 md:mb-10 font-medium max-w-3xl mx-auto leading-relaxed ${themeClasses.muted}`}>            
-            Apply and book a call to see if our 3-month Apex Method Mentorship is a good fit. Only 7 of 12 spots left in the next cohort starting Oct 3. Enrollment closes Sep 29.
+            Apply and book a call to see if our 3-month Apex Method Mentorship is a good fit. {CONFIG.cohort.description}
           </p>
           
           <a 
-            href="https://calendly.com/apexmovement/strategy"
+            href="https://calendly.com/apexmovement/coach"
             target="_blank"
             rel="noopener noreferrer"
             className={`inline-flex items-center justify-center gap-3 px-8 py-5 font-black uppercase tracking-[0.2em] text-[13px] transition-all hover:scale-105 active:scale-95 ${themeClasses.accentBg} shadow-[0_0_40px_-10px_rgba(251,191,36,0.4)]`}
@@ -528,7 +529,7 @@ export default function Coach() {
             we only accept a small group of coaches who have the drive to execute. let's build together.
           </p>
           <a 
-            href="https://calendly.com/apexmovement/strategy"
+            href="https://calendly.com/apexmovement/coach"
             target="_blank"
             rel="noopener noreferrer"
             className={`inline-flex items-center justify-center gap-3 px-10 py-6 font-black uppercase tracking-[0.2em] text-[13px] md:text-[14px] ${themeClasses.accentBg} hover:scale-105 active:scale-95 transition-all shadow-[0_0_40px_-10px_rgba(251,191,36,0.4)]`}
