@@ -13,7 +13,8 @@ export const CONFIG = {
   cta: "JOIN THE COMMUNITY",
   skoolLink: "https://www.skool.com/apexmovement/about?ref=ceaa23f64b494958924a0fe4b69e4be1",
   merchLink: "https://shop.apexmovement.com/",
-  sheetId: "14MMo3dYdQC96YMTsL0MhZEhuCOCl4c8JVw0C6TuH_fs", 
+  blogLink: "https://apexmovement.substack.com/",
+  calendlyLink: "https://calendly.com/apexmovement/coach", 
   cohort: {
     spotsLeft: 7,
     totalSpots: 15,

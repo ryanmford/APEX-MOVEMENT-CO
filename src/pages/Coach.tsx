@@ -44,7 +44,7 @@ export default function Coach() {
           </p>
           
           <a 
-            href="https://calendly.com/apexmovement/coach"
+            href={CONFIG.calendlyLink}
             target="_blank"
             rel="noopener noreferrer"
             className={`inline-flex items-center justify-center gap-3 px-8 py-5 font-black uppercase tracking-[0.2em] text-[13px] transition-all hover:scale-105 active:scale-95 ${themeClasses.accentBg} shadow-[0_0_40px_-10px_rgba(251,191,36,0.4)]`}
@@ -184,7 +184,7 @@ export default function Coach() {
             <div>
               <div className="text-2xl font-black mb-1">Marlo Fisken</div>
               <div className={`text-xs font-bold tracking-widest uppercase mb-1 ${themeClasses.muted}`}>Nov 2013 Cohort</div>
-              <a href="hhttps://www.instagram.com/marlofisken/" target="_blank" rel="noopener noreferrer" className={`block text-sm font-medium hover:opacity-80 transition-opacity ${themeClasses.accent}`}>125k Instagram</a>
+              <a href="https://www.instagram.com/marlofisken/" target="_blank" rel="noopener noreferrer" className={`block text-sm font-medium hover:opacity-80 transition-opacity ${themeClasses.accent}`}>125k Instagram</a>
             </div>
             <div>
               <div className="text-2xl font-black mb-1">Dylan Baker</div>
@@ -524,17 +524,17 @@ export default function Coach() {
       {/* CTA */}
       <section className={`py-32 px-6 text-center border-t ${themeClasses.border}`}>
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-5xl md:text-6xl font-black tracking-tighter mb-6">secure your spot for oct 3</h2>
+          <h2 className="text-5xl md:text-6xl font-black tracking-tighter mb-6">secure your spot for {CONFIG.cohort.fullDate.toLowerCase()}</h2>
           <p className={`text-xl mb-12 font-medium ${themeClasses.muted}`}>
             we only accept a small group of coaches who have the drive to execute. let's build together.
           </p>
           <a 
-            href="https://calendly.com/apexmovement/coach"
+            href={CONFIG.calendlyLink}
             target="_blank"
             rel="noopener noreferrer"
             className={`inline-flex items-center justify-center gap-3 px-10 py-6 font-black uppercase tracking-[0.2em] text-[13px] md:text-[14px] ${themeClasses.accentBg} hover:scale-105 active:scale-95 transition-all shadow-[0_0_40px_-10px_rgba(251,191,36,0.4)]`}
           >
-            Apply now <ArrowRight className="w-5 h-5" />
+            APPLY NOW <ArrowRight className="w-5 h-5" />
           </a>
         </div>
       </section>

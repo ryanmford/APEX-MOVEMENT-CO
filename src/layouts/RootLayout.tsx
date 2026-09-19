@@ -39,7 +39,7 @@ export default function RootLayout() {
     <div className={`min-h-screen font-sans antialiased overflow-x-hidden transition-colors duration-200 selection:bg-amber-400 selection:text-black ${theme === 'dark' ? 'bg-black text-white' : 'bg-white text-black'}`}>
       
       {/* Matte Grain Overlay */}
-      <div className={`fixed inset-0 pointer-events-none z-[1000] bg-[url('https://grainy-gradients.vercel.app/noise.svg')] ${theme === 'dark' ? 'opacity-[0.03] mix-blend-screen' : 'opacity-[0.04] mix-blend-multiply'}`}></div>
+      <div className={`fixed inset-0 pointer-events-none z-[1000] bg-[url('/noise.svg')] ${theme === 'dark' ? 'opacity-[0.035]' : 'opacity-[0.04]'}`}></div>
 
       {/* Dominant Color Bleed */}
       <div 

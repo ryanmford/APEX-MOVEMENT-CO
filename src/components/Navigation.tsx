@@ -19,7 +19,6 @@ export function Navigation({ isMenuOpen, setIsMenuOpen }: NavigationProps) {
 
   const currentView = location.pathname === '/' ? 'home' : location.pathname.substring(1);
 
-  const openMerch = useCallback(() => window.open(CONFIG.merchLink, '_blank'), []);
   const openSkool = useCallback(() => window.open(CONFIG.skoolLink, '_blank'), []);
 
   React.useEffect(() => {
@@ -47,7 +46,7 @@ export function Navigation({ isMenuOpen, setIsMenuOpen }: NavigationProps) {
 
   const navLinks = useMemo(() => [
     { label: 'coach', onClick: () => handleNav('coach'), active: currentView === 'coach', external: false, href: '/coach' },
-    { label: 'blog', onClick: undefined, active: false, external: true, href: 'https://apexmovement.substack.com/' },
+    { label: 'blog', onClick: undefined, active: false, external: true, href: CONFIG.blogLink },
     { label: 'merch', onClick: undefined, active: false, external: true, href: CONFIG.merchLink },
   ], [handleNav, currentView]);
 

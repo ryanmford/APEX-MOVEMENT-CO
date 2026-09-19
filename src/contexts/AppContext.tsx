@@ -1,6 +1,5 @@
-import React, { createContext, useContext, useState, useEffect, useCallback } from 'react';
+import React, { createContext, useContext, useState, useCallback } from 'react';
 import { Movement, Project } from '../types';
-import { fetchMovements, fetchProjects } from '../lib/googleSheets';
 
 interface AppContextType {
   theme: 'light' | 'dark';
@@ -30,30 +29,11 @@ export const AppProvider = ({ children }: { children: React.ReactNode }) => {
   const [activeProject, setActiveProject] = useState<Project | null>(null);
   const [dominantColor, setDominantColor] = useState<string | null>(null);
 
-  const [movements, setMovements] = useState<Movement[]>([]);
-  const [projects, setProjects] = useState<Project[]>([]);
-  const [isLoadingMovements, setIsLoadingMovements] = useState(true);
+  const [movements] = useState<Movement[]>([]);
+  const [projects] = useState<Project[]>([]);
+  const [isLoadingMovements] = useState(false);
 
   const toggleTheme = useCallback(() => setTheme(prev => prev === 'light' ? 'dark' : 'light'), []);
-
-  useEffect(() => {
-    let mounted = true;
-    const loadData = async () => {
-      setIsLoadingMovements(true);
-      const [fetchedMovements, fetchedProjects] = await Promise.all([
-        fetchMovements(),
-        fetchProjects()
-      ]);
-      
-      if (mounted) {
-        setMovements(fetchedMovements);
-        setProjects(fetchedProjects);
-        setIsLoadingMovements(false);
-      }
-    };
-    loadData();
-    return () => { mounted = false; };
-  }, []);
 
   return (
     <AppContext.Provider value={{

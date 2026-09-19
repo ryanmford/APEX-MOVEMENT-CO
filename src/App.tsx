@@ -1,11 +1,9 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import { AppProvider } from './contexts/AppContext';
 import RootLayout from './layouts/RootLayout';
 import Home from './pages/Home';
-import Blog from './pages/Blog';
-import Apply from './pages/Apply';
 import Coach from './pages/Coach';
 
 export default function App() {
@@ -16,10 +14,9 @@ export default function App() {
           <Routes>
             <Route path="/" element={<RootLayout />}>
               <Route index element={<Home />} />
-              <Route path="blog" element={<Blog />} />
               <Route path="coach" element={<Coach />} />
+              <Route path="*" element={<Navigate to="/" replace />} />
             </Route>
-            <Route path="/apply" element={<Apply />} />
           </Routes>
         </BrowserRouter>
       </AppProvider>

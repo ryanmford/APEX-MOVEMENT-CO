@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import { SEO } from '../components/SEO';
-import { BlogSection } from '../components/sections';
 import { ArrowRight, ExternalLink } from 'lucide-react';
 import { GIF_POOL, CONFIG } from '../data';
 import { motion } from 'motion/react';
@@ -25,6 +24,7 @@ function SkoolHero() {
           alt="Parkour Background" 
           fetchPriority="high"
           loading="eager"
+          decoding="async"
           className={`w-full h-full object-cover absolute inset-0 z-20 mix-blend-overlay ${theme === 'dark' ? 'grayscale opacity-40' : 'grayscale-0 opacity-30'}`}
         />
         
@@ -87,9 +87,10 @@ function CoachSection() {
         <img 
           src={bgImage} 
           alt="Coach Background" 
+          loading="lazy"
+          decoding="async"
           className={`w-full h-full object-cover absolute inset-0 z-20 mix-blend-overlay ${theme === 'dark' ? 'grayscale opacity-40' : 'grayscale-0 opacity-30'}`}
         />
-        <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-overlay z-30 pointer-events-none" />
       </div>
 
       <div className="max-w-7xl mx-auto w-full relative z-40 flex flex-col items-start text-left mt-8 md:mt-0">
@@ -123,7 +124,7 @@ function CoachSection() {
           className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto"
         >
           <a 
-            href="https://calendly.com/apexmovement/coach"
+            href={CONFIG.calendlyLink}
             target="_blank"
             rel="noopener noreferrer"
             className={`inline-flex w-full sm:w-auto items-center justify-center gap-3 px-8 py-5 md:px-10 md:py-6 font-black uppercase tracking-[0.2em] text-[12px] md:text-[13px] transition-all active:scale-95 ${theme === 'dark' ? 'bg-white text-black hover:bg-zinc-200 shadow-[0_0_40px_-10px_rgba(255,255,255,0.3)]' : 'bg-black text-white hover:bg-zinc-800 shadow-[0_0_40px_-10px_rgba(0,0,0,0.3)]'}`}
@@ -150,79 +151,6 @@ function CoachSection() {
   );
 }
 
-function AthleteSection() {
-  const { theme } = useAppContext();
-  const bgImage = GIF_POOL[4 % GIF_POOL.length];
-  
-  const scrollToNext = () => {
-    document.getElementById('asr')?.scrollIntoView({ behavior: 'smooth' });
-  };
-
-  return (
-    <section id="athlete" className={`relative min-h-[100svh] flex flex-col justify-center pt-28 pb-20 md:pt-48 md:pb-32 px-6 overflow-hidden transition-colors duration-200 ${theme === 'dark' ? 'bg-zinc-950 text-white' : 'bg-neutral-50 text-black'}`}>
-      <div className="absolute inset-0 z-0">
-        <div className={`absolute inset-0 bg-gradient-to-br transition-colors duration-200 z-10 ${theme === 'dark' ? 'from-zinc-950/95 via-zinc-950/80 to-zinc-950/95' : 'from-white/95 via-white/80 to-white/95'}`} />
-        <img 
-          src={bgImage} 
-          alt="Athlete Background" 
-          className={`w-full h-full object-cover absolute inset-0 z-20 mix-blend-overlay ${theme === 'dark' ? 'grayscale opacity-40' : 'grayscale-0 opacity-30'}`}
-        />
-        <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-overlay z-30 pointer-events-none" />
-      </div>
-
-      <div className="max-w-7xl mx-auto w-full relative z-40 flex flex-col items-start text-left mt-8 md:mt-0">
-        <motion.div 
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8 }}
-          className="w-full mb-4 lg:mb-10 max-w-4xl"
-        >
-          <h2 className="text-[clamp(2rem,10vw,7.5rem)] sm:text-[clamp(3.5rem,7vw,7.5rem)] font-black tracking-tighter leading-[0.9] uppercase">
-            train like an athlete.<br/>
-            <span className={`text-transparent bg-clip-text bg-gradient-to-r transition-colors duration-200 ${theme === 'dark' ? 'from-white to-zinc-500' : 'from-black to-zinc-400'}`}>
-              move like a human.
-            </span>
-          </h2>
-        </motion.div>
-        
-        <motion.p 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8, delay: 0.1 }}
-          className={`text-base md:text-2xl font-medium leading-relaxed mb-6 lg:mb-12 max-w-2xl transition-colors duration-200 ${theme === 'dark' ? 'text-zinc-200' : 'text-zinc-900'}`}
-        >
-          Whether you're starting your parkour journey or pushing past plateaus, our curriculum is designed to help you master the art of movement.
-        </motion.p>
-        
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="w-full sm:w-auto"
-        >
-          <Link 
-            to="/train"
-            className={`inline-flex w-full sm:w-auto items-center justify-center gap-3 px-8 py-5 md:px-10 md:py-6 font-black uppercase tracking-[0.2em] text-[12px] md:text-[13px] transition-all active:scale-95 ${theme === 'dark' ? 'bg-white text-black hover:bg-zinc-200 shadow-[0_0_40px_-10px_rgba(255,255,255,0.3)]' : 'bg-black text-white hover:bg-zinc-800 shadow-[0_0_40px_-10px_rgba(0,0,0,0.3)]'}`}
-          >
-            Learn More <ArrowRight className="w-5 h-5" />
-          </Link>
-        </motion.div>
-      </div>
-
-      <button 
-        className="absolute bottom-6 md:bottom-8 left-1/2 -translate-x-1/2 z-40 flex flex-col items-center gap-2 cursor-pointer opacity-30 hover:opacity-100 transition-opacity p-4" 
-        onClick={scrollToNext}
-        aria-label="Scroll to next section"
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="animate-bounce"><path d="m6 9 6 6 6-6"/></svg>
-      </button>
-    </section>
-  );
-}
-
 function ApexSpeedRunSection() {
   const { theme } = useAppContext();
   const bgImage = GIF_POOL[1 % GIF_POOL.length];
@@ -235,8 +163,13 @@ function ApexSpeedRunSection() {
     <section id="asr" className={`relative min-h-[100svh] flex flex-col items-center justify-center pt-28 pb-20 md:pt-48 overflow-hidden border-y transition-colors duration-200 ${theme === 'dark' ? 'bg-neutral-100 text-black border-neutral-200' : 'bg-zinc-950 text-white border-white/10'}`}>
       <div className="absolute inset-0 z-0">
         <div className={`absolute inset-0 bg-gradient-to-br transition-colors duration-200 z-10 ${theme === 'dark' ? 'from-white/95 via-white/80 to-white/95' : 'from-zinc-950/95 via-zinc-950/80 to-zinc-950/95'}`} />
-        <img src={bgImage} alt="Speed Run" className={`absolute inset-0 w-full h-full object-cover z-20 ${theme === 'dark' ? 'opacity-30 grayscale-0' : 'opacity-40 grayscale mix-blend-overlay'}`} />
-        {theme !== 'dark' && <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-overlay z-30 pointer-events-none" />}
+        <img 
+          src={bgImage} 
+          alt="Speed Run" 
+          loading="lazy"
+          decoding="async"
+          className={`absolute inset-0 w-full h-full object-cover z-20 ${theme === 'dark' ? 'opacity-30 grayscale-0' : 'opacity-40 grayscale mix-blend-overlay'}`} 
+        />
       </div>
       
       <div className="relative z-40 text-center px-4 max-w-5xl mx-auto flex flex-col items-center mt-8 md:mt-0">
@@ -268,14 +201,19 @@ function ApexDenverSection() {
   const bgImage = GIF_POOL[3 % GIF_POOL.length];
 
   const scrollToNext = () => {
-    document.getElementById('blog')?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById('footer')?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
     <section id="denver" className={`relative z-10 min-h-[100svh] flex flex-col items-center justify-center shadow-[0_-20px_50px_rgba(0,0,0,0.5)] overflow-hidden transition-colors duration-200 ${theme === 'dark' ? 'bg-white text-black' : 'bg-zinc-950 text-white'}`}>
       <div className={`absolute inset-0 bg-gradient-to-b z-10 transition-colors duration-200 ${theme === 'dark' ? 'from-white/90 to-white/50' : 'from-zinc-950/90 to-zinc-950/50'}`} />
-      <img src={bgImage} alt="Apex Denver" className={`absolute inset-0 w-full h-full object-cover grayscale transition-opacity duration-1000 ${theme === 'dark' ? 'opacity-30' : 'opacity-40 mix-blend-overlay'}`} />
-      {theme !== 'dark' && <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-overlay z-30 pointer-events-none" />}
+      <img 
+        src={bgImage} 
+        alt="Apex Denver" 
+        loading="lazy"
+        decoding="async"
+        className={`absolute inset-0 w-full h-full object-cover grayscale transition-opacity duration-1000 ${theme === 'dark' ? 'opacity-30' : 'opacity-40 mix-blend-overlay'}`} 
+      />
       
       <div className="relative z-20 text-center px-4 max-w-5xl mx-auto flex flex-col items-center pt-28 pb-20 md:pt-48 md:pb-32 mt-8 md:mt-0">
         <motion.h2 
@@ -315,7 +253,7 @@ function ApexDenverSection() {
       </div>
 
       <button 
-        className="absolute bottom-6 md:bottom-8 left-1/2 -translate-x-1/2 z-30 flex flex-col items-center gap-2 cursor-pointer opacity-30 hover:opacity-100 transition-opacity p-4" 
+        className="absolute bottom-6 md:bottom-8 left-1/2 -translate-x-1/2 z-40 flex flex-col items-center gap-2 cursor-pointer opacity-30 hover:opacity-100 transition-opacity p-4" 
         onClick={scrollToNext}
         aria-label="Scroll to next section"
       >
@@ -353,9 +291,6 @@ export default function Home() {
       <ApexSpeedRunSection />
       <CoachSection />
       <ApexDenverSection />
-      <div className="relative z-20 bg-neutral-100">
-        <BlogSection />
-      </div>
     </div>
   );
 }
