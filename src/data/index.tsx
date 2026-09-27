@@ -16,7 +16,7 @@ export const CONFIG = {
   blogLink: "https://apexmovement.substack.com/",
   calendlyLink: "https://calendly.com/apexmovement/coach", 
   cohort: {
-    spotsLeft: 7,
+    spotsLeft: 4,
     totalSpots: 15,
     date: "Oct 3",
     fullDate: "October 3",
