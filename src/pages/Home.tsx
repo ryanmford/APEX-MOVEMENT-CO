@@ -113,7 +113,7 @@ function CoachSection() {
           transition={{ duration: 0.8, delay: 0.1 }}
           className={`text-base md:text-2xl font-medium leading-relaxed mb-6 lg:mb-12 max-w-2xl transition-colors duration-200 ${theme === 'dark' ? 'text-zinc-200' : 'text-zinc-900'}`}
         >
-          Book a call to see if our 3-month program is a good fit. {CONFIG.cohort.description}
+          Apply and book a call to see if our 3-month Apex Method Mentorship is a good fit. {CONFIG.cohort.description}
         </motion.p>
         
         <motion.div 

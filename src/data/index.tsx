@@ -16,25 +16,27 @@ export const CONFIG = {
   blogLink: "https://apexmovement.substack.com/",
   calendlyLink: "https://calendly.com/apexmovement/coach", 
   cohort: {
-    spotsLeft: 4,
+    spotsLeft: 0,
     totalSpots: 15,
     date: "Oct 3",
     fullDate: "October 3",
+    endDate: "January 3",
+    nextCohort: "Q1 2027",
     enrollmentDeadline: "Sep 30",
     get bannerFull() {
-      return `${this.fullDate.toUpperCase()} COACH COHORT: ONLY ${this.spotsLeft} OF ${this.totalSpots} SPOTS LEFT`;
+      return `${this.fullDate.toUpperCase()} COHORT SOLD OUT; APPLY FOR ${this.nextCohort} COHORT`;
     },
     get bannerMedium() {
-      return `${this.date.toUpperCase()} COACH COHORT: ${this.spotsLeft} OF ${this.totalSpots} SPOTS LEFT`;
+      return `${this.date.toUpperCase()} COHORT SOLD OUT; APPLY FOR ${this.nextCohort}`;
     },
     get bannerShort() {
-      return `${this.date.toUpperCase()}: ${this.spotsLeft} OF ${this.totalSpots} SPOTS LEFT`;
+      return `${this.date.toUpperCase()} SOLD OUT; APPLY FOR ${this.nextCohort}`;
     },
     get bannerAria() {
-      return `${this.fullDate} coach cohort: only ${this.spotsLeft} of ${this.totalSpots} spots left`;
+      return `${this.fullDate} cohort sold out; apply for ${this.nextCohort} cohort`;
     },
     get description() {
-      return `We have ${this.spotsLeft} of ${this.totalSpots} spots left for the next cohort on ${this.date}. Enrollment closes ${this.enrollmentDeadline}.`;
+      return `Our ${this.fullDate} cohort sold out and runs through ${this.endDate}. Next cohort starts in ${this.nextCohort}. The waitlist is now open.`;
     }
   },
   socials: [

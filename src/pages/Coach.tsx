@@ -84,7 +84,7 @@ export default function Coach() {
             <div>
               <div className="text-2xl font-black mb-1">Taylor Carpenter</div>
               <div className={`text-xs font-bold tracking-widest uppercase mb-1 ${themeClasses.muted}`}>Jul 2018 Cohort</div>
-              <a href="https://www.instagram.com/tlynncarpenter" target="_blank" rel="noopener noreferrer" className={`block text-sm font-medium hover:opacity-80 transition-opacity ${themeClasses.accent}`}>633k Instagram</a>
+              <a href="https://www.instagram.com/tlynncarpenter" target="_blank" rel="noopener noreferrer" className={`block text-sm font-medium hover:opacity-80 transition-opacity ${themeClasses.accent}`}>640k Instagram</a>
             </div>
             <div>
               <div className="text-2xl font-black mb-1">Rafe Kelley</div>
@@ -331,20 +331,11 @@ export default function Coach() {
                 <img src="/taylor-carpenter.JPG" alt="Taylor Carpenter" className="w-full h-full object-cover object-top" />
               </div>
               <div className="p-6 text-center flex-grow flex flex-col justify-center">
-                <h3 className="text-2xl font-black tracking-tighter mb-1">taylor carpenter</h3>
-                <p className={`text-sm font-medium mb-4 ${themeClasses.muted}`}>pro athlete & creator</p>
-                <div className={`font-bold text-xs tracking-widest uppercase mt-auto pt-2 ${themeClasses.accent}`}>coaching, content, branding</div>
-              </div>
-            </div>
-            
-            <div className={`rounded-2xl border-2 ${themeClasses.card} overflow-hidden flex flex-col`}>
-              <div className="aspect-square w-full overflow-hidden">
-                <img src="/rob.png" alt="Rob Schihl" className="w-full h-full object-cover object-top" />
-              </div>
-              <div className="p-6 text-center flex-grow flex flex-col justify-center">
-                <h3 className="text-2xl font-black tracking-tighter mb-1">rob schihl</h3>
-                <p className={`text-sm font-medium mb-4 ${themeClasses.muted}`}>Apex Denver owner & World Champion</p>
-                <div className={`font-bold text-xs tracking-widest uppercase mt-auto pt-2 ${themeClasses.accent}`}>coaching, community, & culture</div>
+                <h3 className="text-2xl font-black tracking-tighter uppercase mb-1">TAYLOR CARPENTER</h3>
+                <p className={`text-sm font-medium mb-4 ${themeClasses.muted}`}>
+                  World Champion,<br />640k Instagram
+                </p>
+                <div className={`font-bold text-xs tracking-widest lowercase mt-auto pt-2 ${themeClasses.accent}`}>speed parkour, content, marketing</div>
               </div>
             </div>
 
@@ -353,9 +344,24 @@ export default function Coach() {
                 <img src="/autumn.jpg" alt="Autumn Goodridge" className="w-full h-full object-cover object-top" />
               </div>
               <div className="p-6 text-center flex-grow flex flex-col justify-center">
-                <h3 className="text-2xl font-black tracking-tighter mb-1">autumn goodridge</h3>
-                <p className={`text-sm font-medium mb-4 ${themeClasses.muted}`}>Apex Denver owner</p>
-                <div className={`font-bold text-xs tracking-widest uppercase mt-auto pt-2 ${themeClasses.accent}`}>leadership, business, & sales</div>
+                <h3 className="text-2xl font-black tracking-tighter uppercase mb-1">AUTUMN GOODRIDGE</h3>
+                <p className={`text-sm font-medium mb-4 ${themeClasses.muted}`}>
+                  Apex Denver owner
+                </p>
+                <div className={`font-bold text-xs tracking-widest lowercase mt-auto pt-2 ${themeClasses.accent}`}>sales, leadership, business</div>
+              </div>
+            </div>
+            
+            <div className={`rounded-2xl border-2 ${themeClasses.card} overflow-hidden flex flex-col`}>
+              <div className="aspect-square w-full overflow-hidden">
+                <img src="/rob.png" alt="Rob Schihl" className="w-full h-full object-cover object-top" />
+              </div>
+              <div className="p-6 text-center flex-grow flex flex-col justify-center">
+                <h3 className="text-2xl font-black tracking-tighter uppercase mb-1">ROB SCHIHL</h3>
+                <p className={`text-sm font-medium mb-4 ${themeClasses.muted}`}>
+                  World Champion,<br />Apex Denver owner
+                </p>
+                <div className={`font-bold text-xs tracking-widest lowercase mt-auto pt-2 ${themeClasses.accent}`}>parkour, community, culture</div>
               </div>
             </div>
           </div>
@@ -367,7 +373,7 @@ export default function Coach() {
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-black tracking-tighter mb-6">inside the program</h2>
           <p className={`text-xl mb-16 font-medium max-w-2xl mx-auto ${themeClasses.muted}`}>
-            we don't just give you courses. we build your business infrastructure alongside you.
+            we don't just give you courses. we help you build better skills, programs, and systems.
           </p>
 
           <h3 className="text-3xl font-black tracking-tighter mb-8 text-left">coaching skills</h3>
@@ -524,7 +530,7 @@ export default function Coach() {
       {/* CTA */}
       <section className={`py-32 px-6 text-center border-t ${themeClasses.border}`}>
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-5xl md:text-6xl font-black tracking-tighter mb-6">secure your spot for {CONFIG.cohort.fullDate.toLowerCase()}</h2>
+          <h2 className="text-5xl md:text-6xl font-black tracking-tighter mb-6">secure your spot for {CONFIG.cohort.nextCohort}</h2>
           <p className={`text-xl mb-12 font-medium ${themeClasses.muted}`}>
             we only accept a small group of coaches who have the drive to execute. let's build together.
           </p>
